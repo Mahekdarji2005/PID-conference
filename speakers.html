@@ -5,23 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Hosts & Speakers - DISHA 2027 | Parul University</title>
-    
+
     <!-- Base and Custom Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="speakers.css">
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script>
-        (function() {
+        (function () {
             const hash = window.location.hash;
             if (hash.startsWith('#scroll')) {
                 const scrollVal = parseInt(hash.replace('#scroll', ''), 10);
-                window.addEventListener('DOMContentLoaded', function() {
+                window.addEventListener('DOMContentLoaded', function () {
                     window.scrollTo(0, scrollVal);
                     if (document.documentElement) document.documentElement.scrollTop = scrollVal;
                     if (document.body) document.body.scrollTop = scrollVal;
@@ -68,7 +70,7 @@
     <!-- Main Scroll-Driven Showcase Stage -->
     <div class="speakers-scroll-wrapper" id="speakers-scroll-wrapper">
         <div class="speakers-sticky-stage" id="speakers-sticky-stage">
-            
+
             <!-- Central Anchored Heading -->
             <div class="central-anchor-container" id="central-anchor">
                 <div class="stage-scroll-prompt">
@@ -100,9 +102,10 @@
         <div class="overview-header">
             <span class="overview-tag">DISHA 2027 &middot; INTERNATIONAL DELEGATES</span>
             <h2 class="overview-title">All Speakers & Hosts</h2>
-            <p class="overview-subtitle">Convening experts across Design, Sustainability, Fine Arts, and Knowledge Systems</p>
+            <p class="overview-subtitle">Convening experts across Design, Sustainability, Fine Arts, and Knowledge
+                Systems</p>
         </div>
-        
+
         <div class="speakers-grid-container" id="final-grid-container">
             <!-- Rendered dynamically by speakers.js into 5 top + 4 bottom grid -->
         </div>
@@ -119,4 +122,3 @@
 </body>
 
 </html>
-

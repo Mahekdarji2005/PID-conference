@@ -45,6 +45,24 @@
             <h2 class="main-statement">Sustainable and Creative Futures across<br>Design, the Arts and Knowledge Systems
             </h2>
 
+            <!-- SDG Showcase Component -->
+            <div class="sdg-showcase-container">
+                <div class="sdg-showcase-info">
+                    <span class="sdg-showcase-badge"><i class="fa-solid fa-leaf"></i> SDG Showcase</span>
+                    <h3 class="sdg-showcase-heading">Addressing All 17 UN Goals</h3>
+                    <div class="sdg-counter-badge" id="sdg-counter-num">01 / 17</div>
+                    <div class="sdg-nav-controls">
+                        <button class="sdg-nav-btn" id="sdg-prev-btn" aria-label="Previous SDG"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="sdg-nav-btn" id="sdg-next-btn" aria-label="Next SDG"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="sdg-card-stack-wrapper" id="sdg-card-stack">
+                    <!-- Rendered by sdg-stack.js -->
+                </div>
+            </div>
+
             <div class="info-boxes">
                 <div class="info-box">
                     <i class="fa-regular fa-calendar"></i>
@@ -111,7 +129,7 @@
         </div>
     </section>
 
-
+    <script src="sdg-stack.js"></script>
 
 </body>
 

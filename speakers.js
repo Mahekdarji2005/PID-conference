@@ -288,12 +288,12 @@ function initFloatingShowcase() {
         if (!overrideScroll && window.location.hash.startsWith("#scroll")) {
             overrideScroll = window.location.hash.replace("#scroll", "");
         }
-        
+
         let scrolled = Math.max(0, Math.min(totalScrollable, -wrapperRect.top));
         if (overrideScroll && window.pageYOffset === 0) {
             scrolled = Math.max(0, Math.min(totalScrollable, parseInt(overrideScroll, 10)));
         }
-        
+
         const progress = scrolled / totalScrollable;
 
         const cards = container.querySelectorAll(".floating-speaker-card");
