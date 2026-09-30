@@ -1,41 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speakers - DISHA 2027 | Parul University</title>
-
-    <!-- Base and Custom Stylesheets -->
+    <title>Important Dates - DISHA 2027</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="speakers.css">
-
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script>
-        (function () {
-            const hash = window.location.hash;
-            if (hash.startsWith('#scroll')) {
-                const scrollVal = parseInt(hash.replace('#scroll', ''), 10);
-                window.addEventListener('DOMContentLoaded', function () {
-                    window.scrollTo(0, scrollVal);
-                    if (document.documentElement) document.documentElement.scrollTop = scrollVal;
-                    if (document.body) document.body.scrollTop = scrollVal;
-                });
-            }
-        })();
-    </script>
+    <style>
+        .dates-section {
+            padding: 100px 5%;
+            background-color: var(--bg-light);
+            min-height: calc(100vh - 400px);
+            display: flex;
+            align-items: center;
+        }
+        .dates-container {
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--accent-color);
+        }
+        .dates-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .dates-title {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-top: 10px;
+        }
+        .dates-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+        }
+        .dates-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: var(--font-body);
+        }
+        .dates-table tr {
+            border-bottom: 1px solid #eee;
+        }
+        .dates-table tr:last-child {
+            border-bottom: none;
+        }
+        .dates-table td {
+            padding: 20px 15px;
+            color: #444;
+            font-size: 1.1rem;
+        }
+        .dates-table td:first-child {
+            font-weight: 500;
+            color: var(--primary-color);
+            width: 60%;
+        }
+        .dates-table td:last-child {
+            text-align: right;
+            font-style: italic;
+            color: #666;
+        }
+        .dates-table tr:hover {
+            background-color: #fcfbf9;
+        }
+    </style>
 </head>
-
-<body class="speakers-page">
-
-    <!-- Existing Header Navigation -->
+<body>
     <nav class="navbar">
         <div class="logo">
             <a href="index.html" style="display: flex; gap: inherit;">
@@ -48,15 +83,10 @@
         </button>
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html#about">About</a></li>
-<<<<<<< Updated upstream
-            <li><a href="#">Tracks & Panels</a></li>
-            <li><a href="speakers.html" class="active">The Hosts</a></li>
-=======
             <li><a href="tracks.html">Tracks & Panels</a></li>
-            <li><a href="speakers.html" class="active">Speakers</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
             <li><a href="hosts.html">The Hosts</a></li>
-            <li><a href="important-dates.html">Important Dates</a></li>
->>>>>>> Stashed changes
+            <li><a href="important-dates.html" class="active">Important Dates</a></li>
             <li><a href="#">Venue</a></li>
             <li><a href="#">Call for Papers</a></li>
             <li><a href="#">Gallery</a></li>
@@ -67,67 +97,46 @@
         </div>
     </nav>
 
-    <!-- Intro Opening Hero Section -->
-    <section class="speakers-intro">
-        <span class="intro-tag">DISHA 2027 &middot; INTERNATIONAL CONFERENCE</span>
-        <h1 class="intro-title">MEET THE VOICES<br><span>SHAPING THE CONVERSATION</span></h1>
-        <div class="intro-scroll-hint">
-            <span>SCROLL DOWN TO REVEAL THE SPEAKERS</span>
-            <div class="scroll-line"></div>
+    <section class="dates-section">
+        <div class="dates-container">
+            <div class="dates-header">
+                <span class="section-tag" style="color:var(--accent-color); font-weight:600; letter-spacing:2px; text-transform:uppercase; font-size:0.85rem;">CONFERENCE TIMELINE</span>
+                <h1 class="dates-title">Important Dates</h1>
+            </div>
+            
+            <div class="dates-table-wrapper">
+                <table class="dates-table">
+                    <tbody>
+                        <tr>
+                            <td>Abstract submission, both calls</td>
+                            <td>31 October 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Notification of acceptance</td>
+                            <td>15 November 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Registration window</td>
+                            <td>1 November to 31 December 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Full paper submission</td>
+                            <td>31 December 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Poster, proposal and final materials</td>
+                            <td>31 December 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Conference</td>
+                            <td>22 and 23 January 2027</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
-    <!-- Main Scroll-Driven 3D Speaker Orbit Showcase Stage -->
-    <div class="speakers-scroll-wrapper" id="speakers-scroll-wrapper">
-        <div class="speakers-sticky-stage" id="speakers-sticky-stage">
-
-            <!-- Central Anchored Heading -->
-            <div class="central-anchor-container" id="central-anchor">
-                <div class="stage-scroll-prompt">
-                    <span>SCROLL DOWN TO REVEAL ORBIT</span>
-                    <div class="prompt-line"></div>
-                </div>
-                <h1 class="central-title">Speakers</h1>
-                <p class="central-subtitle">22 & 23 JANUARY 2027 &middot; PARUL UNIVERSITY</p>
-            </div>
-
-            <!-- 3D Speaker Orbit Stage Viewport (Rendered dynamically by JS) -->
-            <div class="orbit-stage-viewport" id="orbit-stage-viewport">
-                <div class="orbit-ring-container" id="orbit-ring-container"></div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Right Side Progress Indicator Navigation -->
-    <div class="right-progress-nav" id="right-progress-nav">
-        <div class="current-speaker-num" id="current-speaker-num">01</div>
-        <div class="progress-track-line">
-            <div class="progress-fill-bar" id="progress-fill-bar"></div>
-        </div>
-        <div class="total-speakers-count" id="total-speakers-count">/ 09</div>
-        <div class="speaker-dots" id="speaker-dots"></div>
-    </div>
-
-    <!-- Final Section: Mandatory 5 + 4 Speaker Overview Grid -->
-    <section class="final-overview-section" id="final-overview">
-        <div class="overview-header">
-            <span class="overview-tag">DISHA 2027 &middot; INTERNATIONAL DELEGATES</span>
-            <h2 class="overview-title">All Speakers</h2>
-            <p class="overview-subtitle">Convening experts across Design, Sustainability, Fine Arts, and Knowledge
-                Systems</p>
-        </div>
-
-        <div class="speakers-grid-container" id="final-grid-container">
-            <!-- Rendered dynamically by speakers.js into 5 top + 4 bottom grid -->
-        </div>
-    </section>
-
-    <!-- Footer -->
-<<<<<<< Updated upstream
-    <footer class="speakers-footer">
-        <p>&copy; 2027 DISHA Conference &middot; Parul University. All Rights Reserved.</p>
-=======
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-column">
@@ -169,11 +178,6 @@
             <p>&copy; 2027 DISHA Conference &middot; Parul University. All Rights Reserved.</p>
             <p style="margin-top: 10px; font-size: 0.85rem;">Designed and Developed by <a href="https://www.linkedin.com/in/mahek-darji" target="_blank" style="color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; font-weight: 500;">Mahek Darji <i class="fa-brands fa-linkedin"></i></a></p>
         </div>
->>>>>>> Stashed changes
-    </footer>
-
-    <!-- Script Execution -->
-    <script src="speakers.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const navToggle = document.getElementById('navToggle');
@@ -185,7 +189,5 @@
             }
         });
     </script>
-
 </body>
-
 </html>

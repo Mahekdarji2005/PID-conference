@@ -4,20 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hosts - DISHA 2027</title>
+    <title>The Hosts - DISHA 2027 | Parul University</title>
     <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .hosts-section {
-            min-height: calc(100vh - 105px);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-    </style>
 </head>
 
 <body>
@@ -29,10 +19,15 @@
                 <img src="PU logo.png" alt="Parul University Logo" class="logo-img">
             </a>
         </div>
-        <ul class="nav-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Tracks & Panels</a></li>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="tracks.html">Tracks & Panels</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
             <li><a href="hosts.html" class="active">The Hosts</a></li>
+            <li><a href="important-dates.html">Important Dates</a></li>
             <li><a href="#">Venue</a></li>
             <li><a href="#">Call for Papers</a></li>
             <li><a href="#">Gallery</a></li>
@@ -43,37 +38,261 @@
         </div>
     </nav>
 
-    <section id="hosts" class="hosts-section">
-        <div class="hosts-header">
-            <span class="section-tag">MEET THE EXPERTS</span>
-            <h2>The Hosts</h2>
-        </div>
-        <div class="hosts-container">
-            <div class="host-card">
-                <div class="host-image-wrapper">
-                    <img src="Dr.%20Swapna%20Mishra.jpeg" alt="Dr. Swapna Mishra">
-                    <div class="host-reveal-overlay">
-                        <div class="host-details">
-                            <h3>Dr. Swapna Mishra</h3>
-                            <p>Host</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="host-card">
-                <div class="host-image-wrapper">
-                    <img src="Dr.%20S.%20Arulchelvan.jpg" alt="Dr. S. Arulchelvan">
-                    <div class="host-reveal-overlay">
-                        <div class="host-details">
-                            <h3>Dr. S. Arulchelvan</h3>
-                            <p>Host</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="hosts-page-container">
 
+        <!-- Page Hero -->
+        <header class="hosts-hero">
+            <span class="section-tag">DISHA 2027 &middot; CONFERENCE LEADERSHIP</span>
+            <h1>The Hosts</h1>
+            <p>Conference leadership, patrons and advisory committees</p>
+        </header>
+
+        <!-- 01 CHIEF PATRON -->
+        <section class="hosts-section">
+            <div class="hosts-section-header first-section">
+                <h2 class="hosts-section-title">Chief Patron</h2>
+            </div>
+            <div class="chief-patron-wrapper">
+                <div class="chief-patron-card">
+                    <div class="patron-img-wrapper">
+                        <img src="host/devanshusir_cutout.png" alt="Dr. Devanshu Patel" class="patron-img">
+                    </div>
+                    <div class="patron-card-body">
+                        <span class="patron-role-tag">Chief Patron</span>
+                        <h3 class="patron-name">Dr. Devanshu Patel</h3>
+                        <p class="patron-designation">President, Parul University</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 PATRONS -->
+        <section class="hosts-section">
+            <div class="hosts-section-header">
+                <h2 class="hosts-section-title">Patrons</h2>
+            </div>
+            <div class="patrons-grid">
+                <div class="patron-card">
+                    <div class="patron-img-wrapper">
+                        <img src="host/parulmam_cutout.png" alt="Dr. Parul Patel" class="patron-img">
+                    </div>
+                    <div class="patron-card-body">
+                        <span class="patron-role-tag">Patron</span>
+                        <h3 class="patron-name">Dr. Parul Patel</h3>
+                        <p class="patron-designation">Vice President (Student Affairs and General Administration), Parul University</p>
+                    </div>
+                </div>
+                <div class="patron-card">
+                    <div class="patron-img-wrapper">
+                        <img src="host/geetikamam_cutout.png" alt="Dr. Geetika Patel" class="patron-img">
+                    </div>
+                    <div class="patron-card-body">
+                        <span class="patron-role-tag">Patron</span>
+                        <h3 class="patron-name">Dr. Geetika Patel</h3>
+                        <p class="patron-designation">Vice President (Quality, Research &amp; Health Sciences) and Medical Director, Parul University</p>
+                    </div>
+                </div>
+                <div class="patron-card">
+                    <div class="patron-img-wrapper">
+                        <img src="host/komalmam_cutout.png" alt="Dr. Komal Patel" class="patron-img">
+                    </div>
+                    <div class="patron-card-body">
+                        <span class="patron-role-tag">Patron</span>
+                        <h3 class="patron-name">Dr. Komal Patel</h3>
+                        <p class="patron-designation">Vice President (Medical and Paramedical Health Sciences), Parul University</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 CO-PATRONS -->
+        <section class="hosts-section">
+            <div class="hosts-section-header">
+                <h2 class="hosts-section-title">Co-Patrons</h2>
+            </div>
+            <div class="patrons-grid">
+                <div class="patron-card">
+                    <div class="patron-img-wrapper">
+                        <img src="host/Prof.-Dr.-K.N.-Madhusoodanan_cutout.png" alt="Dr. K. N. Madhusoodanan" class="patron-img">
+                    </div>
+                    <div class="patron-card-body">
+                        <span class="patron-role-tag">Co-Patron</span>
+                        <h3 class="patron-name">Dr. K. N. Madhusoodanan</h3>
+                        <p class="patron-designation">Provost, Parul University</p>
+                    </div>
+                </div>
+                <div class="patron-card">
+                    <div class="patron-img-wrapper">
+                        <img src="host/Dr.-Kunjal-Sinha_cutout.png" alt="Dr. Kunjal Sinha" class="patron-img">
+                    </div>
+                    <div class="patron-card-body">
+                        <span class="patron-role-tag">Co-Patron</span>
+                        <h3 class="patron-name">Dr. Kunjal Sinha</h3>
+                        <p class="patron-designation">Pro Vice Chancellor, Parul University</p>
+                    </div>
+                </div>
+                <div class="patron-card">
+                    <div class="patron-img-wrapper black-placeholder">
+                        <img src="host/manishpandya.jpg" alt="Prof. Manish Pandya" class="patron-img placeholder-black">
+                    </div>
+                    <div class="patron-card-body">
+                        <span class="patron-role-tag">Co-Patron</span>
+                        <h3 class="patron-name">Prof. Manish Pandya</h3>
+                        <p class="patron-designation">Registrar, Parul University</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 ADVISORY COMMITTEE -->
+        <section class="hosts-section">
+            <div class="hosts-section-header">
+                <h2 class="hosts-section-title">Advisory Committee</h2>
+                <p class="hosts-section-subtitle">National Advisory Board</p>
+            </div>
+            <div class="committee-grid-2">
+                <div class="committee-card">
+                    <span class="committee-num">01</span>
+                    <div class="committee-info">
+                        <h3>Prof. Rajat Bhattacharya</h3>
+                        <p>Advisor &middot; Parul Institute of Design</p>
+                    </div>
+                </div>
+                <div class="committee-card">
+                    <span class="committee-num">02</span>
+                    <div class="committee-info">
+                        <h3>Mr. Vashishth Upadhyay</h3>
+                        <p>Advisor &middot; Parul Institute of Design</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 INTERNATIONAL ADVISORY COMMITTEE -->
+        <section class="hosts-section">
+            <div class="hosts-section-header">
+                <h2 class="hosts-section-title">International Advisory Committee</h2>
+                <p class="hosts-section-subtitle">International Advisory Board</p>
+            </div>
+            <div class="committee-grid-3">
+                <div class="committee-card editorial">
+                    <span class="committee-num">01</span>
+                    <div class="committee-info">
+                        <h3>Ms. Eija Salmi FRSA</h3>
+                        <p>Secretary General, Cumulus Association, Finland</p>
+                    </div>
+                </div>
+                <div class="committee-card editorial">
+                    <span class="committee-num">02</span>
+                    <div class="committee-info">
+                        <h3>Prof. Dr. Lorenzo Imbesi</h3>
+                        <p>President, Cumulus Association, Sapienza University of Rome, Italy</p>
+                    </div>
+                </div>
+                <div class="committee-card editorial">
+                    <span class="committee-num">03</span>
+                    <div class="committee-info">
+                        <h3>Dr. Dolly Daou</h3>
+                        <p>Design researcher and academic leader, Australia and France</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pending-note">
+                Additional members and institutional representatives will be announced following confirmation.
+            </div>
+        </section>
+
+        <!-- 06 SCIENTIFIC & REVIEW COMMITTEE -->
+        <section class="hosts-section">
+            <div class="hosts-section-header">
+                <h2 class="hosts-section-title">Scientific &amp; Review Committee</h2>
+            </div>
+            <div class="scientific-grid">
+                <div class="scientific-card">
+                    <h4>Dr. Shruti Tiwari</h4>
+                </div>
+                <div class="scientific-card">
+                    <h4>Dr. Jyoti Rani</h4>
+                </div>
+                <div class="scientific-card">
+                    <h4>Dr. Vandana Gupta</h4>
+                </div>
+                <div class="scientific-card">
+                    <h4>Dr. V. M. Sarvanan</h4>
+                </div>
+                <div class="scientific-card">
+                    <h4>Dr. Rechab</h4>
+                </div>
+                <div class="scientific-card">
+                    <h4>Dr. Dhananjay Bisht</h4>
+                </div>
+            </div>
+            <div class="pending-note">
+                Additional representatives from Parul Institute of Fine Arts and Parul Institute of Liberal Arts will be nominated.
+            </div>
+        </section>
+
+        <!-- REVIEW PROCESS NOTE -->
+        <div class="review-process-box">
+            <h4>REVIEW PROCESS</h4>
+            <p>All submissions are reviewed double blind. Reviewers are drawn from the committee above and from the international pool of subject experts invited through the Cumulus network.</p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column footer-about-col">
+                <div class="footer-logo">
+                    <img src="images.jpg" alt="Parul Institute of Design Logo" class="footer-logo-img">
+                    <img src="PU logo.png" alt="Parul University Logo" class="footer-logo-img">
+                </div>
+                <p class="footer-about">
+                    DISHA 2027 reframes the conversation around sustainability, creativity and civilisational knowledge, 
+                    convening experts across design, arts, and technology.
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html#about"><i class="fa-solid fa-angle-right"></i> About DISHA</a></li>
+                    <li><a href="tracks.html"><i class="fa-solid fa-angle-right"></i> Tracks &amp; Panels</a></li>
+                    <li><a href="speakers.html"><i class="fa-solid fa-angle-right"></i> Speakers</a></li>
+                    <li><a href="hosts.html"><i class="fa-solid fa-angle-right"></i> The Hosts</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i> Call for Papers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-contact">
+                <h3 class="footer-title">Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> <span>Parul University, P.O. Limda, Ta. Waghodia, Vadodara, Gujarat, India - 391760</span></p>
+                <p><i class="fa-solid fa-phone"></i> <span>+91 2668 260 312</span></p>
+                <p><i class="fa-solid fa-envelope"></i> <span>info@paruluniversity.ac.in</span></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2027 DISHA Conference &middot; Parul University. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Designed and Developed by <a href="https://www.linkedin.com/in/mahek-darji" target="_blank" style="color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; font-weight: 500;">Mahek Darji <i class="fa-brands fa-linkedin"></i></a></p>
+        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

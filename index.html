@@ -21,10 +21,20 @@
                 <img src="PU logo.png" alt="Parul University Logo" class="logo-img">
             </a>
         </div>
-        <ul class="nav-links">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#about">About</a></li>
+<<<<<<< Updated upstream
             <li><a href="#">Tracks & Panels</a></li>
             <li><a href="speakers.html">The Hosts</a></li>
+=======
+            <li><a href="tracks.html">Tracks & Panels</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="hosts.html">The Hosts</a></li>
+            <li><a href="important-dates.html">Important Dates</a></li>
+>>>>>>> Stashed changes
             <li><a href="#">Venue</a></li>
             <li><a href="#">Call for Papers</a></li>
             <li><a href="#">Gallery</a></li>
@@ -36,33 +46,41 @@
     </nav>
 
     <header class="hero-section">
-        <div class="hero-content">
-            <p class="subtitle">PARUL UNIVERSITY INTERNATIONAL CONFERENCE</p>
-            <h1 class="title">DISH<span>A</span> 2027</h1>
-            <p class="disciplines">Design &middot; Innovation &middot; Sustainability &middot; Humanities &middot; Arts
-            </p>
+        <div class="hero-main">
+            <div class="hero-content">
+                <p class="subtitle">PARUL UNIVERSITY INTERNATIONAL CONFERENCE</p>
+                <h1 class="title">DISH<span>A</span> 2027</h1>
+                <p class="disciplines">Design &middot; Innovation &middot; Sustainability &middot; Humanities &middot; Arts
+                </p>
 
-            <h2 class="main-statement">Sustainable and Creative Futures across<br>Design, the Arts and Knowledge Systems
-            </h2>
+                <h2 class="main-statement">Sustainable and Creative Futures across<br>Design, the Arts and Knowledge Systems
+                </h2>
 
-            <!-- SDG Showcase Component -->
-            <div class="sdg-showcase-container">
-                <div class="sdg-showcase-info">
-                    <span class="sdg-showcase-badge"><i class="fa-solid fa-leaf"></i> SDG Showcase</span>
-                    <h3 class="sdg-showcase-heading">Addressing All 17 UN Goals</h3>
-                    <div class="sdg-counter-badge" id="sdg-counter-num">01 / 17</div>
-                    <div class="sdg-nav-controls">
-                        <button class="sdg-nav-btn" id="sdg-prev-btn" aria-label="Previous SDG"><i
-                                class="fa-solid fa-chevron-left"></i></button>
-                        <button class="sdg-nav-btn" id="sdg-next-btn" aria-label="Next SDG"><i
-                                class="fa-solid fa-chevron-right"></i></button>
+                <!-- Date & Venue Info Boxes (MOVED ABOVE SDG SHOWCASE) -->
+                <div class="info-boxes">
+                    <div class="info-box">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div>
+                            <strong>Date</strong>
+                            <p style="font-weight: 700; color: #1a1a1a; font-size: 1rem;">22 & 23 January 2027</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Venue</strong>
+                            <p style="font-weight: 700; color: #1a1a1a; font-size: 1rem;">Parul University, Vadodara</p>
+                        </div>
                     </div>
                 </div>
-                <div class="sdg-card-stack-wrapper" id="sdg-card-stack">
-                    <!-- Rendered by sdg-stack.js -->
+
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Submit Your Paper <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#" class="btn btn-primary">Call for Papers</a>
                 </div>
             </div>
 
+<<<<<<< Updated upstream
             <div class="info-boxes">
                 <div class="info-box">
                     <i class="fa-regular fa-calendar"></i>
@@ -83,16 +101,43 @@
             <div class="hero-buttons">
                 <a href="#" class="btn btn-primary">Submit Your Paper <i class="fa-solid fa-arrow-right"></i></a>
                 <a href="#" class="btn btn-primary">Call for Papers</a>
+=======
+            <div class="hero-image blob-shape">
+                <div class="slideshow">
+                    <img src="desgin-1.jpg" alt="Interior 1" class="slide">
+                    <img src="desgin-2.jpg" alt="Interior 2" class="slide">
+                    <img src="desgin-3.jpg" alt="Interior 3" class="slide">
+                    <img src="desgin-4.jpg" alt="Interior 4" class="slide">
+                    <img src="desgin-5.jpg" alt="Interior 5" class="slide">
+                </div>
+>>>>>>> Stashed changes
             </div>
         </div>
 
-        <div class="hero-image blob-shape">
-            <div class="slideshow">
-                <img src="desgin-1.jpg" alt="Interior 1" class="slide">
-                <img src="desgin-2.jpg" alt="Interior 2" class="slide">
-                <img src="desgin-3.jpg" alt="Interior 3" class="slide">
-                <img src="desgin-4.jpg" alt="Interior 4" class="slide">
-                <img src="desgin-5.jpg" alt="Interior 5" class="slide">
+        <!-- Wide Horizontal SDG Showcase Section (BELOW DATE/VENUE & HERO MAIN) -->
+        <div class="sdg-showcase-container">
+            <div class="sdg-showcase-header">
+                <span class="sdg-showcase-badge"><i class="fa-solid fa-leaf"></i> SDG Showcase</span>
+                <h3 class="sdg-showcase-heading">Addressing All 17 UN Goals</h3>
+            </div>
+            <div class="sdg-grid">
+                <div class="sdg-item"><img src="sdg/sdg-01.svg" alt="SDG 01 - No Poverty" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-02.svg" alt="SDG 02 - Zero Hunger" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-03.svg" alt="SDG 03 - Good Health & Well-Being" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-04.svg" alt="SDG 04 - Quality Education" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-05.svg" alt="SDG 05 - Gender Equality" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-06.svg" alt="SDG 06 - Clean Water & Sanitation" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-07.svg" alt="SDG 07 - Affordable & Clean Energy" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-08.svg" alt="SDG 08 - Decent Work & Economic Growth" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-09.svg" alt="SDG 09 - Industry, Innovation & Infrastructure" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-10.svg" alt="SDG 10 - Reduced Inequalities" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-11.svg" alt="SDG 11 - Sustainable Cities & Communities" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-12.svg" alt="SDG 12 - Responsible Consumption & Production" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-13.svg" alt="SDG 13 - Climate Action" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-14.svg" alt="SDG 14 - Life Below Water" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-15.svg" alt="SDG 15 - Life on Land" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-16.svg" alt="SDG 16 - Peace, Justice & Strong Institutions" class="sdg-img" loading="lazy"></div>
+                <div class="sdg-item"><img src="sdg/sdg-17.svg" alt="SDG 17 - Partnerships for the Goals" class="sdg-img" loading="lazy"></div>
             </div>
         </div>
     </header>
@@ -129,8 +174,64 @@
         </div>
     </section>
 
+<<<<<<< Updated upstream
     <script src="sdg-stack.js"></script>
 
+=======
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="images.jpg" alt="Parul Institute of Design">
+                    <img src="PU logo.png" alt="Parul University">
+                </div>
+                <p class="footer-about">
+                    DISHA 2027 reframes the conversation around sustainability, creativity and civilisational knowledge, 
+                    convening experts across design, arts, and technology.
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html#about"><i class="fa-solid fa-angle-right"></i> About DISHA</a></li>
+                    <li><a href="tracks.html"><i class="fa-solid fa-angle-right"></i> Tracks & Panels</a></li>
+                    <li><a href="speakers.html"><i class="fa-solid fa-angle-right"></i> Speakers</a></li>
+                    <li><a href="hosts.html"><i class="fa-solid fa-angle-right"></i> The Hosts</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i> Call for Papers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-contact">
+                <h3 class="footer-title">Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> <span>Parul University, P.O. Limda, Ta. Waghodia, Vadodara, Gujarat, India - 391760</span></p>
+                <p><i class="fa-solid fa-phone"></i> <span>+91 2668 260 312</span></p>
+                <p><i class="fa-solid fa-envelope"></i> <span>info@paruluniversity.ac.in</span></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2027 DISHA Conference &middot; Parul University. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Designed and Developed by <a href="https://www.linkedin.com/in/mahek-darji" target="_blank" style="color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; font-weight: 500;">Mahek Darji <i class="fa-brands fa-linkedin"></i></a></p>
+        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+>>>>>>> Stashed changes
 </body>
 
 </html>

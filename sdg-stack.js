@@ -36,13 +36,13 @@ function initSDGCardStack() {
 
     let currentIndex = 0;
     const totalSDGs = sdgData.length;
+    let isAnimating = false;
 
-    // Render initial cards
     function renderStack() {
         stackContainer.innerHTML = "";
 
-        // Render top 3 visible cards in the stack
-        for (let i = 0; i < totalSDGs; i++) {
+        // Render top 3 visible cards in 3D depth stack
+        for (let i = 0; i < 3; i++) {
             const dataIndex = (currentIndex + i) % totalSDGs;
             const sdg = sdgData[dataIndex];
 
@@ -51,7 +51,7 @@ function initSDGCardStack() {
             card.dataset.stackPos = i;
 
             card.innerHTML = `
-                <img src="${sdg.image}" alt="SDG ${String(sdg.id).padStart(2, '0')} - ${sdg.title}" class="sdg-logo-img" />
+                <img src="${sdg.image}" alt="SDG ${String(sdg.id).padStart(2, '0')} - ${sdg.title}" class="sdg-logo-img" loading="eager" />
             `;
 
             // Style position in 3D stack
@@ -60,18 +60,13 @@ function initSDGCardStack() {
                 card.style.zIndex = "3";
                 card.style.opacity = "1";
             } else if (i === 1) {
-                card.style.transform = "translate3d(10px, -6px, -15px) rotate(2.5deg) scale(0.95)";
+                card.style.transform = "translate3d(14px, -10px, -15px) rotate(3deg) scale(0.94)";
                 card.style.zIndex = "2";
                 card.style.opacity = "0.85";
             } else if (i === 2) {
-                card.style.transform = "translate3d(20px, -12px, -30px) rotate(-2deg) scale(0.90)";
+                card.style.transform = "translate3d(28px, -20px, -30px) rotate(-2.5deg) scale(0.88)";
                 card.style.zIndex = "1";
                 card.style.opacity = "0.65";
-            } else {
-                card.style.transform = "translate3d(30px, -18px, -45px) rotate(0deg) scale(0.85)";
-                card.style.zIndex = "0";
-                card.style.opacity = "0";
-                card.style.pointerEvents = "none";
             }
 
             stackContainer.appendChild(card);
@@ -84,41 +79,74 @@ function initSDGCardStack() {
     }
 
     function nextCard() {
+        if (isAnimating) return;
+        isAnimating = true;
+
         const topCard = stackContainer.querySelector('.sdg-card[data-stack-pos="0"]');
         if (topCard) {
-            topCard.style.transform = "translate3d(100px, 10px, 0) rotate(10deg) scale(0.9)";
+            topCard.style.transition = "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease";
+            topCard.style.transform = "translate3d(120px, 15px, 0) rotate(12deg) scale(0.9)";
             topCard.style.opacity = "0";
         }
+
         setTimeout(() => {
             currentIndex = (currentIndex + 1) % totalSDGs;
             renderStack();
-        }, 220);
+            isAnimating = false;
+        }, 240);
     }
 
     function prevCard() {
+        if (isAnimating) return;
+        isAnimating = true;
+
         currentIndex = (currentIndex - 1 + totalSDGs) % totalSDGs;
         renderStack();
+
         const topCard = stackContainer.querySelector('.sdg-card[data-stack-pos="0"]');
         if (topCard) {
-            topCard.style.transform = "translate3d(-100px, 10px, 0) rotate(-10deg) scale(0.9)";
+            topCard.style.transition = "none";
+            topCard.style.transform = "translate3d(-120px, 15px, 0) rotate(-12deg) scale(0.9)";
             topCard.style.opacity = "0";
+
             requestAnimationFrame(() => {
-                topCard.style.transform = "translate3d(0, 0, 0) rotate(0deg) scale(1)";
-                topCard.style.opacity = "1";
+                requestAnimationFrame(() => {
+                    topCard.style.transition = "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease";
+                    topCard.style.transform = "translate3d(0, 0, 0) rotate(0deg) scale(1)";
+                    topCard.style.opacity = "1";
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 350);
+                });
             });
+        } else {
+            isAnimating = false;
         }
     }
 
-    if (nextBtn) nextBtn.addEventListener("click", nextCard);
-    if (prevBtn) prevBtn.addEventListener("click", prevCard);
+    if (nextBtn) nextBtn.addEventListener("click", () => {
+        resetAutoTimer();
+        nextCard();
+    });
+
+    if (prevBtn) prevBtn.addEventListener("click", () => {
+        resetAutoTimer();
+        prevCard();
+    });
 
     // Auto cycle every 4 seconds
     let autoTimer = setInterval(nextCard, 4000);
-    stackContainer.addEventListener("mouseenter", () => clearInterval(autoTimer));
-    stackContainer.addEventListener("mouseleave", () => {
+
+    function resetAutoTimer() {
         clearInterval(autoTimer);
         autoTimer = setInterval(nextCard, 4000);
-    });
+    }
+
+    const showcaseContainer = document.querySelector(".sdg-showcase-container");
+    if (showcaseContainer) {
+        showcaseContainer.addEventListener("mouseenter", () => clearInterval(autoTimer));
+        showcaseContainer.addEventListener("mouseleave", () => resetAutoTimer());
+    }
 
     renderStack();
 }
