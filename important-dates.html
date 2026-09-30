@@ -10,7 +10,9 @@
     <style>
         .dates-section {
             padding: 100px 5%;
-            background-color: var(--bg-light);
+            background-color: #f7f6f2;
+            background-image: radial-gradient(#e0ded8 1px, transparent 1px);
+            background-size: 20px 20px;
             min-height: calc(100vh - 400px);
             display: flex;
             align-items: center;
@@ -19,54 +21,157 @@
             max-width: 900px;
             margin: 0 auto;
             width: 100%;
-            background: #fff;
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-            border-top: 5px solid var(--accent-color);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05), 0 0 0 1px rgba(0,0,0,0.05);
+            border-top: 5px solid #a83c27;
         }
         .dates-header {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             text-align: center;
+        }
+        .dates-header .section-tag {
+            color: #a83c27 !important;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 15px;
+            background: #fff5f3;
+            padding: 8px 16px;
+            border-radius: 20px;
         }
         .dates-title {
             font-family: var(--font-heading);
-            font-size: 2.8rem;
-            color: var(--primary-color);
-            margin-top: 10px;
+            font-size: 3.5rem;
+            color: #002f4b;
+            margin-top: 0;
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
         }
-        .dates-table-wrapper {
-            width: 100%;
-            overflow-x: auto;
+        .dates-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #a83c27;
+            border-radius: 2px;
         }
-        .dates-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-family: var(--font-body);
+        
+        .timeline {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+            padding-left: 30px;
         }
-        .dates-table tr {
-            border-bottom: 1px solid #eee;
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: linear-gradient(to bottom, #a83c27, #002f4b);
+            border-radius: 2px;
         }
-        .dates-table tr:last-child {
-            border-bottom: none;
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+            padding-left: 40px;
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
         }
-        .dates-table td {
-            padding: 20px 15px;
-            color: #444;
-            font-size: 1.1rem;
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+        .timeline-item:nth-child(6) { animation-delay: 0.6s; }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
         }
-        .dates-table td:first-child {
+        .timeline-dot {
+            position: absolute;
+            left: -37px;
+            top: 15px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid #a83c27;
+            box-shadow: 0 0 0 4px rgba(168, 60, 39, 0.1);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        .timeline-item:hover .timeline-dot {
+            background: #a83c27;
+            transform: scale(1.2);
+            box-shadow: 0 0 0 6px rgba(168, 60, 39, 0.2);
+        }
+        .timeline-content {
+            background: #fff;
+            padding: 20px 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .timeline-item:hover .timeline-content {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-color: #e0ded8;
+        }
+        .timeline-date {
+            font-size: 0.95rem;
+            color: #a83c27;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .timeline-event {
+            font-size: 1.25rem;
+            color: #002f4b;
             font-weight: 500;
-            color: var(--primary-color);
-            width: 60%;
+            font-family: var(--font-heading);
         }
-        .dates-table td:last-child {
-            text-align: right;
-            font-style: italic;
-            color: #666;
+        
+        /* Highlight for Conference */
+        .timeline-item.highlight .timeline-dot {
+            border-color: #002f4b;
+            box-shadow: 0 0 0 4px rgba(0, 47, 75, 0.1);
         }
-        .dates-table tr:hover {
-            background-color: #fcfbf9;
+        .timeline-item.highlight:hover .timeline-dot {
+            background: #002f4b;
+            box-shadow: 0 0 0 6px rgba(0, 47, 75, 0.2);
+        }
+        .timeline-item.highlight .timeline-content {
+            background: var(--primary-color);
+            border: none;
+            color: #fff;
+        }
+        .timeline-item.highlight .timeline-date {
+            color: #d4af37; /* Gold accent */
+        }
+        .timeline-item.highlight .timeline-event {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
         }
     </style>
 </head>
@@ -84,7 +189,7 @@
             <li><a href="speakers.html">The Hosts</a></li>
             <li><a href="important-dates.html" class="active">Important Dates</a></li>
             <li><a href="#">Venue</a></li>
-            <li><a href="#">Call for Papers</a></li>
+            <li><a href="call-for-papers.html">Call for Papers</a></li>
             <li><a href="#">Gallery</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -100,35 +205,49 @@
                 <h1 class="dates-title">Important Dates</h1>
             </div>
             
-            <div class="dates-table-wrapper">
-                <table class="dates-table">
-                    <tbody>
-                        <tr>
-                            <td>Abstract submission, both calls</td>
-                            <td>31 October 2026</td>
-                        </tr>
-                        <tr>
-                            <td>Notification of acceptance</td>
-                            <td>15 November 2026</td>
-                        </tr>
-                        <tr>
-                            <td>Registration window</td>
-                            <td>1 November to 31 December 2026</td>
-                        </tr>
-                        <tr>
-                            <td>Full paper submission</td>
-                            <td>31 December 2026</td>
-                        </tr>
-                        <tr>
-                            <td>Poster, proposal and final materials</td>
-                            <td>31 December 2026</td>
-                        </tr>
-                        <tr>
-                            <td>Conference</td>
-                            <td>22 and 23 January 2027</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">31 October 2026</div>
+                        <div class="timeline-event">Abstract submission, both calls</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">15 November 2026</div>
+                        <div class="timeline-event">Notification of acceptance</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1 Nov to 31 Dec 2026</div>
+                        <div class="timeline-event">Registration window</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">31 December 2026</div>
+                        <div class="timeline-event">Full paper submission</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">31 December 2026</div>
+                        <div class="timeline-event">Poster, proposal and final materials</div>
+                    </div>
+                </div>
+                <div class="timeline-item highlight">
+                    <div class="timeline-dot highlight-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date highlight-date">22 and 23 January 2027</div>
+                        <div class="timeline-event highlight-event">Conference</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
