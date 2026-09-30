@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracks & Panels - DISHA 2027</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .tracks-section {
+            padding: 100px 5%;
+            background-color: #fcfbf9;
+            color: #333;
+        }
+        .tracks-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .tracks-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .track-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 4px solid #2a4b7c;
+        }
+        .track-title {
+            font-family: 'Playfair Display', serif;
+            color: #2a4b7c;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        .track-title span {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+        .track-subtitle {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .track-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-family: 'Inter', sans-serif;
+            color: #444;
+            line-height: 1.6;
+        }
+        .track-list li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="display: flex; gap: inherit;">
+                <img src="images.jpg" alt="Parul Institute of Design Logo" class="logo-img">
+                <img src="PU logo.png" alt="Parul University Logo" class="logo-img">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="tracks.html" class="active">Tracks & Panels</a></li>
+            <li><a href="speakers.html">The Hosts</a></li>
+            <li><a href="important-dates.html">Important Dates</a></li>
+            <li><a href="#">Venue</a></li>
+            <li><a href="#">Call for Papers</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="right-logos">
+            <img src="Cumulus logo.jpg" alt="Cumulus Association Logo" class="logo-img">
+        </div>
+    </nav>
+
+    <section class="tracks-section">
+        <div class="tracks-header">
+            <span class="section-tag" style="color:var(--accent-color); font-weight:600; letter-spacing:2px; text-transform:uppercase; font-size:0.85rem;">DISHA 2027</span>
+            <h1 style="font-family:'Playfair Display', serif; font-size:3rem; color:#1a1a1a; margin-top:10px;">Tracks & Panels</h1>
+        </div>
+
+        <div class="tracks-container">
+            <!-- Track 1 -->
+            <div class="track-card">
+                <h3 class="track-title"><span>Track 1.</span> Design for Sustainable and Civilisational Futures</h3>
+                <div class="track-subtitle">Parul Institute of Design</div>
+                <ul class="track-list">
+                    <li>Sustainable fashion design, textiles and conscious clothing systems</li>
+                    <li>Fashion merchandising, retail experience and circular business models</li>
+                    <li>Interior design, biophilic and regenerative built environments</li>
+                    <li>Product and industrial design for circularity and sustainable living</li>
+                    <li>Communication design, branding and design for social impact</li>
+                    <li>UX, service and interaction design for public and digital systems</li>
+                    <li>Animation, VFX and immersive storytelling for global audiences</li>
+                    <li>Film, television and screen media for culture and change</li>
+                    <li>Craft to industry pipelines, vernacular design and Indian craft futures</li>
+                    <li>Design thinking, systems and futures design for planetary challenges</li>
+                </ul>
+            </div>
+
+            <!-- Track 2 -->
+            <div class="track-card">
+                <h3 class="track-title"><span>Track 2.</span> Fine Arts, Visual Culture and Material Ecologies</h3>
+                <div class="track-subtitle">Parul Institute of Fine Arts</div>
+                <ul class="track-list">
+                    <li>Eco art and visual practice for climate consciousness</li>
+                    <li>Sustainable materials, pigments and low impact studio practice</li>
+                    <li>Public art, muralism and community placemaking</li>
+                    <li>Indian aesthetics, visual culture and global art history</li>
+                    <li>Craft revival, applied arts and circular making</li>
+                    <li>Contemporary art, biennials and the global art ecosystem</li>
+                    <li>Curatorial practice, museums and cultural institutions</li>
+                    <li>Art, activism and social and environmental justice</li>
+                    <li>Digital art, generative art and new media aesthetics</li>
+                    <li>Art markets, cultural economy and the creative workforce</li>
+                </ul>
+            </div>
+
+            <!-- Track 3 -->
+            <div class="track-card">
+                <h3 class="track-title"><span>Track 3.</span> Humanities, Society and Civilisational Thought</h3>
+                <div class="track-subtitle">Parul Institute of Liberal Arts</div>
+                <ul class="track-list">
+                    <li>Literature, languages and translation across Bharat and the world</li>
+                    <li>Philosophy, ethics and Indian thought</li>
+                    <li>History, memory, migration, identity and global citizenship</li>
+                    <li>Public policy, governance and international relations</li>
+                    <li>Peace and conflict studies, and cultural diplomacy</li>
+                    <li>Psychology, wellbeing and mental health</li>
+                    <li>Sociology, community development and economics for sustainable development</li>
+                    <li>Political ecology and environmental humanities</li>
+                    <li>Digital society, cultural studies and media</li>
+                    <li>Gender, equity, social justice and the ethics of artificial intelligence</li>
+                </ul>
+            </div>
+
+            <!-- Track 4 -->
+            <div class="track-card">
+                <h3 class="track-title"><span>Track 4.</span> Indian Knowledge Systems towards Future Sustainability</h3>
+                <div class="track-subtitle">Cross faculty signature track</div>
+                <ul class="track-list">
+                    <li>Traditional ecological knowledge and climate resilience</li>
+                    <li>Vernacular architecture, materials and low impact technologies</li>
+                    <li>Agroecology, food systems and seed sovereignty</li>
+                    <li>Health, wellbeing and traditional medicine, Ayurveda and Yoga</li>
+                    <li>Crafts, circular livelihoods and indigenous economies</li>
+                    <li>Sanskrit, textual traditions and knowledge translation</li>
+                    <li>Water heritage, stepwells and community resource management</li>
+                    <li>Indigenous and global knowledge systems in dialogue</li>
+                    <li>Ethics, philosophy and consciousness studies for sustainability</li>
+                    <li>IKS in education, policy and the global sustainability agenda</li>
+                </ul>
+            </div>
+
+            <!-- Track 5 -->
+            <div class="track-card">
+                <h3 class="track-title"><span>Track 5.</span> AI, Digital Cultures and Creative Technologies</h3>
+                <div class="track-subtitle">Cross faculty track</div>
+                <ul class="track-list">
+                    <li>Generative AI for design, art and creative production</li>
+                    <li>AVGC and XR, immersive and extended reality experiences</li>
+                    <li>Digital humanities, digital heritage and archives</li>
+                    <li>Ethical, responsible and explainable AI for the creative economy</li>
+                    <li>Digital public infrastructure and inclusion for cultural access</li>
+                    <li>Human and AI collaboration, and the future of creative work</li>
+                    <li>Data, algorithms and computational creativity</li>
+                    <li>Gaming, interactive media and the metaverse</li>
+                    <li>Blockchain, provenance and digital ownership in the arts</li>
+                    <li>AI governance, intellectual property and creative technology policy</li>
+                </ul>
+            </div>
+
+            <!-- Track 6 -->
+            <div class="track-card">
+                <h3 class="track-title"><span>Track 6.</span> Creative Education, Research and Global Collaboration</h3>
+                <div class="track-subtitle">Cross faculty track</div>
+                <ul class="track-list">
+                    <li>NEP 2020 and multidisciplinary creative pedagogy</li>
+                    <li>Practice led and arts based research methodologies</li>
+                    <li>The educator as practitioner, a Cumulus priority</li>
+                    <li>South to South and global academic partnerships</li>
+                    <li>Publishing, dissemination and research impact</li>
+                    <li>Design and arts education for the SDGs</li>
+                    <li>Internationalisation, mobility and joint programmes</li>
+                    <li>Digital, blended and open learning in the creative disciplines</li>
+                    <li>Assessment, quality and accreditation in creative education</li>
+                    <li>Decolonising curricula and inclusive creative pedagogy</li>
+                </ul>
+            </div>
+
+            <!-- Track 7 -->
+            <div class="track-card">
+                <h3 class="track-title"><span>Track 7.</span> Peace, Sustainability and Human Futures</h3>
+                <div class="track-subtitle">Cross faculty track</div>
+                <ul class="track-list">
+                    <li>Resilience, peacebuilding and conflict transformation</li>
+                    <li>Ethics, justice and human futures</li>
+                    <li>Sustainability, climate resilience and future societies</li>
+                    <li>Wellbeing, care and inclusive development</li>
+                    <li>Global citizenship and cross cultural cooperation</li>
+                    <li>Cultural diplomacy and soft power</li>
+                    <li>Migration, displacement and belonging</li>
+                    <li>Human security, equity and the SDGs</li>
+                    <li>Technology, humanity and post human futures</li>
+                    <li>Nonviolence, Gandhian thought and global peace movements</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Thematic Panels Section -->
+        <div class="panels-header" style="margin-top: 80px; text-align: center;">
+            <h2 style="font-family:'Playfair Display', serif; font-size:2.5rem; color:var(--primary-color);">Cross faculty thematic panels</h2>
+            <p style="font-family:'Inter', sans-serif; color:#555; max-width:800px; margin: 20px auto; font-size:1.1rem; line-height:1.6;">
+                Alongside the paper tracks, six thematic panels run through both days. Each is curated jointly by the three faculties and brings an invited expert panel into conversation with delegates. Where the tracks gather research, the panels test it against practice, policy and industry.
+            </p>
+        </div>
+
+        <div class="panels-container" style="max-width: 1000px; margin: 40px auto; display: flex; flex-direction: column; gap: 40px;">
+            <!-- Panel 1 -->
+            <div class="panel-card" style="background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid var(--accent-color);">
+                <h3 style="font-family: 'Playfair Display', serif; color: var(--primary-color); font-size: 1.6rem; margin-bottom: 5px;">
+                    <span style="color: var(--accent-color); font-weight: 700;">Panel 1.</span> Policy, Skills and the Creative Economy: Turning Curriculum into Capability
+                </h3>
+                <div style="font-style: italic; color: #666; margin-bottom: 20px; font-family: 'Inter', sans-serif; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    Day one, 22 January
+                </div>
+                <p style="font-family: 'Inter', sans-serif; color: #444; line-height: 1.6;">
+                    Where creative education meets national policy. The panel takes the multidisciplinary mandate of NEP 2020, the entry of Indian Knowledge Systems into the curriculum, national skill standards and craft livelihoods, public educational media, and sets them against what employers actually ask of a creative graduate. Design brings the stake in skills, craft to industry pipelines and employability. Liberal Arts brings policy, governance, ethics and the knowledge systems question. Fine Arts brings arts education, cultural institutions and the livelihood of the practising artist, where recognition and funding are thinnest. The question the panel holds is a practical one: what has to change for policy intent to reach the studio, the workshop and the first job.
+                </p>
+            </div>
+
+            <!-- Panel 2 -->
+            <div class="panel-card" style="background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid var(--accent-color);">
+                <h3 style="font-family: 'Playfair Display', serif; color: var(--primary-color); font-size: 1.6rem; margin-bottom: 5px;">
+                    <span style="color: var(--accent-color); font-weight: 700;">Panel 2.</span> The Machine in the Studio: Authorship, Ethics and Creative Education
+                </h3>
+                <div style="font-style: italic; color: #666; margin-bottom: 20px; font-family: 'Inter', sans-serif; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    Day two- 23 January
+                </div>
+                <p style="font-family: 'Inter', sans-serif; color: #444; line-height: 1.6;">
+                    What artificial intelligence is doing to the three things a creative faculty exists to protect: authorship, judgement and the apprenticeship that produces both. The panel moves from the making of the artefact to the teaching of the maker, and on to the question of ownership that neither law nor pedagogy has yet settled. Design asks what remains of the brief when generation is cheap. Fine Arts asks what authorship means when the hand is optional. Liberal Arts asks who carries the ethical and legal weight of the result. If the machine can make the artefact, what is it that we are still teaching, and who owns what comes out.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="images.jpg" alt="Parul Institute of Design">
+                    <img src="PU logo.png" alt="Parul University">
+                </div>
+                <p class="footer-about">
+                    DISHA 2027 reframes the conversation around sustainability, creativity and civilisational knowledge, 
+                    convening experts across design, arts, and technology.
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html#about"><i class="fa-solid fa-angle-right"></i> About DISHA</a></li>
+                    <li><a href="tracks.html"><i class="fa-solid fa-angle-right"></i> Tracks & Panels</a></li>
+                    <li><a href="speakers.html"><i class="fa-solid fa-angle-right"></i> The Hosts</a></li>
+                    <li><a href="#"><i class="fa-solid fa-angle-right"></i> Call for Papers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-contact">
+                <h3 class="footer-title">Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> <span>Parul University, P.O. Limda, Ta. Waghodia, Vadodara, Gujarat, India - 391760</span></p>
+                <p><i class="fa-solid fa-phone"></i> <span>+91 2668 260 312</span></p>
+                <p><i class="fa-solid fa-envelope"></i> <span>info@paruluniversity.ac.in</span></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2027 DISHA Conference &middot; Parul University. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Designed and Developed by <a href="https://www.linkedin.com/in/mahek-darji" target="_blank" style="color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; font-weight: 500;">Mahek Darji <i class="fa-brands fa-linkedin"></i></a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
