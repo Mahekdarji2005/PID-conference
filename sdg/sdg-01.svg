@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <rect width="300" height="300" rx="16" fill="#E5243B"/>
+  <text x="24" y="52" fill="#FFFFFF" font-family="'Inter', Arial, sans-serif" font-weight="900" font-size="40" letter-spacing="-1">1</text>
+  <text x="24" y="78" fill="#FFFFFF" font-family="'Inter', Arial, sans-serif" font-weight="800" font-size="14" letter-spacing="0.5">NO</text>
+  <text x="24" y="96" fill="#FFFFFF" font-family="'Inter', Arial, sans-serif" font-weight="800" font-size="14" letter-spacing="0.5">POVERTY</text>
+  <g fill="#FFFFFF"><circle cx="100" cy="180" r="14"/><path d="M100 198 c-16 0 -30 10 -30 25 v12 h60 v-12 c0 -15 -14 -25 -30 -25 z"/><circle cx="150" cy="170" r="18"/><path d="M150 192 c-20 0 -38 12 -38 30 v13 h76 v-13 c0 -18 -18 -30 -38 -30 z"/><circle cx="200" cy="180" r="14"/><path d="M200 198 c-16 0 -30 10 -30 25 v12 h60 v-12 c0 -15 -14 -25 -30 -25 z"/></g>
+</svg>

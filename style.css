@@ -245,9 +245,19 @@ body {
 }
 
 @keyframes morph {
-    0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
-    34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
-    67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+
+    0%,
+    100% {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    }
+
+    34% {
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
 }
 
 .slideshow {
@@ -267,18 +277,46 @@ body {
     animation: fade 25s infinite;
 }
 
-.slide:nth-child(1) { animation-delay: 0s; }
-.slide:nth-child(2) { animation-delay: 5s; }
-.slide:nth-child(3) { animation-delay: 10s; }
-.slide:nth-child(4) { animation-delay: 15s; }
-.slide:nth-child(5) { animation-delay: 20s; }
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.slide:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.slide:nth-child(5) {
+    animation-delay: 20s;
+}
 
 @keyframes fade {
-    0% { opacity: 0; }
-    5% { opacity: 1; }
-    20% { opacity: 1; }
-    25% { opacity: 0; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /* About Section */
@@ -386,7 +424,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -443,11 +481,12 @@ body {
 /* Hover Animations */
 .host-card:hover {
     transform: translateY(-15px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
 }
 
 .host-card:hover .host-image-wrapper img {
-    transform: scale(1.08); /* Zoom in effect */
+    transform: scale(1.08);
+    /* Zoom in effect */
 }
 
 .host-card:hover .host-reveal-overlay {
