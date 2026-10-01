@@ -1,7 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
-  <rect width="300" height="300" rx="16" fill="#DDA63A"/>
-  <text x="24" y="52" fill="#FFFFFF" font-family="'Inter', Arial, sans-serif" font-weight="900" font-size="40" letter-spacing="-1">2</text>
-  <text x="24" y="78" fill="#FFFFFF" font-family="'Inter', Arial, sans-serif" font-weight="800" font-size="14" letter-spacing="0.5">ZERO</text>
-  <text x="24" y="96" fill="#FFFFFF" font-family="'Inter', Arial, sans-serif" font-weight="800" font-size="14" letter-spacing="0.5">HUNGER</text>
-  <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M90 185 Q150 250 210 185 Z" fill="#FFFFFF"/><path d="M100 185 C100 160 130 142 150 125 C170 142 200 160 200 185"/><path d="M150 125 L150 185"/><line x1="120" y1="220" x2="180" y2="220"/><line x1="135" y1="232" x2="165" y2="232"/></g>
+  <rect width="300" height="300" rx="20" fill="#DDA63A"/>
+  <!-- SDG Number in Upper-Left -->
+  <text x="24" y="48" fill="#FFFFFF" font-family="'Inter', Arial, sans-serif" font-weight="900" font-size="34" letter-spacing="-1">2</text>
+  
+  <!-- Left-Aligned SDG Title (Uniform Font Size: 28px across all 17 cards) -->
+  <text x="24" y="145" text-anchor="start" fill="#FFFFFF" font-family="'Inter', Arial, sans-serif" font-weight="900" font-size="28" letter-spacing="0.3">ZERO</text>
+  <text x="24" y="176" text-anchor="start" fill="#FFFFFF" font-family="'Inter', Arial, sans-serif" font-weight="900" font-size="28" letter-spacing="0.3">HUNGER</text>
+  
+  <!-- SDG Icon in Upper-Right -->
+  <g transform="translate(242, 50) scale(0.38) translate(-150, -185)">
+    <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M90 185 Q150 250 210 185 Z" fill="#FFFFFF"/><path d="M100 185 C100 160 130 142 150 125 C170 142 200 160 200 185"/><path d="M150 125 L150 185"/><line x1="120" y1="220" x2="180" y2="220"/><line x1="135" y1="232" x2="165" y2="232"/></g>
+  </g>
 </svg>
