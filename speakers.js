@@ -139,8 +139,8 @@ function init3DSpeakerOrbit() {
 
     if (!scrollWrapper || !ringContainer || !stage) return;
 
-    // Set scroll wrapper height to 500vh for generous, smooth scroll distance
-    scrollWrapper.style.height = "500vh";
+    // Set scroll wrapper height to 300vh for a responsive, smooth sequential reveal
+    scrollWrapper.style.height = "300vh";
 
     // Build 3D Speaker Cards
     ringContainer.innerHTML = "";
@@ -218,8 +218,8 @@ function init3DSpeakerOrbit() {
         }
     });
 
-    // Continuous Animation & Scroll Ticker
-    function renderFrame() {
+    // Scroll-Driven Sequential Reveal Engine (Zero Revolving / Rotation)
+    function updateOrbitStage() {
         const wrapperRect = scrollWrapper.getBoundingClientRect();
         const stageWidth = stage.clientWidth;
         const stageHeight = stage.clientHeight;
@@ -230,29 +230,21 @@ function init3DSpeakerOrbit() {
         let scrolled = Math.max(0, Math.min(totalScrollable, -wrapperRect.top));
         const progress = scrolled / totalScrollable;
 
-        // Calculate Orbit Radius dynamically based on viewport dimensions
+        // Dynamic Orbit Radii (X and Y independent radii)
         const isMobile = stageWidth <= 600;
         const isTablet = stageWidth > 600 && stageWidth <= 1100;
 
-        // Dynamic Orbit Radii (X and Y independent radii)
-        // Ensures speaker cutouts revolve around the central "Speakers" heading with a 60px–100px gap
         const orbitRadiusX = isMobile
             ? Math.max(140, Math.min(stageWidth * 0.42, 200))
             : isTablet
-            ? Math.max(300, Math.min(stageWidth * 0.40, 440))
-            : Math.max(400, Math.min(stageWidth * 0.40, 560));
+                ? Math.max(300, Math.min(stageWidth * 0.40, 440))
+                : Math.max(400, Math.min(stageWidth * 0.40, 560));
 
         const orbitRadiusY = isMobile
             ? Math.max(150, Math.min(stageHeight * 0.36, 230))
             : isTablet
-            ? Math.max(200, Math.min(stageHeight * 0.34, 270))
-            : Math.max(240, Math.min(stageHeight * 0.34, 300));
-
-        // Advance continuous auto-rotation if any speakers are in complete orbit
-        // Speed slows down to 0 if a speaker card is flipped to allow easy reading
-        const isFlipped = activeFlippedIndex !== -1;
-        const autoSpeed = isFlipped ? 0 : 0.08; 
-        autoRotateAngle = (autoRotateAngle + autoSpeed) % 360;
+                ? Math.max(200, Math.min(stageHeight * 0.34, 270))
+                : Math.max(240, Math.min(stageHeight * 0.34, 300));
 
         const cards = ringContainer.querySelectorAll(".speaker-orbit-item");
         let currentActiveIdx = 0;
@@ -262,28 +254,25 @@ function init3DSpeakerOrbit() {
             const card = cards[i];
             if (!card) return;
 
-            // Sequential Entrance Windows (0.0 to 0.80)
-            const startProgress = i * 0.08;
-            const endProgress = startProgress + 0.15;
+            // Sequential Entrance Windows (0.0 to 0.85)
+            const startProgress = i * 0.10;
+            const endProgress = startProgress + 0.18;
 
-            // Angle around 360 deg circle (evenly spaced 45 deg intervals for 8 speakers)
+            // Static circular positions (equal 45 deg intervals around central title, 0 rotation)
             const baseAngleDeg = i * (360 / speakersData.length) - 90;
-            // Total angle combining base angle + continuous auto-rotation
-            const currentAngleDeg = baseAngleDeg + autoRotateAngle;
-            const rad = (currentAngleDeg * Math.PI) / 180;
+            const rad = (baseAngleDeg * Math.PI) / 180;
 
-            // Target Orbit Position in 3D Space (centered around exact title center)
             const targetX = Math.cos(rad) * orbitRadiusX;
             const targetY = Math.sin(rad) * orbitRadiusY + (yOrganicOffsets[i] * 0.25);
             const targetZ = Math.sin(rad) * 120; // Depth into/out of screen
 
             if (progress < startProgress) {
-                // Initial State: NOT visible, positioned off-screen to the RIGHT
+                // Not yet revealed: Hidden off-screen
                 card.style.opacity = "0";
                 card.style.visibility = "hidden";
                 card.style.pointerEvents = "none";
             } else if (progress >= startProgress && progress < endProgress) {
-                // Entrance Phase: Moving from RIGHT edge to orbit position
+                // Reveal Entrance Phase: Moving into position as user scrolls
                 card.style.visibility = "visible";
                 card.style.pointerEvents = "auto";
 
@@ -295,7 +284,6 @@ function init3DSpeakerOrbit() {
                     currentActiveIdx = i;
                 }
 
-                // Entrance trajectory starting from right edge
                 const startX = stageWidth * 0.5 + (isMobile ? 180 : 380);
                 const startY = targetY;
                 const startZ = -180;
@@ -307,21 +295,18 @@ function init3DSpeakerOrbit() {
                 const opacity = Math.min(1, t * 1.2);
                 const scale = 0.65 + (1.0 - 0.65) * t;
 
-                // Apply 3D Transform
                 card.style.opacity = opacity.toFixed(3);
                 card.style.zIndex = Math.round(100 + currZ);
                 card.style.transform = `translate3d(${currX.toFixed(1)}px, ${currY.toFixed(1)}px, ${currZ.toFixed(1)}px) scale(${scale.toFixed(3)})`;
             } else {
-                // Full Orbit Phase: Continuously rotating around central title
+                // Fully Settled Phase: Static layout position
                 card.style.visibility = "visible";
                 card.style.pointerEvents = "auto";
-                card.style.opacity = "1";
 
                 if (i >= currentActiveIdx) {
                     currentActiveIdx = i;
                 }
 
-                // Depth scaling: Items closer to viewer (z > 0) are larger; background items slightly smaller
                 const maxZ = 120;
                 const depthScale = 0.88 + ((targetZ + maxZ) / (maxZ * 2)) * 0.22;
                 const depthOpacity = 0.82 + ((targetZ + maxZ) / (maxZ * 2)) * 0.18;
@@ -351,12 +336,25 @@ function init3DSpeakerOrbit() {
                 }
             });
         }
-
-        requestAnimationFrame(renderFrame);
     }
 
-    // Start continuous ticker loop
-    requestAnimationFrame(renderFrame);
+    // Scroll & Resize Event Handling
+    let isTicking = false;
+    function handleScrollOrResize() {
+        if (!isTicking) {
+            requestAnimationFrame(() => {
+                updateOrbitStage();
+                isTicking = false;
+            });
+            isTicking = true;
+        }
+    }
+
+    window.addEventListener("scroll", handleScrollOrResize, { passive: true });
+    window.addEventListener("resize", handleScrollOrResize, { passive: true });
+
+    // Initial render call
+    updateOrbitStage();
 }
 
 /* Toggle Flip card state */
@@ -395,8 +393,8 @@ function scrollToSpeaker(index) {
     const absoluteTop = window.pageYOffset + wrapperRect.top;
     const totalScrollable = scrollWrapper.clientHeight - window.innerHeight;
 
-    const startProgress = index * 0.08;
-    const targetProgress = startProgress + 0.06;
+    const startProgress = index * 0.10;
+    const targetProgress = Math.min(1, startProgress + 0.06);
     const targetScroll = absoluteTop + targetProgress * totalScrollable;
 
     window.scrollTo({
