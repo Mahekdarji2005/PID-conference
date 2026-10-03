@@ -83,9 +83,7 @@ const speakersData = expertSpeakersData;
 const yOrganicOffsets = [-15, 18, -12, 22, -18, 12, -24, 10];
 
 // Global state variables
-let autoRotateAngle = 0;
 let activeFlippedIndex = -1;
-let isAnimationTickerActive = false;
 
 document.addEventListener("DOMContentLoaded", () => {
     measureNavbar();

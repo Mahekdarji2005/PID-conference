@@ -3,14 +3,6 @@
    ========================================================================== */
 
 :root {
-    --primary-color: #0d2836;
-    --accent-color: #b54728;
-    --text-main: #333;
-    --text-light: #666;
-    --bg-light: #f5f3ef;
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
-    
     /* Dynamically measured navbar height default fallback */
     --navbar-height: 110px;
 }
@@ -119,14 +111,6 @@ body.speakers-page .logo-img {
     width: 2px;
     height: 42px;
     background: linear-gradient(to bottom, var(--accent-color), transparent);
-    animation: scrollLineAnim 2s infinite ease-in-out;
-}
-
-@keyframes scrollLineAnim {
-    0% { transform: scaleY(0); transform-origin: top; }
-    50% { transform: scaleY(1); transform-origin: top; }
-    51% { transform: scaleY(1); transform-origin: bottom; }
-    100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
 /* --------------------------------------------------------------------------
@@ -135,7 +119,7 @@ body.speakers-page .logo-img {
 .speakers-scroll-wrapper {
     position: relative;
     width: 100%;
-    /* Outer container height set dynamically in JS (~500vh) */
+    margin-bottom: 2.5rem;
 }
 
 .speakers-sticky-stage {
@@ -143,8 +127,8 @@ body.speakers-page .logo-img {
     top: var(--navbar-height);
     height: calc(100dvh - var(--navbar-height));
     width: 100%;
-    overflow: hidden;
-    background-color: var(--bg-light);
+    overflow: visible;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -533,7 +517,7 @@ body.speakers-page .logo-img {
    -------------------------------------------------------------------------- */
 .final-overview-section {
     padding: 6rem 4% 8rem 4%;
-    background-color: var(--bg-light);
+    background: transparent;
     position: relative;
     z-index: 10;
     border-top: 1px solid rgba(13, 40, 54, 0.08);
@@ -710,6 +694,7 @@ body.speakers-page .logo-img {
         margin-left: -95px;
         margin-top: -135px;
     }
+
     .cutout-wrapper {
         height: 200px;
     }
@@ -719,6 +704,7 @@ body.speakers-page .logo-img {
     .right-progress-nav {
         right: 1rem;
     }
+
     .progress-track-line {
         height: 100px;
     }
@@ -729,21 +715,27 @@ body.speakers-page .logo-img {
         min-height: calc(100dvh - var(--navbar-height));
         padding: 3rem 1.2rem;
     }
+
     .right-progress-nav {
-        display: none; /* Hide side nav on small mobile */
+        display: none;
+        /* Hide side nav on small mobile */
     }
+
     .central-title {
         font-size: 3.2rem;
     }
+
     .speaker-orbit-item {
         width: 160px;
         height: 240px;
         margin-left: -80px;
         margin-top: -120px;
     }
+
     .cutout-wrapper {
         height: 170px;
     }
+
     .speaker-name-tag {
         font-size: 0.75rem;
         padding: 4px 10px;
@@ -752,12 +744,14 @@ body.speakers-page .logo-img {
     .final-card-name {
         font-size: 0.95rem;
     }
+
     .final-card-role {
         font-size: 0.72rem;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .speaker-card-flipper,
     .speaker-orbit-item,
     .card-front {
@@ -852,9 +846,9 @@ body.speakers-page .logo-img {
     padding: 0;
     overflow: hidden;
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
-                opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1),
-                filter 0.6s cubic-bezier(0.25, 1, 0.5, 1),
-                box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+        filter 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+        box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     user-select: none;
     will-change: transform, opacity;
 }
@@ -948,8 +942,13 @@ body.speakers-page .logo-img {
     z-index: 20;
 }
 
-.carousel-nav-btn.prev-btn { left: -15px; }
-.carousel-nav-btn.next-btn { right: -15px; }
+.carousel-nav-btn.prev-btn {
+    left: -15px;
+}
+
+.carousel-nav-btn.next-btn {
+    right: -15px;
+}
 
 .carousel-nav-btn:hover {
     background: var(--accent-color);
@@ -1048,8 +1047,13 @@ body.speakers-page .logo-img {
         font-size: 0.95rem;
     }
 
-    .carousel-nav-btn.prev-btn { left: 0; }
-    .carousel-nav-btn.next-btn { right: 0; }
+    .carousel-nav-btn.prev-btn {
+        left: 0;
+    }
+
+    .carousel-nav-btn.next-btn {
+        right: 0;
+    }
 }
 
 @media (max-width: 480px) {
