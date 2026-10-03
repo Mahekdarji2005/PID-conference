@@ -5,63 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Call for Papers - DISHA 2027</title>
     <link rel="stylesheet" href="style.css">
-<<<<<<< Updated upstream
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .page-section {
-            padding: 120px 5% 80px 5%;
-            background-color: #fcfbf9;
-            color: #333;
-            font-family: 'Inter', sans-serif;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--accent-color, #c09040);
-        }
-        .page-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .page-title {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color, #002060);
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            color: #903020;
-            font-size: 1.6rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        .content-text {
-            line-height: 1.7;
-            color: #444;
-            font-size: 1.05rem;
-        }
-        .guidelines-list {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin-top: 15px;
-            line-height: 1.7;
-            color: #444;
-        }
-        .guidelines-list li {
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
-
-=======
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -127,8 +70,6 @@
             margin-right: auto;
         }
 
-
-
         .btn-cta-primary {
             display: inline-flex;
             align-items: center;
@@ -151,7 +92,7 @@
             background-color: #9c3b20;
         }
 
-        /* 2. Two Calls Section */
+        /* Two Calls Section */
         .calls-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -254,7 +195,7 @@
             transform: translateY(-2px);
         }
 
-        /* 3. Guidelines Section */
+        /* Guidelines Section */
         .guidelines-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -299,185 +240,7 @@
             line-height: 1.6;
         }
 
-        /* 4. Research Tracks Section */
-        .tracks-compact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin-top: 35px;
-        }
-
-        .track-compact-card {
-            background: #ffffff;
-            border-radius: 14px;
-            padding: 30px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .track-compact-card:hover {
-            border-color: var(--accent-color);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        .track-num {
-            font-family: var(--font-heading);
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--accent-color);
-            margin-bottom: 12px;
-            opacity: 0.85;
-        }
-
-        .track-name {
-            font-family: var(--font-heading);
-            font-size: 1.25rem;
-            color: var(--primary-color);
-            font-weight: 600;
-            line-height: 1.35;
-            margin-bottom: 12px;
-        }
-
-        .track-host-tag {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            font-style: italic;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .track-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--accent-color);
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-decoration: none;
-            letter-spacing: 0.5px;
-            transition: gap 0.2s ease;
-        }
-
-        .track-link:hover {
-            gap: 12px;
-        }
-
-        /* 5. Deadlines Timeline System */
-        .dates-tree {
-            position: relative;
-            max-width: 850px;
-            margin: 40px auto 0;
-            padding: 20px 0;
-        }
-
-        .dates-tree::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 3px;
-            background: var(--accent-color);
-            transform: translateX(-50%);
-            border-radius: 2px;
-            z-index: 1;
-        }
-
-        .date-node {
-            position: relative;
-            margin-bottom: 45px;
-            min-height: 65px;
-            display: flex;
-            align-items: center;
-            z-index: 2;
-        }
-
-        .date-node:last-child {
-            margin-bottom: 0;
-        }
-
-        .node-branch {
-            position: absolute;
-            top: 50%;
-            height: 2px;
-            background: var(--accent-color);
-            transform: translateY(-50%);
-            z-index: 2;
-        }
-
-        .node-dot {
-            position: absolute;
-            top: 50%;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background: #ffffff;
-            border: 3.5px solid var(--accent-color);
-            box-shadow: 0 0 0 4px rgba(181, 71, 40, 0.15);
-            transition: all 0.3s ease;
-            z-index: 3;
-        }
-
-        .date-node.left .node-branch {
-            right: 50%;
-            width: 45px;
-        }
-
-        .date-node.left .node-dot {
-            right: calc(50% + 45px);
-            transform: translate(50%, -50%);
-        }
-
-        .date-node.left .node-content {
-            margin-right: calc(50% + 65px);
-            margin-left: auto;
-            max-width: 340px;
-            text-align: right;
-        }
-
-        .date-node.right .node-branch {
-            left: 50%;
-            width: 45px;
-        }
-
-        .date-node.right .node-dot {
-            left: calc(50% + 45px);
-            transform: translate(-50%, -50%);
-        }
-
-        .date-node.right .node-content {
-            margin-left: calc(50% + 65px);
-            margin-right: auto;
-            max-width: 340px;
-            text-align: left;
-        }
-
-        .node-date {
-            font-size: 0.95rem;
-            color: var(--accent-color);
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-        }
-
-        .node-event {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            font-weight: 600;
-            font-family: var(--font-heading);
-            line-height: 1.3;
-        }
-
-        /* 6. Workflow Process Section */
+        /* Workflow Process Section */
         .process-steps {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -516,7 +279,7 @@
             line-height: 1.5;
         }
 
-        /* 7. Publication Section */
+        /* Publication Section */
         .publication-box {
             background: #ffffff;
             border-radius: 16px;
@@ -573,90 +336,7 @@
             font-weight: 500;
         }
 
-        /* 8. Registration Fees Table */
-        .fees-card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            margin-top: 30px;
-            border-top: 4px solid var(--primary-color);
-        }
-
-        .table-responsive {
-            overflow-x: auto;
-            margin-bottom: 30px;
-        }
-
-        .fees-table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-        }
-
-        .fees-table th {
-            background: #f8f6f2;
-            color: var(--primary-color);
-            font-family: var(--font-heading);
-            font-size: 1.05rem;
-            font-weight: 700;
-            padding: 16px 20px;
-            border-bottom: 2px solid var(--accent-color);
-        }
-
-        .fees-table td {
-            padding: 16px 20px;
-            border-bottom: 1px solid #eee;
-            font-size: 0.98rem;
-            color: var(--text-main);
-        }
-
-        .fees-table tr:hover td {
-            background: #faf8f5;
-        }
-
-        .fee-inclusions {
-            background: #f8f7f4;
-            padding: 24px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-
-        .fee-inclusions-title {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-
-        .fee-inclusions-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px 30px;
-            list-style: none;
-        }
-
-        .fee-inclusions-list li {
-            font-size: 0.92rem;
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .fee-inclusions-list li i {
-            color: var(--accent-color);
-        }
-
-        .fee-notes {
-            font-size: 0.88rem;
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* 9. Final CTA */
+        /* Final CTA */
         .cta-final-box {
             background: linear-gradient(135deg, var(--primary-color) 0%, #153a4d 100%);
             border-radius: 20px;
@@ -731,53 +411,17 @@
             .pub-list { grid-template-columns: 1fr; }
             .cta-final-title { font-size: 2.2rem; }
             .cta-buttons-group { flex-direction: column; align-items: stretch; }
-
-            .dates-tree::before {
-                left: 20px;
-                transform: none;
-            }
-
-            .date-node.left .node-branch,
-            .date-node.right .node-branch {
-                left: 20px;
-                right: auto;
-                width: 30px;
-            }
-
-            .date-node.left .node-dot,
-            .date-node.right .node-dot {
-                left: 50px;
-                right: auto;
-                transform: translate(-50%, -50%);
-            }
-
-            .date-node.left .node-content,
-            .date-node.right .node-content {
-                margin-left: 68px;
-                margin-right: 0;
-                max-width: calc(100% - 75px);
-                text-align: left;
-            }
         }
     </style>
 </head>
 <body>
->>>>>>> Stashed changes
     <nav class="navbar">
         <div class="logo">
             <a href="index.html" style="display: flex; gap: inherit;">
-                <img src="images.jpg" alt="Parul Institute of Design Logo" class="logo-img">
-                <img src="PU logo.png" alt="Parul University Logo" class="logo-img">
+                <img src="logo/Design logo.jpg" alt="Parul Institute of Design Logo" class="logo-img">
+                <img src="logo/PU logo.png" alt="Parul University Logo" class="logo-img">
             </a>
         </div>
-<<<<<<< Updated upstream
-        <ul class="nav-links">
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="tracks.html">Tracks & Panels</a></li>
-            <li><a href="speakers.html">The Hosts</a></li>
-            <li><a href="important-dates.html">Important Dates</a></li>
-            <li><a href="#">Venue</a></li>
-=======
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars"></i>
         </button>
@@ -788,48 +432,18 @@
             <li><a href="hosts.html">The Hosts</a></li>
             <li><a href="important-dates.html">Important Dates</a></li>
             <li><a href="venue.html">Venue</a></li>
->>>>>>> Stashed changes
             <li><a href="call-for-papers.html" class="active">Call for Papers</a></li>
             <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="right-logos">
-            <img src="Cumulus logo.jpg" alt="Cumulus Association Logo" class="logo-img">
+            <a href="https://cumulusassociation.org/" target="_blank" rel="noopener noreferrer" title="Cumulus Association">
+                <img src="logo/Cumulus logo.jpg" alt="Cumulus Association Logo" class="logo-img">
+            </a>
         </div>
     </nav>
 
-<<<<<<< Updated upstream
-    <section class="page-section">
-        <div class="container">
-            <div class="page-header">
-                <h1 class="page-title">Two calls, one conference</h1>
-            </div>
-
-            <h2 class="section-title">Call for Papers</h2>
-            <p class="content-text">
-                For academics, research scholars and doctoral candidates. Abstracts are allocated to one track and reviewed double blind. Accepted papers are presented in parallel sessions and considered for publication.
-            </p>
-
-            <h2 class="section-title">Call for Proposals</h2>
-            <p class="content-text">
-                For professional designers, artists and educators, postgraduate students and staff. Proposals may take the form of workshops, demonstrations, exhibitions, performances or posters.
-            </p>
-
-            <h2 class="section-title">Submission guidelines</h2>
-            <ul class="guidelines-list">
-                <li>Abstracts of up to 250 words, with five keywords, allocated to a single track and sub theme.</li>
-                <li>Abstract title limited to 20 words. Submissions in English.</li>
-                <li>Full papers up to 5,000 words in the conference template, Times New Roman 12 point, references single spaced.</li>
-                <li>Similarity below 10 per cent. Work must be original and not previously published or accepted elsewhere.</li>
-                <li>At least one author must register for a paper to be presented and considered for publication.</li>
-                <li>No change of title, abstract or authorship is permitted after the submission deadline.</li>
-            </ul>
-        </div>
-    </section>
-
-=======
-
-    <!-- 2. TWO CALLS SECTION -->
+    <!-- TWO CALLS SECTION -->
     <section class="cfp-section" id="two-calls">
         <div class="cfp-container">
             <div class="section-header">
@@ -879,7 +493,7 @@
         </div>
     </section>
 
-    <!-- 3. SUBMISSION GUIDELINES -->
+    <!-- SUBMISSION GUIDELINES -->
     <section class="cfp-section" id="guidelines">
         <div class="cfp-container">
             <div class="section-header">
@@ -933,7 +547,7 @@
         </div>
     </section>
 
-    <!-- 4. SUBMISSION WORKFLOW -->
+    <!-- SUBMISSION WORKFLOW -->
     <section class="cfp-section" id="process">
         <div class="cfp-container">
             <div class="section-header">
@@ -982,7 +596,7 @@
         </div>
     </section>
 
-    <!-- 5. PUBLICATION SECTION -->
+    <!-- PUBLICATION SECTION -->
     <section class="cfp-section" id="publication">
         <div class="cfp-container">
             <div class="section-header">
@@ -1027,7 +641,7 @@
         </div>
     </section>
 
-    <!-- 9. FINAL CTA SECTION -->
+    <!-- FINAL CTA SECTION -->
     <section class="cfp-section" id="submit-portal" style="padding-bottom: 100px;">
         <div class="cfp-container">
             <div class="cta-final-box">
@@ -1056,8 +670,8 @@
         <div class="footer-container">
             <div class="footer-column">
                 <div class="footer-logo">
-                    <img src="images.jpg" alt="Parul Institute of Design">
-                    <img src="PU logo.png" alt="Parul University">
+                    <img src="logo/Design logo.jpg" alt="Parul Institute of Design">
+                    <img src="logo/PU logo.png" alt="Parul University">
                 </div>
                 <p class="footer-about">
                     DISHA 2027 reframes the conversation around sustainability, creativity and civilisational knowledge, 
@@ -1079,6 +693,7 @@
                     <li><a href="speakers.html"><i class="fa-solid fa-angle-right"></i> Speakers</a></li>
                     <li><a href="hosts.html"><i class="fa-solid fa-angle-right"></i> The Hosts</a></li>
                     <li><a href="important-dates.html"><i class="fa-solid fa-angle-right"></i> Important Dates</a></li>
+                    <li><a href="venue.html"><i class="fa-solid fa-angle-right"></i> Venue</a></li>
                     <li><a href="call-for-papers.html"><i class="fa-solid fa-angle-right"></i> Call for Papers</a></li>
                 </ul>
             </div>
@@ -1107,6 +722,5 @@
             }
         });
     </script>
->>>>>>> Stashed changes
 </body>
 </html>

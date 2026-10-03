@@ -5,18 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Important Dates - DISHA 2027</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .dates-section {
-            padding: 100px 5%;
-<<<<<<< Updated upstream
-            background-color: #f7f6f2;
-            background-image: radial-gradient(#e0ded8 1px, transparent 1px);
-            background-size: 20px 20px;
-=======
+            padding: 80px 5% 100px;
             background: transparent;
->>>>>>> Stashed changes
             min-height: calc(100vh - 400px);
             display: flex;
             align-items: center;
@@ -25,17 +19,6 @@
             max-width: 900px;
             margin: 0 auto;
             width: 100%;
-<<<<<<< Updated upstream
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 60px;
-            border-radius: 16px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.05), 0 0 0 1px rgba(0,0,0,0.05);
-            border-top: 5px solid #a83c27;
-        }
-        .dates-header {
-            margin-bottom: 50px;
-=======
             background: transparent;
             backdrop-filter: none;
             padding: 20px 0;
@@ -44,7 +27,6 @@
         }
         .dates-header {
             margin-bottom: 60px;
->>>>>>> Stashed changes
             text-align: center;
         }
         .dates-header .section-tag {
@@ -82,30 +64,6 @@
             border-radius: 2px;
         }
         
-<<<<<<< Updated upstream
-        .timeline {
-            position: relative;
-            max-width: 700px;
-            margin: 0 auto;
-            padding-left: 30px;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 10px;
-            bottom: 10px;
-            width: 2px;
-            background: linear-gradient(to bottom, #a83c27, #002f4b);
-            border-radius: 2px;
-        }
-        .timeline-item {
-            position: relative;
-            margin-bottom: 35px;
-            padding-left: 40px;
-            opacity: 0;
-            animation: fadeIn 0.6s ease forwards;
-=======
         /* Tree Timeline Container */
         .timeline {
             position: relative;
@@ -137,7 +95,6 @@
             opacity: 0;
             animation: fadeIn 0.6s ease forwards;
             z-index: 2;
->>>>>>> Stashed changes
         }
         .timeline-item:nth-child(1) { animation-delay: 0.1s; }
         .timeline-item:nth-child(2) { animation-delay: 0.2s; }
@@ -149,80 +106,6 @@
         .timeline-item:last-child {
             margin-bottom: 0;
         }
-<<<<<<< Updated upstream
-        .timeline-dot {
-            position: absolute;
-            left: -37px;
-            top: 15px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: #fff;
-            border: 3px solid #a83c27;
-            box-shadow: 0 0 0 4px rgba(168, 60, 39, 0.1);
-            transition: all 0.3s ease;
-            z-index: 2;
-        }
-        .timeline-item:hover .timeline-dot {
-            background: #a83c27;
-            transform: scale(1.2);
-            box-shadow: 0 0 0 6px rgba(168, 60, 39, 0.2);
-        }
-        .timeline-content {
-            background: #fff;
-            padding: 20px 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-            border: 1px solid #f0f0f0;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        .timeline-item:hover .timeline-content {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border-color: #e0ded8;
-        }
-        .timeline-date {
-            font-size: 0.95rem;
-            color: #a83c27;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
-        .timeline-event {
-            font-size: 1.25rem;
-            color: #002f4b;
-            font-weight: 500;
-            font-family: var(--font-heading);
-        }
-        
-        /* Highlight for Conference */
-        .timeline-item.highlight .timeline-dot {
-            border-color: #002f4b;
-            box-shadow: 0 0 0 4px rgba(0, 47, 75, 0.1);
-        }
-        .timeline-item.highlight:hover .timeline-dot {
-            background: #002f4b;
-            box-shadow: 0 0 0 6px rgba(0, 47, 75, 0.2);
-        }
-        .timeline-item.highlight .timeline-content {
-            background: var(--primary-color);
-            border: none;
-            color: #fff;
-        }
-        .timeline-item.highlight .timeline-date {
-            color: #d4af37; /* Gold accent */
-        }
-        .timeline-item.highlight .timeline-event {
-            color: #fff;
-            font-size: 1.5rem;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateX(-20px); }
-            to { opacity: 1; transform: translateX(0); }
-=======
         
         /* Horizontal Branch Line */
         .branch-line {
@@ -363,7 +246,6 @@
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
->>>>>>> Stashed changes
         }
     </style>
 </head>
@@ -371,112 +253,90 @@
     <nav class="navbar">
         <div class="logo">
             <a href="index.html" style="display: flex; gap: inherit;">
-                <img src="images.jpg" alt="Parul Institute of Design Logo" class="logo-img">
-                <img src="PU logo.png" alt="Parul University Logo" class="logo-img">
+                <img src="logo/Design logo.jpg" alt="Parul Institute of Design Logo" class="logo-img">
+                <img src="logo/PU logo.png" alt="Parul University Logo" class="logo-img">
             </a>
         </div>
-        <ul class="nav-links">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html#about">About</a></li>
             <li><a href="tracks.html">Tracks & Panels</a></li>
-            <li><a href="speakers.html">The Hosts</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="hosts.html">The Hosts</a></li>
             <li><a href="important-dates.html" class="active">Important Dates</a></li>
-<<<<<<< Updated upstream
-            <li><a href="#">Venue</a></li>
-=======
             <li><a href="venue.html">Venue</a></li>
->>>>>>> Stashed changes
             <li><a href="call-for-papers.html">Call for Papers</a></li>
             <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="right-logos">
-            <img src="Cumulus logo.jpg" alt="Cumulus Association Logo" class="logo-img">
+            <a href="https://cumulusassociation.org/" target="_blank" rel="noopener noreferrer" title="Cumulus Association">
+                <img src="logo/Cumulus logo.jpg" alt="Cumulus Association Logo" class="logo-img">
+            </a>
         </div>
     </nav>
 
     <section class="dates-section">
         <div class="dates-container">
             <div class="dates-header">
-                <span class="section-tag" style="color:var(--accent-color); font-weight:600; letter-spacing:2px; text-transform:uppercase; font-size:0.85rem;">CONFERENCE TIMELINE</span>
+                <span class="section-tag">CONFERENCE TIMELINE</span>
                 <h1 class="dates-title">Important Dates</h1>
             </div>
             
-<<<<<<< Updated upstream
-            <div class="timeline">
-                <div class="timeline-item">
-=======
             <div class="timeline" id="timeline">
                 <div class="timeline-item left">
                     <div class="branch-line"></div>
->>>>>>> Stashed changes
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">31 October 2026</div>
                         <div class="timeline-event">Abstract submission, both calls</div>
                     </div>
                 </div>
-<<<<<<< Updated upstream
-                <div class="timeline-item">
-=======
+
                 <div class="timeline-item right">
                     <div class="branch-line"></div>
->>>>>>> Stashed changes
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">15 November 2026</div>
                         <div class="timeline-event">Notification of acceptance</div>
                     </div>
                 </div>
-<<<<<<< Updated upstream
-                <div class="timeline-item">
-=======
+
                 <div class="timeline-item left">
                     <div class="branch-line"></div>
->>>>>>> Stashed changes
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">1 Nov to 31 Dec 2026</div>
                         <div class="timeline-event">Registration window</div>
                     </div>
                 </div>
-<<<<<<< Updated upstream
-                <div class="timeline-item">
-=======
+
                 <div class="timeline-item right">
                     <div class="branch-line"></div>
->>>>>>> Stashed changes
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">31 December 2026</div>
                         <div class="timeline-event">Full paper submission</div>
                     </div>
                 </div>
-<<<<<<< Updated upstream
-                <div class="timeline-item">
-=======
+
                 <div class="timeline-item left">
                     <div class="branch-line"></div>
->>>>>>> Stashed changes
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">31 December 2026</div>
                         <div class="timeline-event">Poster, proposal and final materials</div>
                     </div>
                 </div>
-<<<<<<< Updated upstream
-                <div class="timeline-item highlight">
-                    <div class="timeline-dot highlight-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date highlight-date">22 and 23 January 2027</div>
-                        <div class="timeline-event highlight-event">Conference</div>
-=======
+
                 <div class="timeline-item right">
                     <div class="branch-line"></div>
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">22 and 23 January 2027</div>
                         <div class="timeline-event">Conference</div>
->>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
@@ -487,8 +347,8 @@
         <div class="footer-container">
             <div class="footer-column">
                 <div class="footer-logo">
-                    <img src="images.jpg" alt="Parul Institute of Design">
-                    <img src="PU logo.png" alt="Parul University">
+                    <img src="logo/Design logo.jpg" alt="Parul Institute of Design">
+                    <img src="logo/PU logo.png" alt="Parul University">
                 </div>
                 <p class="footer-about">
                     DISHA 2027 reframes the conversation around sustainability, creativity and civilisational knowledge, 
@@ -507,15 +367,11 @@
                 <ul class="footer-links">
                     <li><a href="index.html#about"><i class="fa-solid fa-angle-right"></i> About DISHA</a></li>
                     <li><a href="tracks.html"><i class="fa-solid fa-angle-right"></i> Tracks & Panels</a></li>
-<<<<<<< Updated upstream
-                    <li><a href="speakers.html"><i class="fa-solid fa-angle-right"></i> The Hosts</a></li>
-                    <li><a href="#"><i class="fa-solid fa-angle-right"></i> Call for Papers</a></li>
-=======
                     <li><a href="speakers.html"><i class="fa-solid fa-angle-right"></i> Speakers</a></li>
                     <li><a href="hosts.html"><i class="fa-solid fa-angle-right"></i> The Hosts</a></li>
                     <li><a href="important-dates.html"><i class="fa-solid fa-angle-right"></i> Important Dates</a></li>
+                    <li><a href="venue.html"><i class="fa-solid fa-angle-right"></i> Venue</a></li>
                     <li><a href="call-for-papers.html"><i class="fa-solid fa-angle-right"></i> Call for Papers</a></li>
->>>>>>> Stashed changes
                 </ul>
             </div>
             
@@ -532,8 +388,6 @@
         </div>
     </footer>
 
-<<<<<<< Updated upstream
-=======
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const navToggle = document.getElementById('navToggle');
@@ -545,8 +399,5 @@
             }
         });
     </script>
->>>>>>> Stashed changes
 </body>
 </html>
-
-

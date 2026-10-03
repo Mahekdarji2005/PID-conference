@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DISHA 2027 | Parul University</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-page-container {
+            padding: 3.5rem 5% 6rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .contact-hero {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .contact-hero .section-tag {
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent-color, #0d9488);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            font-family: var(--font-body);
+            display: inline-block;
+            background: rgba(13, 148, 136, 0.08);
+            padding: 6px 18px;
+            border-radius: 30px;
+        }
+
+        .contact-hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            color: var(--primary-color, #0f2c3d);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .contact-hero p {
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            color: #556975;
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            margin-bottom: 4rem;
+        }
+
+        .contact-section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            color: var(--primary-color, #0f2c3d);
+            font-weight: 700;
+            display: inline-block;
+            position: relative;
+        }
+
+        .contact-section-title::after {
+            content: '';
+            display: block;
+            width: 44px;
+            height: 3px;
+            background-color: var(--accent-color, #0d9488);
+            margin: 0.6rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* Conveners Cards Grid */
+        .conveners-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .convener-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 30px rgba(13, 40, 54, 0.06);
+            border: 1px solid rgba(13, 40, 54, 0.08);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .convener-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(13, 40, 54, 0.12);
+        }
+
+        .convener-avatar-circle {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(13, 148, 136, 0.1);
+            color: var(--accent-color, #0d9488);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            border: 2px solid rgba(13, 148, 136, 0.2);
+        }
+
+        .convener-role-badge {
+            display: inline-block;
+            background: var(--accent-color, #0d9488);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 0.35rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 0.85rem;
+        }
+
+        .convener-name {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--primary-color, #0f2c3d);
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+
+        .convener-dept {
+            font-size: 0.92rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .contact-detail-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .contact-link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.65rem;
+            background: #f8fafc;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(13, 40, 54, 0.06);
+            color: var(--primary-color, #0f2c3d);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            word-break: break-all;
+            transition: all 0.25s ease;
+        }
+
+        .contact-link-item i {
+            color: var(--accent-color, #0d9488);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-link-item:hover {
+            background: var(--primary-color, #0f2c3d);
+            color: #ffffff;
+            border-color: var(--primary-color, #0f2c3d);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(13, 40, 54, 0.15);
+        }
+
+        .contact-link-item:hover i {
+            color: #ffffff;
+        }
+
+        /* Conference Desk Section */
+        .desk-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(13, 40, 54, 0.05);
+            border: 1px dashed rgba(13, 148, 136, 0.3);
+            background-color: #fafdfd;
+        }
+
+        .desk-icon {
+            font-size: 2.2rem;
+            color: var(--accent-color, #0d9488);
+            margin-bottom: 1rem;
+        }
+
+        .desk-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--primary-color, #0f2c3d);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .desk-status {
+            font-size: 0.95rem;
+            color: #64748b;
+            font-style: italic;
+            background: #f1f5f9;
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            margin-top: 0.5rem;
+        }
+
+        /* Cumulus Section */
+        .cumulus-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(13, 40, 54, 0.05);
+            border: 1px solid rgba(13, 40, 54, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cumulus-logo-wrap {
+            margin-bottom: 1.2rem;
+        }
+
+        .cumulus-logo-wrap img {
+            max-height: 56px;
+            width: auto;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+
+        .cumulus-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--accent-color, #0d9488);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            padding: 0.6rem 1.4rem;
+            border-radius: 30px;
+            border: 1px solid rgba(13, 148, 136, 0.25);
+            transition: all 0.25s ease;
+        }
+
+        .cumulus-link:hover {
+            background: var(--accent-color, #0d9488);
+            color: #ffffff;
+            box-shadow: 0 6px 18px rgba(13, 148, 136, 0.25);
+            transform: translateY(-2px);
+        }
+
+        /* Conference Alignment Banner */
+        .alignment-banner {
+            background: linear-gradient(135deg, var(--primary-color, #0f2c3d) 0%, #1a4358 100%);
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 2.5rem 2.5rem;
+            max-width: 960px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 14px 35px rgba(15, 44, 61, 0.18);
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid var(--accent-color, #0d9488);
+        }
+
+        .alignment-banner p {
+            font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+            line-height: 1.7;
+            font-weight: 400;
+            margin: 0;
+            color: #f0f4f8;
+            font-family: var(--font-heading);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .conveners-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .contact-page-container {
+                padding: 2.5rem 4% 4rem;
+            }
+
+            .alignment-banner {
+                padding: 1.8rem 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="display: flex; gap: inherit;">
+                <img src="logo/Design logo.jpg" alt="Parul Institute of Design Logo" class="logo-img">
+                <img src="logo/PU logo.png" alt="Parul University Logo" class="logo-img">
+            </a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="tracks.html">Tracks & Panels</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="hosts.html">The Hosts</a></li>
+            <li><a href="important-dates.html">Important Dates</a></li>
+            <li><a href="venue.html">Venue</a></li>
+            <li><a href="call-for-papers.html">Call for Papers</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="right-logos">
+            <a href="https://cumulusassociation.org/" target="_blank" rel="noopener noreferrer" title="Cumulus Association">
+                <img src="logo/Cumulus logo.jpg" alt="Cumulus Association Logo" class="logo-img">
+            </a>
+        </div>
+    </nav>
+
+    <div class="contact-page-container">
+
+        <!-- Hero Section -->
+        <header class="contact-hero">
+            <span class="section-tag">DISHA 2027 &middot; INTERNATIONAL CONFERENCE</span>
+            <h1>GET IN TOUCH</h1>
+            <p>For conference enquiries, submissions, and general information, please contact the conference conveners or the conference desk.</p>
+        </header>
+
+        <!-- 01 — Conference Conveners -->
+        <section class="contact-section">
+            <div class="contact-section-header">
+                <h2 class="contact-section-title">Conference Conveners</h2>
+            </div>
+            <div class="conveners-grid">
+
+                <!-- Convener 1 -->
+                <div class="convener-card">
+                    <div class="convener-avatar-circle">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span class="convener-role-badge">CONVENER</span>
+                    <h3 class="convener-name">Ms. Dhara Vinod Parmar</h3>
+                    <p class="convener-dept">Parul Institute of Design</p>
+                    <div class="contact-detail-list">
+                        <a href="mailto:dhara.parmar89031@paruluniversity.ac.in" class="contact-link-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>dhara.parmar89031@paruluniversity.ac.in</span>
+                        </a>
+                        <a href="tel:9687560244" class="contact-link-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 9687560244</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Convener 2 -->
+                <div class="convener-card">
+                    <div class="convener-avatar-circle">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span class="convener-role-badge">CONVENER</span>
+                    <h3 class="convener-name">Mr. Anand Bhargava</h3>
+                    <p class="convener-dept">Parul Institute of Design</p>
+                    <div class="contact-detail-list">
+                        <a href="mailto:anand.bhargava34569@paruluniversity.ac.in" class="contact-link-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>anand.bhargava34569@paruluniversity.ac.in</span>
+                        </a>
+                        <a href="tel:9873257320" class="contact-link-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 9873257320</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 02 — Conference Desk -->
+        <section class="contact-section">
+            <div class="contact-section-header">
+                <h2 class="contact-section-title">Conference Desk</h2>
+            </div>
+            <div class="desk-card">
+                <div class="desk-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <h3 class="desk-title">Conference Desk</h3>
+                <span class="desk-status"><i class="fa-regular fa-clock"></i> Conference email and website to be inserted later.</span>
+            </div>
+        </section>
+
+        <!-- 03 — Cumulus Association -->
+        <section class="contact-section">
+            <div class="contact-section-header">
+                <h2 class="contact-section-title">Cumulus Association</h2>
+            </div>
+            <div class="cumulus-card">
+                <div class="cumulus-logo-wrap">
+                    <img src="logo/Cumulus logo.jpg" alt="Cumulus Association Logo">
+                </div>
+                <a href="https://cumulusassociation.org/" target="_blank" rel="noopener noreferrer" class="cumulus-link">
+                    <i class="fa-solid fa-globe"></i> cumulusassociation.org
+                </a>
+            </div>
+        </section>
+
+        <!-- 04 — Conference Alignment -->
+        <section class="contact-section">
+            <div class="alignment-banner">
+                <p>
+                    DISHA 2027 is endorsed by the Cumulus Association and aligned with Viksit Bharat 2047, the seventeen United Nations Sustainable Development Goals and the G20 agenda.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column footer-about-col">
+                <div class="footer-logo">
+                    <img src="logo/Design logo.jpg" alt="Parul Institute of Design Logo" class="footer-logo-img">
+                    <img src="logo/PU logo.png" alt="Parul University Logo" class="footer-logo-img">
+                </div>
+                <p class="footer-about">
+                    DISHA 2027 reframes the conversation around sustainability, creativity and civilisational knowledge, 
+                    convening experts across design, arts, and technology.
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html#about"><i class="fa-solid fa-angle-right"></i> About DISHA</a></li>
+                    <li><a href="tracks.html"><i class="fa-solid fa-angle-right"></i> Tracks &amp; Panels</a></li>
+                    <li><a href="speakers.html"><i class="fa-solid fa-angle-right"></i> Speakers</a></li>
+                    <li><a href="hosts.html"><i class="fa-solid fa-angle-right"></i> The Hosts</a></li>
+                    <li><a href="important-dates.html"><i class="fa-solid fa-angle-right"></i> Important Dates</a></li>
+                    <li><a href="venue.html"><i class="fa-solid fa-angle-right"></i> Venue</a></li>
+                    <li><a href="call-for-papers.html"><i class="fa-solid fa-angle-right"></i> Call for Papers</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-contact">
+                <h3 class="footer-title">Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> <span>Parul University, P.O. Limda, Ta. Waghodia, Vadodara, Gujarat, India - 391760</span></p>
+                <p><i class="fa-solid fa-phone"></i> <span>+91 2668 260 312</span></p>
+                <p><i class="fa-solid fa-envelope"></i> <span>info@paruluniversity.ac.in</span></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2027 DISHA Conference &middot; Parul University. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Designed and Developed by <a href="https://www.linkedin.com/in/mahek-darji" target="_blank" style="color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; font-weight: 500;">Mahek Darji <i class="fa-brands fa-linkedin"></i></a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

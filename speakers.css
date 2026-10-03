@@ -18,7 +18,7 @@
 /* Light Theme Body */
 body.speakers-page {
     background-color: var(--bg-light);
-    background-image: linear-gradient(rgba(245, 243, 239, 0.88), rgba(245, 243, 239, 0.94)), url('desgin building.jpg');
+    background-image: linear-gradient(rgba(245, 243, 239, 0.88), rgba(245, 243, 239, 0.94)), url('design/desgin building.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -576,25 +576,44 @@ body.speakers-page .logo-img {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3.5rem;
 }
 
-/* Row 1: Exactly 5 items */
-.grid-row-5 {
+.directory-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.directory-group-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+    padding-bottom: 0.6rem;
+    display: inline-block;
+}
+
+.directory-group-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+.directory-grid-auto {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 1.5rem;
     width: 100%;
 }
 
-/* Row 2: Exactly 4 items (Centered underneath top row) */
-.grid-row-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    width: 80%;
-    margin: 0 auto;
-}
 
 /* Final Speaker Card */
 .final-speaker-card {
@@ -685,9 +704,6 @@ body.speakers-page .logo-img {
    7. Responsive & Reduced Motion Adjustments
    -------------------------------------------------------------------------- */
 @media (max-width: 1100px) {
-    .grid-row-4 {
-        width: 90%;
-    }
     .speaker-orbit-item {
         width: 190px;
         height: 270px;
@@ -705,13 +721,6 @@ body.speakers-page .logo-img {
     }
     .progress-track-line {
         height: 100px;
-    }
-    .grid-row-5 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .grid-row-4 {
-        grid-template-columns: repeat(3, 1fr);
-        width: 100%;
     }
 }
 
@@ -739,12 +748,7 @@ body.speakers-page .logo-img {
         font-size: 0.75rem;
         padding: 4px 10px;
     }
-    .grid-row-5,
-    .grid-row-4 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        width: 100%;
-    }
+
     .final-card-name {
         font-size: 0.95rem;
     }
@@ -758,5 +762,304 @@ body.speakers-page .logo-img {
     .speaker-orbit-item,
     .card-front {
         transition: none !important;
+    }
+}
+
+/* ==========================================================================
+   Keynotes & Guest of Honour Perspective Carousel CSS
+   ========================================================================== */
+.keynotes-section {
+    padding: 4.5rem 4% 5rem;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.keynotes-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.keynotes-tag {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.keynotes-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 0 0 0.6rem 0;
+}
+
+.keynotes-title-accent {
+    width: 48px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* 3D Perspective Carousel Container */
+.perspective-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.perspective-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+}
+
+/* Perspective Cards */
+.perspective-card {
+    position: absolute;
+    width: clamp(230px, 22vw, 270px);
+    height: clamp(330px, 30vw, 385px);
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(13, 40, 54, 0.12);
+    border: 1px solid rgba(13, 40, 54, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+                filter 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+                box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    user-select: none;
+    will-change: transform, opacity;
+}
+
+.perspective-card.pos-center {
+    z-index: 10;
+    transform: translateX(0) translateZ(0) rotateY(0deg) scale(1);
+    opacity: 1;
+    filter: none;
+    border: 3.5px solid var(--accent-color);
+    box-shadow: 0 25px 55px rgba(181, 71, 40, 0.22);
+}
+
+/* Large Gap & Perspective Rotation matching reference image */
+.perspective-card.pos-left {
+    z-index: 5;
+    transform: translateX(-340px) translateZ(-100px) rotateY(38deg) scale(0.8);
+    opacity: 0.72;
+    filter: brightness(0.85);
+    cursor: pointer;
+}
+
+.perspective-card.pos-right {
+    z-index: 5;
+    transform: translateX(340px) translateZ(-100px) rotateY(-38deg) scale(0.8);
+    opacity: 0.72;
+    filter: brightness(0.85);
+    cursor: pointer;
+}
+
+.perspective-card.pos-left:hover,
+.perspective-card.pos-right:hover {
+    opacity: 0.95;
+    filter: brightness(0.95);
+}
+
+/* Card Photo / Frame */
+.card-photo-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(circle, #f0eae1 0%, #ded6cb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+/* Initials Fallback Avatar Container */
+.card-avatar-fallback {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0d2836 0%, #1e4963 100%);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.05em;
+}
+
+/* Navigation Buttons */
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid rgba(13, 40, 54, 0.12);
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    z-index: 20;
+}
+
+.carousel-nav-btn.prev-btn { left: -15px; }
+.carousel-nav-btn.next-btn { right: -15px; }
+
+.carousel-nav-btn:hover {
+    background: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Active Speaker Info Box */
+.keynote-details-box {
+    text-align: center;
+    max-width: 680px;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.keynote-role-badge {
+    display: inline-block;
+    background: var(--accent-color);
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.4rem 1.2rem;
+    border-radius: 30px;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-body);
+}
+
+.keynote-speaker-name {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.keynote-speaker-bio {
+    font-family: var(--font-body);
+    font-size: 0.96rem;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Carousel Pagination Dots */
+.carousel-dots-container {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1.6rem;
+}
+
+.dot-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(13, 40, 54, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.dot-btn.active {
+    width: 32px;
+    border-radius: 10px;
+    background: var(--accent-color);
+}
+
+/* Mobile Media Queries for Keynotes Carousel */
+@media (max-width: 768px) {
+    .keynotes-section {
+        padding: 3.5rem 4% 4rem;
+    }
+
+    .perspective-carousel-wrapper {
+        height: 310px;
+    }
+
+    .perspective-card.pos-left {
+        transform: translateX(-110px) translateZ(-40px) rotateY(18deg) scale(0.75);
+    }
+
+    .perspective-card.pos-right {
+        transform: translateX(110px) translateZ(-40px) rotateY(-18deg) scale(0.75);
+    }
+
+    .carousel-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+    }
+
+    .carousel-nav-btn.prev-btn { left: 0; }
+    .carousel-nav-btn.next-btn { right: 0; }
+}
+
+@media (max-width: 480px) {
+    .perspective-card.pos-left {
+        transform: translateX(-65px) scale(0.62);
+        opacity: 0.25;
+    }
+
+    .perspective-card.pos-right {
+        transform: translateX(65px) scale(0.62);
+        opacity: 0.25;
     }
 }

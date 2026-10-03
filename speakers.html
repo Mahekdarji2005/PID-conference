@@ -4,61 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hosts & Speakers - DISHA 2027 | Parul University</title>
-
-    <!-- Base and Custom Stylesheets -->
+    <title>Speakers - DISHA 2027 | Parul University</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="speakers.css">
-
-    <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script>
-        (function () {
-            const hash = window.location.hash;
-            if (hash.startsWith('#scroll')) {
-                const scrollVal = parseInt(hash.replace('#scroll', ''), 10);
-                window.addEventListener('DOMContentLoaded', function () {
-                    window.scrollTo(0, scrollVal);
-                    if (document.documentElement) document.documentElement.scrollTop = scrollVal;
-                    if (document.body) document.body.scrollTop = scrollVal;
-                });
-            }
-        })();
-    </script>
 </head>
 
-<body class="speakers-page">
+<body>
 
-    <!-- Existing Header Navigation -->
     <nav class="navbar">
         <div class="logo">
             <a href="index.html" style="display: flex; gap: inherit;">
-                <img src="images.jpg" alt="Parul Institute of Design Logo" class="logo-img">
-                <img src="PU logo.png" alt="Parul University Logo" class="logo-img">
+                <img src="logo/Design logo.jpg" alt="Parul Institute of Design Logo" class="logo-img">
+                <img src="logo/PU logo.png" alt="Parul University Logo" class="logo-img">
             </a>
         </div>
-        <ul class="nav-links">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html#about">About</a></li>
             <li><a href="tracks.html">Tracks & Panels</a></li>
-            <li><a href="speakers.html" class="active">The Hosts</a></li>
+            <li><a href="speakers.html" class="active">Speakers</a></li>
+            <li><a href="hosts.html">The Hosts</a></li>
             <li><a href="important-dates.html">Important Dates</a></li>
-<<<<<<< Updated upstream
-            <li><a href="#">Venue</a></li>
-=======
             <li><a href="venue.html">Venue</a></li>
->>>>>>> Stashed changes
             <li><a href="call-for-papers.html">Call for Papers</a></li>
             <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="right-logos">
-            <img src="Cumulus logo.jpg" alt="Cumulus Association Logo" class="logo-img">
+            <a href="https://cumulusassociation.org/" target="_blank" rel="noopener noreferrer" title="Cumulus Association">
+                <img src="logo/Cumulus logo.jpg" alt="Cumulus Association Logo" class="logo-img">
+            </a>
         </div>
     </nav>
 
@@ -72,6 +54,70 @@
         </div>
     </section>
 
+    <!-- Keynotes & Guest of Honour 3D Perspective Carousel Section -->
+    <section class="keynotes-section" id="keynotes-section">
+        <div class="keynotes-header">
+            <span class="keynotes-tag">DISHA 2027 &middot; FEATURED LEADERSHIP</span>
+            <h2 class="keynotes-title">Keynotes &amp; Guest of Honour</h2>
+            <div class="keynotes-title-accent"></div>
+        </div>
+
+        <div class="perspective-carousel-wrapper">
+            <!-- Navigation Arrow Left -->
+            <button class="carousel-nav-btn prev-btn" id="keynote-prev-btn" aria-label="Previous Keynote">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- 3D Perspective Stage -->
+            <div class="perspective-stage" id="perspective-stage">
+                <!-- Slide 0: Lorenzo Imbesi (Keynote Speaker I) -->
+                <div class="perspective-card active" data-index="0">
+                    <div class="card-photo-wrapper">
+                        <div class="card-avatar-fallback">LI</div>
+                        <img src="Speaker_images/Lorenzo_Imbesi.jpg" alt="Prof. Dr. Lorenzo Imbesi" class="card-photo" onerror="this.style.display='none'; this.previousElementSibling.style.display='flex';">
+                    </div>
+                </div>
+
+                <!-- Slide 1: Dolly Daou (Keynote Speaker II) -->
+                <div class="perspective-card right" data-index="1">
+                    <div class="card-photo-wrapper">
+                        <div class="card-avatar-fallback">DD</div>
+                        <img src="Speaker_images/Dolly_Daou.jpg" alt="Dr. Dolly Daou" class="card-photo" onerror="this.style.display='none'; this.previousElementSibling.style.display='flex';">
+                    </div>
+                </div>
+
+                <!-- Slide 2: Eija Salmi FRSA (Guest of Honour) -->
+                <div class="perspective-card left" data-index="2">
+                    <div class="card-photo-wrapper">
+                        <div class="card-avatar-fallback">ES</div>
+                        <img src="Speaker_images/Eija Salmi FRSA.JPG" alt="Ms. Eija Salmi FRSA" class="card-photo" onerror="this.style.display='none'; this.previousElementSibling.style.display='flex';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrow Right -->
+            <button class="carousel-nav-btn next-btn" id="keynote-next-btn" aria-label="Next Keynote">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Active Keynote Details Box -->
+        <div class="keynote-details-box" id="keynote-details-box">
+            <span class="keynote-role-badge" id="keynote-role-badge">KEYNOTE SPEAKER I</span>
+            <h3 class="keynote-speaker-name" id="keynote-speaker-name">Prof. Dr. Lorenzo Imbesi</h3>
+            <p class="keynote-speaker-bio" id="keynote-speaker-bio">
+                President, Cumulus Association. Full Professor and Director, Sapienza Design Research, Sapienza University of Rome, Italy.
+            </p>
+        </div>
+
+        <!-- Pagination Indicator Dots -->
+        <div class="carousel-dots-container" id="keynote-carousel-dots">
+            <button class="dot-btn active" data-index="0" aria-label="Go to Keynote 1"></button>
+            <button class="dot-btn" data-index="1" aria-label="Go to Keynote 2"></button>
+            <button class="dot-btn" data-index="2" aria-label="Go to Keynote 3"></button>
+        </div>
+    </section>
+
     <!-- Main Scroll-Driven 3D Speaker Orbit Showcase Stage -->
     <div class="speakers-scroll-wrapper" id="speakers-scroll-wrapper">
         <div class="speakers-sticky-stage" id="speakers-sticky-stage">
@@ -82,7 +128,7 @@
                     <span>SCROLL DOWN TO REVEAL ORBIT</span>
                     <div class="prompt-line"></div>
                 </div>
-                <h1 class="central-title">Speakers</h1>
+                <h1 class="central-title">Expert Speakers</h1>
                 <p class="central-subtitle">22 & 23 JANUARY 2027 &middot; PARUL UNIVERSITY</p>
             </div>
 
@@ -100,7 +146,7 @@
         <div class="progress-track-line">
             <div class="progress-fill-bar" id="progress-fill-bar"></div>
         </div>
-        <div class="total-speakers-count" id="total-speakers-count">/ 09</div>
+        <div class="total-speakers-count" id="total-speakers-count">/ 08</div>
         <div class="speaker-dots" id="speaker-dots"></div>
     </div>
 
@@ -108,7 +154,7 @@
     <section class="final-overview-section" id="final-overview">
         <div class="overview-header">
             <span class="overview-tag">DISHA 2027 &middot; INTERNATIONAL DELEGATES</span>
-            <h2 class="overview-title">All Speakers & Hosts</h2>
+            <h2 class="overview-title">All Speakers</h2>
             <p class="overview-subtitle">Convening experts across Design, Sustainability, Fine Arts, and Knowledge
                 Systems</p>
         </div>
@@ -123,8 +169,8 @@
         <div class="footer-container">
             <div class="footer-column">
                 <div class="footer-logo">
-                    <img src="images.jpg" alt="Parul Institute of Design">
-                    <img src="PU logo.png" alt="Parul University">
+                    <img src="logo/Design logo.jpg" alt="Parul Institute of Design">
+                    <img src="logo/PU logo.png" alt="Parul University">
                 </div>
                 <p class="footer-about">
                     DISHA 2027 reframes the conversation around sustainability, creativity and civilisational knowledge, 
@@ -143,15 +189,11 @@
                 <ul class="footer-links">
                     <li><a href="index.html#about"><i class="fa-solid fa-angle-right"></i> About DISHA</a></li>
                     <li><a href="tracks.html"><i class="fa-solid fa-angle-right"></i> Tracks & Panels</a></li>
-<<<<<<< Updated upstream
-                    <li><a href="speakers.html"><i class="fa-solid fa-angle-right"></i> The Hosts</a></li>
-                    <li><a href="#"><i class="fa-solid fa-angle-right"></i> Call for Papers</a></li>
-=======
                     <li><a href="speakers.html"><i class="fa-solid fa-angle-right"></i> Speakers</a></li>
                     <li><a href="hosts.html"><i class="fa-solid fa-angle-right"></i> The Hosts</a></li>
                     <li><a href="important-dates.html"><i class="fa-solid fa-angle-right"></i> Important Dates</a></li>
+                    <li><a href="venue.html"><i class="fa-solid fa-angle-right"></i> Venue</a></li>
                     <li><a href="call-for-papers.html"><i class="fa-solid fa-angle-right"></i> Call for Papers</a></li>
->>>>>>> Stashed changes
                 </ul>
             </div>
             
@@ -168,9 +210,8 @@
         </div>
     </footer>
 
-    <!-- Script Execution -->
+    <!-- Interactive Orbit Script -->
     <script src="speakers.js"></script>
-
 </body>
 
 </html>

@@ -2,92 +2,85 @@
    DISHA 2027 - 3D Scroll-Driven Speaker Orbit Showcase Engine
    ========================================================================== */
 
-const speakersData = [
+const expertSpeakersData = [
     {
         id: 1,
-        name: "Eija Salmi FRSA",
-        designation: "Secretary General",
-        institution: "Cumulus Association · International Association of Universities & Colleges of Art, Design and Media",
-        tag: "KEYNOTE SPEAKER",
-        image: "Eija Salmi FRSA.JPG",
-        cutout: "speaker_cutouts/Eija Salmi FRSA.png"
-    },
-    {
-        id: 2,
         name: "Dr. Anil Sinha",
         designation: "Former Executive Director & Senior Faculty",
         institution: "National Institute of Design (NID), Ahmedabad",
         tag: "DESIGN PEDAGOGY & LEADERSHIP",
-        image: "Dr Anil Sinha.jpg",
+        image: "Speaker_images/Dr Anil Sinha.jpg",
         cutout: "speaker_cutouts/Dr Anil Sinha.png"
     },
     {
-        id: 3,
+        id: 2,
         name: "Dr. Anuradha Choudry",
         designation: "Coordinator, IKS Division & Associate Professor",
         institution: "Ministry of Education, Govt. of India · IIT Kharagpur",
         tag: "INDIAN KNOWLEDGE SYSTEMS",
-        image: "Dr. Anuradha Choudry.jpg",
+        image: "Speaker_images/Dr. Anuradha Choudry.jpg",
         cutout: "speaker_cutouts/Dr. Anuradha Choudry.png"
     },
     {
-        id: 4,
+        id: 3,
         name: "Dr. S. Arulchelvan",
         designation: "Director & Professor",
         institution: "Educational Multimedia Research Centre (EMRC), Anna University",
         tag: "MULTIMEDIA & DIGITAL COMMUNICATION",
-        image: "Dr. S. Arulchelvan.jpg",
+        image: "Speaker_images/Dr. S. Arulchelvan.jpg",
         cutout: "speaker_cutouts/Dr. S. Arulchelvan.png"
     },
     {
-        id: 5,
+        id: 4,
         name: "Dr. Swapna Mishra",
         designation: "Director & Dean",
         institution: "Parul Institute of Design & Fine Arts, Parul University",
         tag: "CONFERENCE CHAIR",
-        image: "Dr. Swapna Mishra.jpeg",
+        image: "Speaker_images/Dr. Swapna Mishra.jpeg",
         cutout: "speaker_cutouts/Dr. Swapna Mishra.png"
     },
     {
-        id: 6,
+        id: 5,
         name: "Prof. Dr. Anjali Karolia (Retd)",
         designation: "Former Dean & Craft Heritage Specialist",
         institution: "Faculty of Family and Community Sciences, MSU Baroda",
         tag: "TEXTILE HERITAGE & CRAFT",
-        image: "Prof. Dr. Anjali Karolia (Retd).jpg",
+        image: "Speaker_images/Prof. Dr. Anjali Karolia (Retd).jpg",
         cutout: "speaker_cutouts/Prof. Dr. Anjali Karolia (Retd).png"
     },
     {
-        id: 7,
+        id: 6,
         name: "Dr. M.M. Hundekar",
         designation: "Former Principal & Senior Academician",
         institution: "School of Fashion & Textile Technology",
         tag: "SUSTAINABLE FASHION INNOVATION",
-        image: "IMG-Dr. M.M. Hundekar.jpg",
+        image: "Speaker_images/IMG-Dr. M.M. Hundekar.jpg",
         cutout: "speaker_cutouts/IMG-Dr. M.M. Hundekar.png"
     },
     {
-        id: 8,
+        id: 7,
         name: "Dr. Vahini Aravind",
         designation: "Associate Professor & Lead Researcher",
         institution: "Parul Institute of Design, Parul University",
         tag: "SUSTAINABLE DESIGN METHODOLOGY",
-        image: "Dr. Vahini Aravind.jpg",
+        image: "Speaker_images/Dr. Vahini Aravind.jpg",
         cutout: "speaker_cutouts/Dr. Vahini Aravind.png"
     },
     {
-        id: 9,
+        id: 8,
         name: "Subhanish Malhotra",
         designation: "Dean & Head of Innovation",
         institution: "Parul Institute of Design, Parul University",
         tag: "INDUSTRIAL DESIGN & INNOVATION",
-        image: "Subhanish Malhotra.png",
+        image: "Speaker_images/Subhanish Malhotra.png",
         cutout: "speaker_cutouts/Subhanish Malhotra.png"
     }
 ];
 
-// Organic vertical shifts for 9 speakers to keep the orbit lively and editorial
-const yOrganicOffsets = [-15, 18, -12, 22, -18, 12, -24, 10, -14];
+const speakersData = expertSpeakersData;
+
+// Organic vertical shifts for 8 Expert Speakers to keep the orbit lively and editorial
+const yOrganicOffsets = [-15, 18, -12, 22, -18, 12, -24, 10];
 
 // Global state variables
 let autoRotateAngle = 0;
@@ -96,6 +89,8 @@ let isAnimationTickerActive = false;
 
 document.addEventListener("DOMContentLoaded", () => {
     measureNavbar();
+    initNavbarToggle();
+    initKeynoteCarousel();
     init3DSpeakerOrbit();
     renderFinalGrid();
 
@@ -105,6 +100,17 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, parseInt(scrollParam, 10));
     }
 });
+
+/* Mobile Navbar Toggle */
+function initNavbarToggle() {
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    }
+}
 
 /* Measure sticky navbar height dynamically */
 function measureNavbar() {
@@ -260,8 +266,8 @@ function init3DSpeakerOrbit() {
             const startProgress = i * 0.08;
             const endProgress = startProgress + 0.15;
 
-            // Angle around 360 deg circle
-            const baseAngleDeg = i * (360 / 9) - 90;
+            // Angle around 360 deg circle (evenly spaced 45 deg intervals for 8 speakers)
+            const baseAngleDeg = i * (360 / speakersData.length) - 90;
             // Total angle combining base angle + continuous auto-rotation
             const currentAngleDeg = baseAngleDeg + autoRotateAngle;
             const rad = (currentAngleDeg * Math.PI) / 180;
@@ -400,7 +406,7 @@ function scrollToSpeaker(index) {
 }
 
 /* --------------------------------------------------------------------------
-   Render Final Overview Section Grid: EXACT MANDATORY 5 TOP + 4 BOTTOM GRID
+   Render Final Directory Overview: Guest of Honour, Keynote Speakers, Expert Speakers
    -------------------------------------------------------------------------- */
 function renderFinalGrid() {
     const gridContainer = document.getElementById("final-grid-container");
@@ -408,38 +414,207 @@ function renderFinalGrid() {
 
     gridContainer.innerHTML = "";
 
-    // Create Row 1 (5 Speakers)
-    const rowTop = document.createElement("div");
-    rowTop.className = "grid-row-5";
+    const DIRECTORY_GROUPS = [
+        {
+            title: "Guest of Honour",
+            people: [
+                {
+                    name: "Ms. Eija Salmi FRSA",
+                    designation: "Guest of Honour & Secretary General",
+                    institution: "Cumulus Association · International Association of Universities & Colleges of Art, Design and Media",
+                    tag: "GUEST OF HONOUR",
+                    image: "Speaker_images/Eija Salmi FRSA.JPG"
+                }
+            ]
+        },
+        {
+            title: "Keynote Speakers",
+            people: [
+                {
+                    name: "Prof. Dr. Lorenzo Imbesi",
+                    designation: "Keynote Speaker I & President, Cumulus Association",
+                    institution: "Sapienza Design Research, Sapienza University of Rome, Italy",
+                    tag: "KEYNOTE",
+                    image: "Speaker_images/Lorenzo_Imbesi.jpg"
+                },
+                {
+                    name: "Dr. Dolly Daou",
+                    designation: "Keynote Speaker II & Lead Design Researcher",
+                    institution: "Transdisciplinary Design Leadership (Australia, Europe, Asia)",
+                    tag: "KEYNOTE",
+                    image: "Speaker_images/Dolly_Daou.jpg"
+                }
+            ]
+        },
+        {
+            title: "Expert Speakers",
+            people: expertSpeakersData.map((s, idx) => ({
+                name: s.name,
+                designation: s.designation,
+                institution: s.institution,
+                tag: `EXPERT ${String(idx + 1).padStart(2, "0")}`,
+                image: s.image
+            }))
+        }
+    ];
 
-    // Create Row 2 (4 Speakers - Centered)
-    const rowBottom = document.createElement("div");
-    rowBottom.className = "grid-row-4";
+    let overallCardNumber = 1;
 
-    speakersData.forEach((speaker, idx) => {
-        const numStr = String(idx + 1).padStart(2, "0");
+    DIRECTORY_GROUPS.forEach((group) => {
+        const groupEl = document.createElement("div");
+        groupEl.className = "directory-group";
 
-        const card = document.createElement("div");
-        card.className = "final-speaker-card";
-        card.innerHTML = `
-            <div class="final-card-img-wrap">
-                <img src="${speaker.image}" alt="${speaker.name}" class="final-card-img" loading="lazy">
-            </div>
-            <div class="final-card-body">
-                <div class="final-card-number">${numStr}</div>
-                <h3 class="final-card-name">${speaker.name}</h3>
-                <div class="final-card-role">${speaker.designation}</div>
-                <div class="final-card-inst">${speaker.institution}</div>
-            </div>
-        `;
+        const titleEl = document.createElement("h3");
+        titleEl.className = "directory-group-title";
+        titleEl.textContent = group.title;
+        groupEl.appendChild(titleEl);
 
-        if (idx < 5) {
-            rowTop.appendChild(card);
-        } else {
-            rowBottom.appendChild(card);
+        const gridEl = document.createElement("div");
+        gridEl.className = "directory-grid-auto";
+
+        group.people.forEach((person) => {
+            const numStr = String(overallCardNumber++).padStart(2, "0");
+            const card = document.createElement("div");
+            card.className = "final-speaker-card";
+            card.innerHTML = `
+                <div class="final-card-img-wrap">
+                    <img src="${person.image}" alt="${person.name}" class="final-card-img" loading="lazy" onerror="this.onerror=null; this.src='logo/Design logo.jpg';">
+                </div>
+                <div class="final-card-body">
+                    <div class="final-card-number">${person.tag || numStr}</div>
+                    <h3 class="final-card-name">${person.name}</h3>
+                    <div class="final-card-role">${person.designation}</div>
+                    <div class="final-card-inst">${person.institution}</div>
+                </div>
+            `;
+            gridEl.appendChild(card);
+        });
+
+        groupEl.appendChild(gridEl);
+        gridContainer.appendChild(groupEl);
+    });
+}
+
+/* ==========================================================================
+   Keynotes & Guest of Honour 3D Perspective Carousel Engine
+   ========================================================================== */
+const KEYNOTE_DATA = [
+    {
+        name: "Prof. Dr. Lorenzo Imbesi",
+        role: "KEYNOTE SPEAKER I",
+        bio: "President, Cumulus Association. Full Professor and Director, Sapienza Design Research, Sapienza University of Rome, Italy."
+    },
+    {
+        name: "Dr. Dolly Daou",
+        role: "KEYNOTE SPEAKER II",
+        bio: "Design researcher, educator and academic leader in transdisciplinary design education, with leadership roles across Australia, Europe, China and the Middle East."
+    },
+    {
+        name: "Ms. Eija Salmi FRSA",
+        role: "GUEST OF HONOUR",
+        bio: "Secretary General, Cumulus Association, Finland."
+    }
+];
+
+let currentKeynoteIndex = 0;
+
+function initKeynoteCarousel() {
+    const stage = document.getElementById("perspective-stage");
+    const prevBtn = document.getElementById("keynote-prev-btn");
+    const nextBtn = document.getElementById("keynote-next-btn");
+    const dots = document.querySelectorAll(".carousel-dots-container .dot-btn");
+
+    if (!stage) return;
+
+    // Attach click listeners to cards
+    const cards = stage.querySelectorAll(".perspective-card");
+    cards.forEach((card, idx) => {
+        card.addEventListener("click", () => {
+            if (currentKeynoteIndex !== idx) {
+                currentKeynoteIndex = idx;
+                updateKeynoteCarousel();
+            }
+        });
+    });
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+            currentKeynoteIndex = (currentKeynoteIndex - 1 + KEYNOTE_DATA.length) % KEYNOTE_DATA.length;
+            updateKeynoteCarousel();
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+            currentKeynoteIndex = (currentKeynoteIndex + 1) % KEYNOTE_DATA.length;
+            updateKeynoteCarousel();
+        });
+    }
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener("click", () => {
+            currentKeynoteIndex = idx;
+            updateKeynoteCarousel();
+        });
+    });
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    stage.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    stage.addEventListener("touchend", (e) => {
+        const touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 40) {
+            currentKeynoteIndex = (currentKeynoteIndex + 1) % KEYNOTE_DATA.length;
+            updateKeynoteCarousel();
+        } else if (touchEndX - touchStartX > 40) {
+            currentKeynoteIndex = (currentKeynoteIndex - 1 + KEYNOTE_DATA.length) % KEYNOTE_DATA.length;
+            updateKeynoteCarousel();
+        }
+    }, { passive: true });
+
+    updateKeynoteCarousel();
+}
+
+function updateKeynoteCarousel() {
+    const cards = document.querySelectorAll(".perspective-card");
+    const roleBadge = document.getElementById("keynote-role-badge");
+    const nameEl = document.getElementById("keynote-speaker-name");
+    const bioEl = document.getElementById("keynote-speaker-bio");
+    const detailsBox = document.getElementById("keynote-details-box");
+    const dots = document.querySelectorAll(".carousel-dots-container .dot-btn");
+    const total = KEYNOTE_DATA.length;
+
+    if (!cards.length) return;
+
+    cards.forEach((card, idx) => {
+        card.classList.remove("pos-center", "pos-left", "pos-right", "active", "left", "right");
+        if (idx === currentKeynoteIndex) {
+            card.classList.add("pos-center");
+        } else if (idx === (currentKeynoteIndex - 1 + total) % total) {
+            card.classList.add("pos-left");
+        } else if (idx === (currentKeynoteIndex + 1) % total) {
+            card.classList.add("pos-right");
         }
     });
 
-    gridContainer.appendChild(rowTop);
-    gridContainer.appendChild(rowBottom);
+    dots.forEach((dot, idx) => {
+        dot.classList.toggle("active", idx === currentKeynoteIndex);
+    });
+
+    // Update active details with smooth fade
+    if (detailsBox) {
+        detailsBox.style.opacity = "0";
+        detailsBox.style.transform = "translateY(8px)";
+        setTimeout(() => {
+            const data = KEYNOTE_DATA[currentKeynoteIndex];
+            if (roleBadge) roleBadge.textContent = data.role;
+            if (nameEl) nameEl.textContent = data.name;
+            if (bioEl) bioEl.textContent = data.bio;
+            detailsBox.style.opacity = "1";
+            detailsBox.style.transform = "translateY(0)";
+        }, 180);
+    }
 }
