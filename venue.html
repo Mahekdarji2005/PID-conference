@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://sdk.mappls.com/map/sdk/web?v=3.0&access_token=ufzlnzaluieyjgustwgcosojzarnuunnnprg"></script>
     <style>
         .venue-section {
             padding: 60px 5% 80px;
@@ -198,12 +199,18 @@
             overflow: hidden;
             border: 1px solid rgba(0, 0, 0, 0.08);
             margin-bottom: 25px;
+            position: relative;
         }
 
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
+        .mappls-popup-content-wrapper, .leaflet-popup-content-wrapper {
+            border-radius: 12px !important;
+            box-shadow: 0 8px 25px rgba(0, 47, 75, 0.18) !important;
+            border-top: 3.5px solid #a83c27 !important;
+        }
+
+        .mappls-popup-content, .leaflet-popup-content {
+            margin: 10px 14px !important;
+            line-height: 1.4 !important;
         }
 
         .map-action-bar {
@@ -277,27 +284,112 @@
             line-height: 1.65;
         }
 
-        /* 5. Campus Gallery */
-        .gallery-grid {
+        /* Intro Image Card */
+        .intro-img-card {
+            position: relative;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            min-height: 380px;
+        }
+
+        .intro-campus-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .intro-img-card:hover .intro-campus-img {
+            transform: scale(1.03);
+        }
+
+        .intro-img-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 47, 75, 0.88);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* 5. Campus Gallery Grid */
+        .campus-gallery-grid {
             display: grid;
-            grid-template-columns: 1.6fr 1fr;
+            grid-template-columns: 1.4fr 1fr;
             gap: 25px;
             margin-top: 35px;
         }
 
-        .gallery-row-2 {
-            display: grid;
-            grid-template-columns: 1fr 1.6fr;
-            gap: 25px;
-            margin-top: 25px;
+        .gallery-item {
+            position: relative;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            background: #ffffff;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
         }
 
-        .gallery-placeholder {
-            min-height: 280px;
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(0, 47, 75, 0.14);
         }
 
-        .gallery-placeholder.large {
+        .gallery-img-container {
+            width: 100%;
+            height: 100%;
             min-height: 320px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px 20px 18px;
+            background: linear-gradient(to top, rgba(0, 47, 75, 0.88) 0%, rgba(0, 47, 75, 0.4) 65%, transparent 100%);
+            color: #ffffff;
+            transition: background 0.3s ease;
+        }
+
+        .gallery-caption h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0 0 4px 0;
+        }
+
+        .gallery-caption p {
+            font-size: 0.85rem;
+            color: #d1e2ec;
+            margin: 0;
+            font-weight: 500;
         }
 
         /* 6. Final CTA Box */
@@ -313,7 +405,7 @@
 
         .cta-final-title {
             font-family: var(--font-heading);
-            font-size: 3rem;
+            font-size: 3.0rem;
             color: #ffffff;
             margin-bottom: 15px;
         }
@@ -322,18 +414,25 @@
             font-size: 1.2rem;
             color: #d1e2ec;
             margin-bottom: 30px;
+            text-align: center;
+            text-align-last: center;
+            -webkit-text-align-last: center;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Responsive Media Queries */
         @media (max-width: 1024px) {
             .intro-grid { grid-template-columns: 1fr; gap: 30px; }
             .travel-grid { grid-template-columns: repeat(2, 1fr); }
-            .gallery-grid, .gallery-row-2 { grid-template-columns: 1fr; }
+            .campus-gallery-grid { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 768px) {
             .venue-hero-title { font-size: 2.2rem; }
             .travel-grid { grid-template-columns: 1fr; }
+            .campus-gallery-grid { grid-template-columns: 1fr; }
+            .gallery-img-container { min-height: 260px; }
             .map-container { height: 320px; }
             .cta-final-title { font-size: 2.2rem; }
             .venue-section { padding: 40px 4% 60px; }
@@ -390,11 +489,10 @@
     <section class="venue-section" id="intro" style="padding-top: 0;">
         <div class="venue-container">
             <div class="intro-grid">
-                <!-- Left: Large Campus Image Placeholder -->
-                <div class="placeholder-box">
-                    <i class="fa-solid fa-building-columns placeholder-icon"></i>
-                    <div class="placeholder-title">Campus Image — To Be Added</div>
-                    <div class="placeholder-sub">Parul University Main Campus &amp; Central Auditorium</div>
+                <!-- Left: Campus Image -->
+                <div class="intro-img-card">
+                    <img src="Image Place Holder/Campus Image.webp" alt="Parul University Main Campus" class="intro-campus-img">
+                    <div class="intro-img-badge"><i class="fa-solid fa-building-columns"></i> Parul University Campus</div>
                 </div>
 
                 <!-- Right: Venue Details Card -->
@@ -442,6 +540,66 @@
         </div>
     </section>
 
+    <!-- 3. Campus Gallery Section -->
+    <section class="venue-section" id="gallery" style="padding-top: 20px;">
+        <div class="venue-container">
+            <div class="section-header">
+                <span class="section-tag-pill">CAMPUS PREVIEW</span>
+                <h2 class="venue-hero-title">EXPLORE THE CAMPUS</h2>
+                <div class="title-divider"></div>
+                <p class="venue-hero-desc">
+                    A visual glimpse of Parul University's world-class academic infrastructure and facilities.
+                </p>
+            </div>
+
+            <div class="campus-gallery-grid">
+                <!-- Slot 1: Main Campus Image (Featured) -->
+                <div class="gallery-item featured">
+                    <div class="gallery-img-container">
+                        <img src="Image Place Holder/Campus Image.webp" alt="Parul University Main Campus" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>Parul University Main Campus</h3>
+                            <p>Central Academic Infrastructure &amp; Auditoriums</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slot 2: Placeholder 1 -->
+                <div class="gallery-item">
+                    <div class="gallery-img-container">
+                        <img src="Image Place Holder/Campus Image Placeholder 1.jpg" alt="Campus Facility 1" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>Central Auditorium &amp; Event Lawns</h3>
+                            <p>Main Conference Venue</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slot 3: Placeholder 2 -->
+                <div class="gallery-item">
+                    <div class="gallery-img-container">
+                        <img src="Image Place Holder/Campus Image Placehoder 2.jpg" alt="Campus Facility 2" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>Parul Institute of Design Studios</h3>
+                            <p>Design &amp; Exhibition Spaces</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slot 4: Placeholder 3 -->
+                <div class="gallery-item">
+                    <div class="gallery-img-container">
+                        <img src="Image Place Holder/Campus Image Pacehoder 3.jpg" alt="Campus Facility 3" class="gallery-img">
+                        <div class="gallery-caption">
+                            <h3>Exhibition Hall &amp; Galleries</h3>
+                            <p>Display &amp; Interactive Workshops</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 3. Getting to the Venue Section (Interactive Map) -->
     <section class="venue-section" id="getting-to-venue">
         <div class="venue-container">
@@ -455,21 +613,59 @@
             </div>
 
             <div class="map-wrapper">
-                <div class="map-container">
-                    <iframe 
-                        title="Parul University Google Map Location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.677560533633!2d73.3615363759367!3d22.29019624324209!2m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5f2c7924467%3A0xb3671239922e96!2sParul%20University!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                <div class="map-container" id="map-container">
+                    <div id="map" style="width: 100%; height: 100%;"></div>
                 </div>
                 <div class="map-action-bar">
-                    <a href="https://maps.google.com/?q=Parul+University+Vadodara" target="_blank" rel="noopener noreferrer" class="btn-map-directions">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Parul+University+Limda+Waghodia+Vadodara+Gujarat" target="_blank" rel="noopener noreferrer" class="btn-map-directions">
                         OPEN IN GOOGLE MAPS <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
             </div>
+            <script>
+                let map, marker;
+                function initMapplsMap() {
+                    if (typeof mappls !== 'undefined') {
+                        const venuePos = { lat: 22.2887, lng: 73.3634 };
+
+                        map = new mappls.Map('map', {
+                            center: [venuePos.lat, venuePos.lng],
+                            zoom: 16,
+                            zoomControl: true,
+                            hybrid: false
+                        });
+
+                        const popupHtml = `
+                            <div style="padding: 4px 2px; font-family: Inter, sans-serif; text-align: left;">
+                                <h4 style="margin: 0 0 4px 0; font-family: Playfair Display, Georgia, serif; color: #002f4b; font-size: 1.05rem; font-weight: 700;">
+                                    <i class="fa-solid fa-graduation-cap" style="color: #a83c27; margin-right: 4px;"></i> Parul University
+                                </h4>
+                                <p style="margin: 0; font-size: 0.84rem; color: #555555; line-height: 1.45;">
+                                    P.O. Limda, Waghodia, Vadodara, Gujarat 391760, India
+                                </p>
+                            </div>
+                        `;
+
+                        marker = new mappls.Marker({
+                            map: map,
+                            position: venuePos,
+                            title: "Parul University",
+                            popupHtml: popupHtml
+                        });
+
+                        setTimeout(() => {
+                            if (marker && typeof marker.openPopup === 'function') {
+                                marker.openPopup();
+                            }
+                        }, 500);
+                    }
+                }
+                if (document.readyState === 'complete') {
+                    initMapplsMap();
+                } else {
+                    window.addEventListener('load', initMapplsMap);
+                }
+            </script>
         </div>
     </section>
 
@@ -516,49 +712,7 @@
         </div>
     </section>
 
-    <!-- 5. Campus Gallery Section -->
-    <section class="venue-section" id="gallery">
-        <div class="venue-container">
-            <div class="section-header">
-                <span class="section-tag-pill">CAMPUS PREVIEW</span>
-                <h2 class="venue-hero-title">EXPLORE THE CAMPUS</h2>
-                <div class="title-divider"></div>
-                <p class="venue-hero-desc">
-                    A visual glimpse of Parul University's world-class academic infrastructure and facilities.
-                </p>
-            </div>
 
-            <!-- Gallery Row 1 -->
-            <div class="gallery-grid">
-                <div class="placeholder-box gallery-placeholder large">
-                    <i class="fa-solid fa-image placeholder-icon"></i>
-                    <div class="placeholder-title">Campus Image Placeholder 1</div>
-                    <div class="placeholder-sub">Central Auditorium &amp; Event Lawns</div>
-                </div>
-
-                <div class="placeholder-box gallery-placeholder">
-                    <i class="fa-solid fa-image placeholder-icon"></i>
-                    <div class="placeholder-title">Campus Image Placeholder 2</div>
-                    <div class="placeholder-sub">Parul Institute of Design Studios</div>
-                </div>
-            </div>
-
-            <!-- Gallery Row 2 -->
-            <div class="gallery-row-2">
-                <div class="placeholder-box gallery-placeholder">
-                    <i class="fa-solid fa-image placeholder-icon"></i>
-                    <div class="placeholder-title">Campus Image Placeholder 3</div>
-                    <div class="placeholder-sub">Exhibition Hall &amp; Design Galleries</div>
-                </div>
-
-                <div class="placeholder-box gallery-placeholder large">
-                    <i class="fa-solid fa-image placeholder-icon"></i>
-                    <div class="placeholder-title">Campus Image Placeholder 4</div>
-                    <div class="placeholder-sub">Campus Greens &amp; Student Amphitheatre</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- 6. Final CTA Section -->
     <section class="venue-section" id="cta" style="padding-bottom: 100px;">
