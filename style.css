@@ -138,6 +138,7 @@ body {
 .logo a {
     display: flex;
     align-items: center;
+    gap: 0.75rem;
     text-decoration: none;
 }
 
@@ -150,7 +151,7 @@ body {
 }
 
 .logo-img {
-    height: clamp(38px, 3.4vw, 48px);
+    height: clamp(34px, 3vw, 42px);
     width: auto;
     transition: transform 0.3s ease;
     object-fit: contain;
@@ -1188,7 +1189,7 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     box-sizing: border-box;
 }
@@ -1274,9 +1275,9 @@ img {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.65rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem 1.2rem;
 }
 
 .footer-links a {
@@ -1314,6 +1315,39 @@ img {
     text-align: center;
     color: #999999;
     font-size: 0.88rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-bottom p {
+    text-align: center;
+}
+
+.footer-bottom a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: var(--accent-color);
+}
+
+.developer-credit {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    text-align: center;
 }
 
 @media (max-width: 992px) {
@@ -1327,6 +1361,9 @@ img {
     .footer-container {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    .footer-links {
+        grid-template-columns: 1fr;
     }
     .site-footer {
         padding: 3rem 4% 1.5rem;
