@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - DISHA 2027 | Parul University</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Schedule Hero Header */
+        .schedule-hero {
+            text-align: center;
+            padding: 70px 5% 20px;
+        }
+
+        .schedule-hero .section-tag {
+            color: #a83c27 !important;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 15px;
+            background: #fff5f3;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        .schedule-title {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            color: #002f4b;
+            margin: 0 0 15px 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        .schedule-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #a83c27;
+            border-radius: 2px;
+        }
+
+        .schedule-subtitle {
+            font-size: 1.15rem;
+            color: #555555;
+            max-width: 680px;
+            margin: 25px auto 0;
+            line-height: 1.6;
+        }
+
+        /* Day Tabs */
+        .day-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 40px 0 45px;
+            flex-wrap: wrap;
+        }
+
+        .day-tab-btn {
+            background: #ffffff;
+            border: 2px solid rgba(0, 47, 75, 0.15);
+            color: #002f4b;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .day-tab-btn:hover {
+            border-color: #a83c27;
+            color: #a83c27;
+            transform: translateY(-2px);
+        }
+
+        .day-tab-btn.active {
+            background: #002f4b;
+            color: #ffffff;
+            border-color: #002f4b;
+            box-shadow: 0 4px 15px rgba(0, 47, 75, 0.2);
+        }
+
+        /* Day Block */
+        .day-block {
+            max-width: 950px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .day-header {
+            background: linear-gradient(135deg, #002f4b 0%, #1a4968 100%);
+            color: #ffffff;
+            padding: 18px 28px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0, 47, 75, 0.15);
+        }
+
+        .day-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.45rem;
+            margin: 0;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .day-header h2 i {
+            color: #ffb7a8;
+        }
+
+        .day-date-tag {
+            font-size: 0.88rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        /* Schedule List & Cards */
+        .schedule-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .schedule-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px 24px;
+            display: grid;
+            grid-template-columns: 140px 1fr 190px;
+            align-items: center;
+            gap: 20px;
+            border-left: 4px solid #002f4b;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .schedule-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .schedule-card.highlight {
+            border-left-color: #a83c27;
+            background: #fffdfc;
+        }
+
+        .schedule-card.break {
+            border-left-color: #7b8e9b;
+            background: #f9fbfd;
+        }
+
+        .schedule-time {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #a83c27;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .schedule-time i {
+            font-size: 0.9rem;
+            color: #a83c27;
+        }
+
+        .schedule-details {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .schedule-type-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #a83c27;
+            margin-bottom: 2px;
+        }
+
+        .schedule-session-title {
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: #002f4b;
+            line-height: 1.45;
+        }
+
+        .schedule-venue {
+            font-size: 0.88rem;
+            color: #555555;
+            background: #f2f5f8;
+            padding: 7px 14px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            max-width: 190px;
+            box-sizing: border-box;
+            justify-self: end;
+            align-self: center;
+            text-align: center;
+            white-space: normal;
+            line-height: 1.35;
+        }
+
+        .schedule-venue i {
+            color: #a83c27;
+        }
+
+        /* Tree Timeline Container */
+        .dates-section {
+            padding: 60px 5% 90px;
+            background: transparent;
+            min-height: auto;
+            border-top: 1px solid rgba(0, 47, 75, 0.08);
+            margin-top: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .dates-container {
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .dates-header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .dates-header .section-tag {
+            color: #a83c27 !important;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 15px;
+            background: #fff5f3;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        .dates-title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: #002f4b;
+            margin-top: 0;
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+
+        .dates-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #a83c27;
+            border-radius: 2px;
+        }
+
+        /* Tree Timeline Container */
+        .timeline {
+            position: relative;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 0;
+            z-index: 2;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: #a83c27;
+            transform: translateX(-50%);
+            border-radius: 2px;
+            z-index: 1;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item.left,
+        .timeline-item:nth-child(odd) {
+            width: 50%;
+            margin-right: 50%;
+            margin-left: 0;
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        .timeline-item.right,
+        .timeline-item:nth-child(even) {
+            width: 50%;
+            margin-left: 50%;
+            margin-right: 0;
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        .branch-line {
+            position: absolute;
+            top: 50%;
+            height: 2px;
+            background: #a83c27;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 50%;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3.5px solid #a83c27;
+            box-shadow: 0 0 0 4px rgba(168, 60, 39, 0.15);
+            transition: all 0.3s ease;
+            z-index: 4;
+        }
+
+        .timeline-item:hover .timeline-dot {
+            background: #a83c27;
+            box-shadow: 0 0 0 8px rgba(168, 60, 39, 0.25);
+        }
+
+        /* LEFT BRANCHING ITEMS */
+        .timeline-item.left .branch-line,
+        .timeline-item:nth-child(odd) .branch-line {
+            right: 0;
+            left: auto;
+            width: 45px;
+        }
+
+        .timeline-item.left .timeline-dot,
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: 0;
+            left: auto;
+            transform: translate(50%, -50%);
+        }
+
+        .timeline-item.left:hover .timeline-dot,
+        .timeline-item:nth-child(odd):hover .timeline-dot {
+            transform: translate(50%, -50%) scale(1.25);
+        }
+
+        .timeline-item.left .timeline-content,
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 55px;
+            margin-left: auto;
+            max-width: 380px;
+            text-align: right;
+        }
+
+        /* RIGHT BRANCHING ITEMS */
+        .timeline-item.right .branch-line,
+        .timeline-item:nth-child(even) .branch-line {
+            left: 0;
+            right: auto;
+            width: 45px;
+        }
+
+        .timeline-item.right .timeline-dot,
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: 0;
+            right: auto;
+            transform: translate(-50%, -50%);
+        }
+
+        .timeline-item.right:hover .timeline-dot,
+        .timeline-item:nth-child(even):hover .timeline-dot {
+            transform: translate(-50%, -50%) scale(1.25);
+        }
+
+        .timeline-item.right .timeline-content,
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 55px;
+            margin-right: auto;
+            max-width: 380px;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: transparent;
+            padding: 6px 12px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 3;
+        }
+
+        .timeline-item:hover .timeline-content {
+            transform: translateY(-2px);
+        }
+
+        .timeline-date {
+            font-size: 0.95rem;
+            color: #a83c27;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .timeline-event {
+            font-size: 1.55rem;
+            color: #002f4b;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            line-height: 1.3;
+        }
+
+        /* Responsive Mobile Layout */
+        @media (max-width: 850px) {
+            .schedule-card {
+                grid-template-columns: 110px 1fr 160px;
+                gap: 12px;
+                padding: 16px;
+            }
+
+            .schedule-venue {
+                width: 100%;
+                max-width: 160px;
+                justify-self: end;
+                align-self: center;
+                text-align: center;
+                margin-top: 0;
+                white-space: normal;
+                line-height: 1.3;
+                font-size: 0.84rem;
+                padding: 6px 10px;
+            }
+
+            .schedule-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 580px) {
+            .schedule-card {
+                display: grid;
+                grid-template-columns: 1fr 135px;
+                grid-template-areas:
+                    "time time"
+                    "details venue";
+                gap: 10px 12px;
+                padding: 16px;
+                align-items: center;
+            }
+
+            .schedule-time {
+                grid-area: time;
+            }
+
+            .schedule-details {
+                grid-area: details;
+            }
+
+            .schedule-venue {
+                grid-area: venue;
+                width: 100%;
+                max-width: 135px;
+                justify-self: end;
+                align-self: center;
+                margin-top: 0;
+                font-size: 0.8rem;
+                padding: 5px 8px;
+                text-align: center;
+                white-space: normal;
+                line-height: 1.3;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                max-width: 100%;
+                padding: 15px 0;
+            }
+
+            .timeline::before {
+                left: 20px;
+                transform: none;
+            }
+
+            .timeline-item {
+                margin-bottom: 40px;
+            }
+
+            .timeline-item.left,
+            .timeline-item.right,
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            .timeline-item.left .branch-line,
+            .timeline-item.right .branch-line,
+            .timeline-item:nth-child(odd) .branch-line,
+            .timeline-item:nth-child(even) .branch-line {
+                left: 20px;
+                right: auto;
+                width: 25px;
+            }
+
+            .timeline-item.left .timeline-dot,
+            .timeline-item.right .timeline-dot,
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 20px;
+                right: auto;
+                transform: translate(-50%, -50%);
+            }
+
+            .timeline-item.left:hover .timeline-dot,
+            .timeline-item.right:hover .timeline-dot,
+            .timeline-item:nth-child(odd):hover .timeline-dot,
+            .timeline-item:nth-child(even):hover .timeline-dot {
+                transform: translate(-50%, -50%) scale(1.25);
+            }
+
+            .timeline-item.left .timeline-content,
+            .timeline-item.right .timeline-content,
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 45px;
+                margin-right: 0;
+                max-width: calc(100% - 55px);
+                text-align: left;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo/Parul_University_Logo.png" alt="Parul University Logo" class="logo-img">
+            </a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="tracks.html">Tracks & Panels</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="hosts.html">The Hosts</a></li>
+            <li><a href="schedule.html" class="active">Schedule</a></li>
+            <li><a href="venue.html">Venue</a></li>
+            <li><a href="call-for-papers.html">Call for Papers</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html" class="btn btn-primary"
+                    style="font-size: 0.75rem; padding: 0.45rem 1rem;">Register Now</a></li>
+        </ul>
+        <div class="right-logos">
+            <a href="https://cumulusassociation.org/" target="_blank" rel="noopener noreferrer"
+                title="Cumulus Association">
+                <img src="logo/Cumulus_Association_Logo.png" alt="Cumulus Association Logo" class="logo-img">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <section class="schedule-hero">
+        <span class="section-tag">PROGRAMME OVERVIEW</span>
+        <h1 class="schedule-title">SCHEDULE</h1>
+        <p class="schedule-subtitle">Two Days of Ideas, Dialogue and Creative Exchange</p>
+    </section>
+
+    <!-- Day Switcher Buttons -->
+    <div class="day-tabs">
+        <button class="day-tab-btn active" onclick="showDay('all', this)"><i class="fa-solid fa-layer-group"></i> All
+            Programme</button>
+        <button class="day-tab-btn" onclick="showDay('day1', this)"><i class="fa-regular fa-calendar-days"></i> Day 1
+            (22 Jan)</button>
+        <button class="day-tab-btn" onclick="showDay('day2', this)"><i class="fa-regular fa-calendar-days"></i> Day 2
+            (23 Jan)</button>
+    </div>
+
+    <!-- PART 1: CONFERENCE SCHEDULE -->
+    <main>
+        <!-- DAY 1 BLOCK -->
+        <div class="day-block" id="day1-block">
+            <div class="day-header">
+                <h2><i class="fa-solid fa-calendar-day"></i> DAY 1 &middot; Friday, 22 January 2027</h2>
+                <span class="day-date-tag">Friday, 22 Jan 2027</span>
+            </div>
+
+            <div class="schedule-list">
+                <div class="schedule-card break">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 09:00 to 10:00</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Registration &amp; Breakfast</span>
+                        <div class="schedule-session-title">Registration, distribution of kits and breakfast</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: PID</div>
+                </div>
+
+                <div class="schedule-card highlight">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 10:00 to 10:45</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Inaugural Session</span>
+                        <div class="schedule-session-title">Inaugural session, lamp lighting and welcome remarks;
+                            acknowledgement of Cumulus endorsement</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: Central Auditorium</div>
+                </div>
+
+                <div class="schedule-card highlight">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 10:45 to 11:30</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Keynote Address</span>
+                        <div class="schedule-session-title">Keynote 1: Prof. Dr. Lorenzo Imbesi</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: Central Auditorium</div>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 11:30 to 13:15</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Paper Presentations</span>
+                        <div class="schedule-session-title">Parallel paper presentations</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: PID</div>
+                </div>
+
+                <div class="schedule-card break">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 13:15 to 14:00</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Lunch Break</span>
+                        <div class="schedule-session-title">Lunch</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: PID / Indian Salt</div>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 14:00 to 15:30</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Workshops &amp; Sessions</span>
+                        <div class="schedule-session-title">Parallel paper sessions continued, and Call for Proposals
+                            workshops and demonstrations</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: PID</div>
+                </div>
+
+                <div class="schedule-card highlight">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 15:30 to 16:15</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Panel Discussion</span>
+                        <div class="schedule-session-title">Panel: Design, the arts and civilisational identity in a
+                            global century</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: Central Auditorium</div>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 16:15 to 17:15</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Exhibition &amp; Posters</span>
+                        <div class="schedule-session-title">Poster presentations, and fine arts and craft exhibition
+                        </div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: PID</div>
+                </div>
+
+                <div class="schedule-card break">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 17:15 to 17:30</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Networking Break</span>
+                        <div class="schedule-session-title">High tea</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: PID</div>
+                </div>
+
+                <div class="schedule-card highlight">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 17:30 to 18:30</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Cultural Showcase</span>
+                        <div class="schedule-session-title">Cultural evening: performing arts showcase in music, dance
+                            and theatre</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: PID / Amphitheatre</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAY 2 BLOCK -->
+        <div class="day-block" id="day2-block">
+            <div class="day-header">
+                <h2><i class="fa-solid fa-calendar-day"></i> DAY 2 &middot; Saturday, 23 January 2027</h2>
+                <span class="day-date-tag">Saturday, 23 Jan 2027</span>
+            </div>
+
+            <div class="schedule-list">
+                <div class="schedule-card break">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 09:00 to 09:45</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Breakfast</span>
+                        <div class="schedule-session-title">Breakfast</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: PID</div>
+                </div>
+
+                <div class="schedule-card highlight">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 09:45 to 10:30</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Keynote Address</span>
+                        <div class="schedule-session-title">Keynote 2: Dr. Dolly Daou</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: Central Auditorium /
+                        OSCAR</div>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 10:30 to 12:30</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Paper Presentations</span>
+                        <div class="schedule-session-title">Parallel paper presentations, Tracks 4, 5, 6 and 7</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: PID</div>
+                </div>
+
+                <div class="schedule-card highlight">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 12:30 to 13:30</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Interactive Workshop</span>
+                        <div class="schedule-session-title">Design and arts charrette: designing for a civilisational
+                            future (workshop)</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: PID</div>
+                </div>
+
+                <div class="schedule-card break">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 13:30 to 14:30</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Lunch Break</span>
+                        <div class="schedule-session-title">Lunch</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: PID / Indian Salt</div>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 14:30 to 15:30</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Paper &amp; Proposal Sessions</span>
+                        <div class="schedule-session-title">Parallel paper sessions continued, and Call for Proposals
+                            sessions</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: PID</div>
+                </div>
+
+                <div class="schedule-card highlight">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 15:30 to 16:15</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Panel Discussion</span>
+                        <div class="schedule-session-title">Panel: Healing, knowledge and cultural diplomacy, India’s
+                            global contribution</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: Central Auditorium</div>
+                </div>
+
+                <div class="schedule-card highlight">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 16:15 to 17:00</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Posters &amp; Awards</span>
+                        <div class="schedule-session-title">Poster presentations and awards</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: Central Auditorium</div>
+                </div>
+
+                <div class="schedule-card highlight">
+                    <div class="schedule-time"><i class="fa-regular fa-clock"></i> 17:00 to 17:45</div>
+                    <div class="schedule-details">
+                        <span class="schedule-type-badge">Valedictory Ceremony</span>
+                        <div class="schedule-session-title">Valedictory function, Cumulus Design Declaration reflection
+                            and announcement of winners</div>
+                    </div>
+                    <div class="schedule-venue"><i class="fa-solid fa-location-dot"></i> Venue: Central Auditorium</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PART 2: IMPORTANT DATES SECTION -->
+        <section class="dates-section">
+            <div class="dates-container">
+                <div class="dates-header">
+                    <span class="section-tag">TIMELINE &amp; DEADLINES</span>
+                    <h2 class="dates-title">IMPORTANT DATES</h2>
+                </div>
+
+                <div class="timeline" id="timeline">
+                    <div class="timeline-item left">
+                        <div class="branch-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">31 October 2026</div>
+                            <div class="timeline-event">Abstract submission (both calls)</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="branch-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">15 November 2026</div>
+                            <div class="timeline-event">Notification of acceptance</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="branch-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">1 November &ndash; 31 December 2026</div>
+                            <div class="timeline-event">Registration window</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="branch-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">31 December 2026</div>
+                            <div class="timeline-event">Full paper submission</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="branch-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">31 December 2026</div>
+                            <div class="timeline-event">Poster, proposal and final materials</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="branch-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">22 &ndash; 23 January 2027</div>
+                            <div class="timeline-event">Conference</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="logo/Parul_Institute_of_Design_Logo.png" alt="Parul Institute of Design">
+                    <img src="logo/Parul_University_white_Logo.png" alt="Parul University">
+                </div>
+                <p class="footer-about">
+                    DISHA 2027 reframes the conversation around sustainability, creativity and civilisational knowledge,
+                    convening experts across design, arts, and technology.
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html#about"><i class="fa-solid fa-angle-right"></i> About DISHA</a></li>
+                    <li><a href="tracks.html"><i class="fa-solid fa-angle-right"></i> Tracks &amp; Panels</a></li>
+                    <li><a href="speakers.html"><i class="fa-solid fa-angle-right"></i> Speakers</a></li>
+                    <li><a href="hosts.html"><i class="fa-solid fa-angle-right"></i> The Hosts</a></li>
+                    <li><a href="schedule.html"><i class="fa-solid fa-angle-right"></i> Schedule</a></li>
+                    <li><a href="venue.html"><i class="fa-solid fa-angle-right"></i> Venue</a></li>
+                    <li><a href="call-for-papers.html"><i class="fa-solid fa-angle-right"></i> Call for Papers</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h3 class="footer-title">Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> <span>Parul University, P.O. Limda, Ta. Waghodia, Vadodara,
+                        Gujarat, India - 391760</span></p>
+                <p><i class="fa-solid fa-phone"></i> <span>+91 2668 260 312</span></p>
+                <p><i class="fa-solid fa-envelope"></i> <span>info@paruluniversity.ac.in</span></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2027 DISHA Conference &middot; Parul University. All Rights Reserved.</p>
+            <p class="developer-credit">Designed and Developed by <a
+                    href="https://www.linkedin.com/in/mahek-darji-521651303/" target="_blank"
+                    rel="noopener noreferrer">Mahek Darji <i class="fa-brands fa-linkedin"></i></a> and <a
+                    href="https://www.linkedin.com/in/nipun-kulshrestha-816604288/" target="_blank"
+                    rel="noopener noreferrer">Nipun Kulshrestha <i class="fa-brands fa-linkedin"></i></a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+
+        function showDay(day, btn) {
+            const day1 = document.getElementById('day1-block');
+            const day2 = document.getElementById('day2-block');
+            const buttons = document.querySelectorAll('.day-tab-btn');
+
+            buttons.forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+
+            if (day === 'day1') {
+                day1.style.display = 'block';
+                day2.style.display = 'none';
+            } else if (day === 'day2') {
+                day1.style.display = 'none';
+                day2.style.display = 'block';
+            } else {
+                day1.style.display = 'block';
+                day2.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
