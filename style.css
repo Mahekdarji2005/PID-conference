@@ -557,7 +557,7 @@ body {
     margin: 0;
 }
 
-/* 17 SDG 2-Row Container */
+/* 8 SDG Single Horizontal Row Layout */
 .sdg-grid-rows {
     display: flex;
     flex-direction: column;
@@ -572,18 +572,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(0.35rem, 1.1vw, 1.25rem);
+    flex-wrap: nowrap;
+    gap: clamp(0.5rem, 1.2vw, 1.25rem);
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
 }
 
-.sdg-row-1, .sdg-row-2 {
-    flex-wrap: nowrap;
-}
-
 .sdg-item {
-    width: clamp(52px, 6.8vw, 105px);
+    width: clamp(75px, 8.5vw, 120px);
     aspect-ratio: 1 / 1;
     flex-shrink: 1;
     border-radius: 16px;
@@ -614,14 +611,20 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .sdg-row {
         flex-wrap: wrap;
-        gap: 0.75rem;
+        gap: 0.85rem;
     }
     
     .sdg-item {
-        width: clamp(48px, 18vw, 75px);
+        width: clamp(90px, 20vw, 130px);
+    }
+}
+
+@media (max-width: 480px) {
+    .sdg-item {
+        width: clamp(80px, 22vw, 115px);
     }
 }
 
