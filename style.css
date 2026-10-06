@@ -21,7 +21,92 @@ body {
     background-position: center;
     background-attachment: fixed;
     color: var(--text-main);
-    line-height: 1.6;
+}
+
+/* Global Typography: Justified Long-Form Body Text */
+.about-content p,
+.feature-box p,
+.university-section p,
+.hosts-hero p,
+.review-process-box p,
+.tracks-main-desc,
+.panels-main-desc,
+.panel-body,
+.about-text,
+.call-card-body,
+.guideline-item p,
+.submission-info p,
+.venue-hero-desc,
+.intro-card-text,
+.travel-desc,
+.cta-final-desc,
+.contact-hero p,
+.alignment-banner p,
+.footer-about,
+.keynote-speaker-bio,
+.register-desc,
+.guidelines-box p {
+    text-align: justify;
+    text-align-last: left;
+    -webkit-text-align-last: left;
+}
+
+/* Academic Convener Institution Line */
+.academic-convener-inst {
+    font-size: 0.85rem;
+    color: #B54728;
+    margin-top: 4px;
+    margin-bottom: 0;
+    text-align: center;
+    text-align-last: center;
+    -webkit-text-align-last: center;
+}
+
+/* Explicit non-justified short metadata, designations & roles */
+.committee-info p,
+.editorial p,
+.card-back-role,
+.card-back-inst,
+.patron-designation,
+.patron-institution,
+.central-subtitle,
+.overview-subtitle,
+.pending-note,
+.footer-contact p,
+.footer-bottom,
+.footer-bottom p {
+    text-align: initial;
+    text-align-last: initial;
+    -webkit-text-align-last: initial;
+}
+
+.committee-info p {
+    text-align: left;
+}
+
+.patron-designation,
+.patron-institution {
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .about-content p,
+    .feature-box p,
+    .university-section p,
+    .tracks-main-desc,
+    .panels-main-desc,
+    .panel-body,
+    .about-text,
+    .call-card-body,
+    .intro-card-text,
+    .travel-desc,
+    .alignment-banner p,
+    .footer-about,
+    .keynote-speaker-bio {
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+    }
 }
 
 /* Navbar */
@@ -47,8 +132,13 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: clamp(0.5rem, 1vw, 1rem);
     flex-shrink: 0;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .logo-text {
@@ -60,10 +150,9 @@ body {
 }
 
 .logo-img {
-    height: clamp(38px, 3.2vw, 48px);
+    height: clamp(38px, 3.4vw, 48px);
     width: auto;
     transition: transform 0.3s ease;
-    mix-blend-mode: multiply;
     object-fit: contain;
 }
 
@@ -87,10 +176,9 @@ body {
 }
 
 .right-logos img {
-    height: clamp(50px, 4.8vw, 65px);
+    height: clamp(38px, 3.2vw, 46px);
     width: auto;
     object-fit: contain;
-    mix-blend-mode: multiply;
     transition: transform 0.3s ease;
 }
 
@@ -139,6 +227,19 @@ body {
     height: 2px;
     background-color: var(--accent-color);
     border-radius: 2px;
+}
+
+.nav-links a.btn-primary {
+    color: #ffffff;
+}
+
+.nav-links a.btn-primary:hover {
+    color: #ffffff;
+    background-color: #9c3b20;
+}
+
+.nav-links a.btn-primary::after {
+    display: none !important;
 }
 
 /* Mobile Nav Toggle Button */
@@ -966,6 +1067,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     min-height: 90px;
 }
 
@@ -981,6 +1083,20 @@ body {
     color: var(--primary-color);
     font-weight: 700;
     line-height: 1.3;
+    margin: 0 0 4px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.scientific-card p.academic-convener-inst,
+.academic-convener-inst {
+    font-size: 0.85rem;
+    color: #B54728;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    text-align-last: center;
+    -webkit-text-align-last: center;
 }
 
 .pending-note {
