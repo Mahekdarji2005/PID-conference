@@ -109,6 +109,15 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
+          <Link
+            href="/publishing-ethics"
+            className={pathname === "/publishing-ethics" ? "active" : ""}
+            onClick={closeNav}
+          >
+            Publishing Ethics
+          </Link>
+        </li>
+        <li>
           <Link href="#" onClick={closeNav}>
             Gallery
           </Link>
