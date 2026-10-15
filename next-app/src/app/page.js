@@ -41,11 +41,11 @@ export default function Home() {
 
           <div className="hero-image blob-shape">
             <div className="slideshow">
-              <img src="/design/desgin-1.jpg" alt="Parul Institute of Design Campus 1" className="slide" />
-              <img src="/design/desgin-2.jpg" alt="Parul Institute of Design Campus 2" className="slide" />
-              <img src="/design/desgin-3.jpg" alt="Parul Institute of Design Campus 3" className="slide" />
-              <img src="/design/desgin-4.jpg" alt="Parul Institute of Design Campus 4" className="slide" />
-              <img src="/design/desgin-5.jpg" alt="Parul Institute of Design Campus 5" className="slide" />
+              <img src="/broucher-images/DSC00010.jpg" alt="DISHA 2027 Conference Highlight 1" className="slide" />
+              <img src="/broucher-images/DSC00025.jpg" alt="DISHA 2027 Conference Highlight 2" className="slide" />
+              <img src="/broucher-images/DSC00035.jpg" alt="DISHA 2027 Conference Highlight 3" className="slide" />
+              <img src="/broucher-images/DSC00050.jpg" alt="DISHA 2027 Conference Highlight 4" className="slide" />
+              <img src="/broucher-images/DSC00078.jpg" alt="DISHA 2027 Conference Highlight 5" className="slide" />
             </div>
           </div>
         </div>

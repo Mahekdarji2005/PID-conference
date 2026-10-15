@@ -118,7 +118,11 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href="#" onClick={closeNav}>
+          <Link
+            href="/gallery"
+            className={pathname === "/gallery" ? "active" : ""}
+            onClick={closeNav}
+          >
             Gallery
           </Link>
         </li>
