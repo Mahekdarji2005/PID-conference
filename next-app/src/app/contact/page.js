@@ -343,7 +343,7 @@ export default function ContactPage() {
               <div className="convener-avatar-circle">
                 <i className="fa-solid fa-user"></i>
               </div>
-              <span className="convener-role-badge">CONVENER</span>
+              <span className="convener-role-badge">CO-CONVENER</span>
               <h3 className="convener-name">Mr. Anand Bhargava</h3>
               <p className="convener-dept">Parul Institute of Design</p>
               <div className="contact-detail-list">
@@ -369,7 +369,16 @@ export default function ContactPage() {
               <i className="fa-solid fa-headset"></i>
             </div>
             <h3 className="desk-title">Conference Desk</h3>
-            <span className="desk-status"><i className="fa-regular fa-clock"></i> Conference email and website to be inserted later.</span>
+            <div className="contact-detail-list" style={{ marginTop: '1.2rem' }}>
+              <a href="mailto:internationalconference.pid@paruluniversity.ac.in" className="contact-link-item">
+                <i className="fa-solid fa-envelope"></i>
+                <span>internationalconference.pid@paruluniversity.ac.in</span>
+              </a>
+              <a href="https://disha-conference.paruluniversity.ac.in" target="_blank" rel="noopener noreferrer" className="contact-link-item">
+                <i className="fa-solid fa-globe"></i>
+                <span>disha-conference.paruluniversity.ac.in</span>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -390,7 +399,7 @@ export default function ContactPage() {
         <section className="contact-section">
           <div className="alignment-banner">
             <p>
-              DISHA 2027 is endorsed by the Cumulus Association and aligned with Viksit Bharat 2047, the seventeen United Nations Sustainable Development Goals and the G20 agenda.
+              DISHA 2027 is organised with the Cumulus Association and aligned with Viksit Bharat 2047, the seventeen United Nations Sustainable Development Goals and the G20 agenda.
             </p>
           </div>
         </section>

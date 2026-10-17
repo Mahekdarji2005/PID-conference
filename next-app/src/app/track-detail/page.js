@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { tracksData } from "@/data/tracks-data";
+import TrackSdgs from "@/components/TrackSdgs";
 
 function TrackDetailContent() {
   const searchParams = useSearchParams();
@@ -41,6 +42,7 @@ function TrackDetailContent() {
               <i className="fa-solid fa-circle-info"></i> ABOUT THIS TRACK
             </div>
             <p className="about-text">{track.about}</p>
+            <TrackSdgs trackId={trackId} />
           </div>
 
           {/* 2. Key Themes / Areas */}
@@ -104,7 +106,7 @@ function TrackDetailContent() {
           <div className="cta-submit-box">
             <div className="cta-submit-info">
               <h3>Ready to Submit to Track {track.number}?</h3>
-              <p>Submit your 250-word abstract by 31 October 2026 for double-blind peer review.</p>
+              <p>Submit your 250-word abstract by 15 November 2026 for double-blind peer review.</p>
             </div>
             <Link href="/call-for-papers#submit-options" className="btn-submit-action">
               SUBMIT ABSTRACT <i className="fa-solid fa-paper-plane"></i>
@@ -255,6 +257,55 @@ export default function TrackDetailPage() {
           font-size: 1.05rem;
           line-height: 1.75;
           color: #444444;
+        }
+
+        .track-sdg-section {
+          margin-top: 28px;
+          padding-top: 24px;
+          border-top: 1px solid #f0ede6;
+        }
+
+        .track-sdg-label {
+          font-family: var(--font-body);
+          font-size: 0.82rem;
+          font-weight: 700;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          color: var(--accent-color);
+          margin-bottom: 14px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .track-sdg-grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 14px;
+          align-items: center;
+        }
+
+        .track-sdg-tile {
+          width: clamp(54px, 6.5vw, 68px);
+          height: clamp(54px, 6.5vw, 68px);
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 14px rgba(13, 40, 54, 0.1);
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+          flex-shrink: 0;
+          background: #ffffff;
+        }
+
+        .track-sdg-tile:hover {
+          transform: translateY(-4px) scale(1.05);
+          box-shadow: 0 8px 22px rgba(13, 40, 54, 0.18);
+        }
+
+        .track-sdg-icon {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .themes-list {

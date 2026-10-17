@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import TrackSdgs from '@/components/TrackSdgs';
 
 export const metadata = {
   title: 'Tracks & Panels - DISHA 2027 | Parul University',
@@ -127,6 +128,36 @@ export default function TracksPage() {
             color: var(--text-light);
             font-size: 0.9rem;
             opacity: 0.85;
+        }
+
+        .track-card-sdgs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 22px;
+            align-items: center;
+        }
+
+        .track-card-sdg-tile {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            background: #ffffff;
+        }
+
+        .track-card:hover .track-card-sdg-tile {
+            transform: translateY(-2px);
+        }
+
+        .track-card-sdg-tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .track-card-link {
@@ -267,6 +298,7 @@ export default function TracksPage() {
                 <div className="track-card-institution">
                   <i className="fa-solid fa-building-columns"></i> Parul Institute of Design
                 </div>
+                <TrackSdgs trackId="1" variant="card" />
               </div>
               <div className="track-card-link">
                 VIEW TRACK <i className="fa-solid fa-arrow-right"></i>
@@ -280,6 +312,7 @@ export default function TracksPage() {
                 <div className="track-card-institution">
                   <i className="fa-solid fa-building-columns"></i> Parul Institute of Fine Arts
                 </div>
+                <TrackSdgs trackId="2" variant="card" />
               </div>
               <div className="track-card-link">
                 VIEW TRACK <i className="fa-solid fa-arrow-right"></i>
@@ -293,6 +326,7 @@ export default function TracksPage() {
                 <div className="track-card-institution">
                   <i className="fa-solid fa-building-columns"></i> Parul Institute of Liberal Arts
                 </div>
+                <TrackSdgs trackId="3" variant="card" />
               </div>
               <div className="track-card-link">
                 VIEW TRACK <i className="fa-solid fa-arrow-right"></i>
@@ -306,6 +340,7 @@ export default function TracksPage() {
                 <div className="track-card-institution">
                   <i className="fa-solid fa-star"></i> Cross Faculty Signature Track
                 </div>
+                <TrackSdgs trackId="4" variant="card" />
               </div>
               <div className="track-card-link">
                 VIEW TRACK <i className="fa-solid fa-arrow-right"></i>
@@ -319,6 +354,7 @@ export default function TracksPage() {
                 <div className="track-card-institution">
                   <i className="fa-solid fa-layer-group"></i> Cross Faculty Track
                 </div>
+                <TrackSdgs trackId="5" variant="card" />
               </div>
               <div className="track-card-link">
                 VIEW TRACK <i className="fa-solid fa-arrow-right"></i>
@@ -332,6 +368,7 @@ export default function TracksPage() {
                 <div className="track-card-institution">
                   <i className="fa-solid fa-layer-group"></i> Cross Faculty Track
                 </div>
+                <TrackSdgs trackId="6" variant="card" />
               </div>
               <div className="track-card-link">
                 VIEW TRACK <i className="fa-solid fa-arrow-right"></i>
@@ -345,6 +382,7 @@ export default function TracksPage() {
                 <div className="track-card-institution">
                   <i className="fa-solid fa-layer-group"></i> Cross Faculty Track
                 </div>
+                <TrackSdgs trackId="7" variant="card" />
               </div>
               <div className="track-card-link">
                 VIEW TRACK <i className="fa-solid fa-arrow-right"></i>

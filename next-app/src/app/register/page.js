@@ -114,6 +114,41 @@ export default function RegisterPage() {
             box-shadow: 0 6px 15px rgba(181, 71, 40, 0.3);
             border: 2px solid var(--accent-color);
         }
+        .register-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .register-info-card {
+            background: #fdfbf7;
+            border: 1px solid rgba(26, 44, 76, 0.1);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 24px;
+        }
+        .register-info-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+        .register-info-card p, .register-info-card ul {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+        }
+        .register-info-card ul {
+            list-style: none;
+        }
+        .register-info-card ul li {
+            margin-bottom: 8px;
+        }
+        .register-info-card ul li:last-child {
+            margin-bottom: 0;
+        }
       `}</style>
       <main className="register-section">
         <div className="register-container">
@@ -207,6 +242,20 @@ export default function RegisterPage() {
               </tr>
             </tbody>
           </table>
+
+          <div className="register-info-grid">
+            <div className="register-info-card">
+              <h3>Registration Inclusions</h3>
+              <p>The registration fee includes the conference kit, programme booklet, participant identity card, digital resource pack and refreshments across both days.</p>
+            </div>
+            <div className="register-info-card">
+              <h3>Terms &amp; Disclaimers</h3>
+              <ul>
+                <li><strong>Refund Policy:</strong> Registration fees are non refundable.</li>
+                <li><strong>Publication Charges:</strong> Full paper publication charges are borne by the author separately.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </main>
     </>

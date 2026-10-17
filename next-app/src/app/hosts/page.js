@@ -105,13 +105,24 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/manish-pandya.png" alt="Prof. Manish Pandya" className="patron-img" />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Patron</span>
               <h3 className="patron-name">Prof. Manish Pandya</h3>
               <p className="patron-designation">Registrar</p>
+              <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Parul University</p>
+            </div>
+          </div>
+          <div className="patron-card">
+            <div className="patron-img-wrapper black-placeholder">
+              <div className="patron-img placeholder-black"></div>
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">Patron</span>
+              <h3 className="patron-name">Dr. Rohit Goyal</h3>
+              <p className="patron-designation">Dean of Academics</p>
               <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Parul University</p>
             </div>
           </div>
@@ -164,7 +175,29 @@ export default function HostsPage() {
             <div className="patron-card-body">
               <span className="patron-role-tag">Co-Patron</span>
               <h3 className="patron-name">Dr. Bhavesh Mevada</h3>
-              <p className="patron-designation">Director, LAEP and Consultancy Cell</p>
+              <p className="patron-designation">Director, Learning and Academic Enrichment Program (LAEP) and Consultancy Cell</p>
+              <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Parul University</p>
+            </div>
+          </div>
+          <div className="patron-card">
+            <div className="patron-img-wrapper black-placeholder">
+              <div className="patron-img placeholder-black"></div>
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">Co-Patron</span>
+              <h3 className="patron-name">Prof. (Dr.) Richa Mishra</h3>
+              <p className="patron-designation">Director, SCOPE (Scientific Communication, Outreach and Public Engagement)</p>
+              <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Parul University</p>
+            </div>
+          </div>
+          <div className="patron-card">
+            <div className="patron-img-wrapper black-placeholder">
+              <div className="patron-img placeholder-black"></div>
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">Co-Patron</span>
+              <h3 className="patron-name">Prof. (Dr.) Preeti Nair</h3>
+              <p className="patron-designation">Director, Center for International Relations and Research (CIRR)</p>
               <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Parul University</p>
             </div>
           </div>
@@ -211,8 +244,8 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Palak Patel.JPG" alt="Ms. Palak Patel" className="patron-img" />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Organising Chair</span>
@@ -222,24 +255,24 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Ms. Dhvani Thakkar.JPG" alt="Ms. Dhvani Thakkar" className="patron-img" />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Organising Chair</span>
               <h3 className="patron-name">Ms. Dhvani Thakkar</h3>
-              <p className="patron-designation">Head, Outreach</p>
+              <p className="patron-designation">Director-Admissions &amp; Outreach</p>
               <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Parul Institute of Design</p>
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Dr. Saravanan Kannappan.jpg" alt="Dr. Saravanan Kannappan" className="patron-img" />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Organising Chair</span>
-              <h3 className="patron-name">Dr. K. Sarvanan</h3>
-              <p className="patron-designation">Head of Department (Academics)</p>
+              <h3 className="patron-name">Dr. Saravanan Kannappan</h3>
+              <p className="patron-designation">HoD-Academics</p>
               <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Parul Institute of Design</p>
             </div>
           </div>
@@ -253,8 +286,8 @@ export default function HostsPage() {
         </div>
         <div className="patrons-grid">
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/dhara vinod parmar.JPG" alt="Ms. Dhara Vinod Parmar" className="patron-img" />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Convener</span>
@@ -264,11 +297,11 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/anand bhargav.JPG" alt="Mr. Anand Bhargava" className="patron-img" />
             </div>
             <div className="patron-card-body">
-              <span className="patron-role-tag">Convener</span>
+              <span className="patron-role-tag">Co-Convener</span>
               <h3 className="patron-name">Mr. Anand Bhargava</h3>
               <p className="patron-designation">Faculty Member</p>
               <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Parul Institute of Design</p>
@@ -277,154 +310,338 @@ export default function HostsPage() {
         </div>
       </section>
 
-      {/* 06 ACADEMIC CONVENERS */}
+      {/* 06 INTERNATIONAL ADVISORY BOARD */}
       <section className="hosts-section">
         <div className="hosts-section-header">
-          <h2 className="hosts-section-title">Academic Conveners</h2>
+          <h2 className="hosts-section-title">International Advisory Board</h2>
+        </div>
+        <div className="patrons-grid">
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img
+                src="/Speaker_images/Eija Salmi FRSA.JPG"
+                alt="Ms. Eija Salmi FRSA"
+                className="patron-img"
+                style={{ objectPosition: 'center 52%' }}
+              />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">International Advisory Board</span>
+              <h3 className="patron-name">Ms. Eija Salmi FRSA</h3>
+              <p className="patron-designation">Secretary General</p>
+              <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Cumulus Association, Finland</p>
+            </div>
+          </div>
+          <div className="patron-card">
+            <div className="patron-img-wrapper awaiting-photo">
+              <div className="patron-img-placeholder">
+                <i className="fa-solid fa-user"></i>
+              </div>
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">International Advisory Board</span>
+              <h3 className="patron-name">Prof. Dr. Lorenzo Imbesi</h3>
+              <p className="patron-designation">President, Cumulus Association</p>
+              <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Sapienza University of Rome, Italy</p>
+            </div>
+          </div>
+          <div className="patron-card">
+            <div className="patron-img-wrapper awaiting-photo">
+              <div className="patron-img-placeholder">
+                <i className="fa-solid fa-user"></i>
+              </div>
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">International Advisory Board</span>
+              <h3 className="patron-name">Dr. Dolly Daou</h3>
+              <p className="patron-designation">Design Researcher &amp; Academic Leader</p>
+              <p className="patron-institution"><i className="fa-solid fa-globe"></i> Australia &amp; France</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Invited International Partner Institutions */}
+        <div style={{ maxWidth: '1120px', margin: '35px auto 0', background: '#ffffff', borderRadius: '16px', padding: '24px 30px', border: '1px solid #e0ddd7', boxShadow: '0 4px 15px rgba(0,0,0,0.03)' }}>
+          <h4 style={{ fontFamily: 'var(--font-heading)', color: 'var(--primary-color)', fontSize: '1.15rem', marginBottom: '8px' }}>
+            Representatives of Invited Partner Institutions <span style={{ fontSize: '0.8rem', color: 'var(--accent-color)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>(Subject to Confirmation)</span>
+          </h4>
+          <p style={{ fontSize: '0.92rem', color: 'var(--text-light)', margin: 0, lineHeight: 1.6 }}>
+            Victoria University of Wellington &middot; Birmingham City University &middot; NABA &middot; Coll&egrave;ge de Paris &middot; Nottingham Trent University
+          </p>
+        </div>
+      </section>
+
+      {/* 07 NATIONAL ADVISORY BOARD */}
+      <section className="hosts-section">
+        <div className="hosts-section-header">
+          <h2 className="hosts-section-title">National Advisory Board</h2>
+        </div>
+        <div className="patrons-grid">
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Mr_Arvind_Mishra.jpg" alt="Mr. Arvind Mishra" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Mr. Arvind Mishra</h3>
+              <p className="patron-designation">Scientific Assistant</p>
+              <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Space Applications Centre (SAC), ISRO, Ahmedabad</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Dr_Jonalee_Das.jpg" alt="Dr. Jonalee Bajpai" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Dr. Jonalee Bajpai</h3>
+              <p className="patron-designation">Director, NIFT Raebareli; Professor</p>
+              <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> NIFT Bengaluru</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Mr_Somaditya_Banerjee.jpg" alt="Mr. Somaditya Banerjee" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Mr. Somaditya Banerjee</h3>
+              <p className="patron-designation">Industry Consultant; Former Experience Design Director</p>
+              <p className="patron-institution"><i className="fa-solid fa-briefcase"></i> McKinsey &amp; Company</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Ms_Indira_Basu.jpg" alt="Ms. Indira Basu" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Ms. Indira Basu</h3>
+              <p className="patron-designation">Head, Content, EdTech Business</p>
+              <p className="patron-institution"><i className="fa-solid fa-building"></i> TCS iON, Tata Consultancy Services</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Mr_Aamir_Abdullah.jpg" alt="Mr. Aamir Abdullah" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Mr. Aamir Abdullah</h3>
+              <p className="patron-designation">Head of Department, Film and Media</p>
+              <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Amity University Gurgaon</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Amitabha_Singh.jpg" alt="Mr. Amitabha Singh" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Mr. Amitabha Singh</h3>
+              <p className="patron-designation">Filmmaker &amp; Cinematographer; Director</p>
+              <p className="patron-institution"><i className="fa-solid fa-film"></i> Xebec Films Pvt. Ltd. and CineVidya</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Mr_Mitresh_Sharma.jpg" alt="Mr. Mitresh Sharma" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Mr. Mitresh Sharma</h3>
+              <p className="patron-designation">Founder</p>
+              <p className="patron-institution"><i className="fa-solid fa-seedling"></i> First Bud Organics</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Ms_Amrita_Madan.jpg" alt="Ar. Amrita Madan" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Ar. Amrita Madan</h3>
+              <p className="patron-designation">Founding Partner &amp; Principal Architect</p>
+              <p className="patron-institution"><i className="fa-solid fa-compass-drafting"></i> Atelier Anonyme Design</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Mr_Chintan_Oza.jpg" alt="Mr. Chintan Oza" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Mr. Chintan Oza</h3>
+              <p className="patron-designation">Head of Sales &amp; Business Development</p>
+              <p className="patron-institution"><i className="fa-solid fa-store"></i> Craftroots</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Mr_Amit_Khamar.jpg" alt="Mr. Amit Khamar" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Mr. Amit Khamar</h3>
+              <p className="patron-designation">People Management Head &amp; EA to CMD</p>
+              <p className="patron-institution"><i className="fa-solid fa-shirt"></i> Jadeblue Lifestyle India Ltd.</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Ms_Bela_Rajgopalan.jpg" alt="Ms. Bela Kothari Rajagopalan" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Ms. Bela Kothari Rajagopalan</h3>
+              <p className="patron-designation">Graphic Designer &amp; Educator</p>
+              <p className="patron-institution"><i className="fa-solid fa-pen-nib"></i> Pictogram Communication Design</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Anil_Saini.jpg" alt="Mr. Anil Saini" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Mr. Anil Saini</h3>
+              <p className="patron-designation">Design Leader &amp; Former Director</p>
+              <p className="patron-institution"><i className="fa-solid fa-car"></i> General Motors Design Studio</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Dr_Arupa_Lahiry.jpg" alt="Dr. Arupa Lahiry" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Dr. Arupa Lahiry</h3>
+              <p className="patron-designation">Regional Director; Ustad Bismillah Khan Yuva Puraskar Awardee</p>
+              <p className="patron-institution"><i className="fa-solid fa-landmark"></i> IGNCA, Ministry of Culture, Govt. of India</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Mr_Alex_Nyembo.jpg" alt="Mr. Alex Nyembo" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Mr. Alex Nyembo</h3>
+              <p className="patron-designation">Architect, Educator &amp; Researcher</p>
+              <p className="patron-institution"><i className="fa-solid fa-compass-drafting"></i> Sustainable &amp; Bioclimatic Architecture</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Mr_Shamy_Jacob.jpg" alt="Mr. Shamy Jacob" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Mr. Shamy Jacob</h3>
+              <p className="patron-designation">Design Thinking &amp; Innovation Leader</p>
+              <p className="patron-institution"><i className="fa-solid fa-lightbulb"></i> Circular Design &amp; Sustainability</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Prof_Rajat_Bhattacharya.jpg" alt="Prof. Rajat Bhattacharya" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Prof. Rajat Bhattacharya</h3>
+              <p className="patron-designation">Advisor</p>
+              <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Parul Institute of Design</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
+              <img src="/advisory_board/Dr_Kamlesh_Jha.jpg" alt="Dr. Kamlesh Jha" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">National Advisory Board</span>
+              <h3 className="patron-name">Dr. Kamlesh Jha</h3>
+              <p className="patron-designation">Advisor</p>
+              <p className="patron-institution"><i className="fa-solid fa-hospital"></i> AIIMS</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 08 ACADEMIC CONVENERS & SCIENTIFIC REVIEW COMMITTEE */}
+      <section className="hosts-section">
+        <div className="hosts-section-header">
+          <h2 className="hosts-section-title">Academic Conveners &amp; Scientific Review Committee</h2>
         </div>
         <div className="scientific-grid">
           <div className="scientific-card">
+            <h4>Dr. Saravanan Kannappan (Lead)</h4>
+            <p className="academic-convener-inst">Parul Institute of Design</p>
+          </div>
+          <div className="scientific-card">
             <h4>Dr. Shruti Tiwari</h4>
-            <p className="academic-convener-inst">Parul Institute of Design</p>
-          </div>
-          <div className="scientific-card">
-            <h4>Dr. K. Sarvanan</h4>
-            <p className="academic-convener-inst">Parul Institute of Design</p>
-          </div>
-          <div className="scientific-card">
-            <h4>Dr. Dhananjay Bisht</h4>
-            <p className="academic-convener-inst">Parul Institute of Design</p>
-          </div>
-          <div className="scientific-card">
-            <h4>Dr. Rechab Londhe</h4>
             <p className="academic-convener-inst">Parul Institute of Design</p>
           </div>
           <div className="scientific-card">
             <h4>Dr. Jyoti Rani</h4>
             <p className="academic-convener-inst">Parul Institute of Design</p>
           </div>
-        </div>
-        <div className="pending-note">
-          (Nominations from PIFA, PILA — yet to be confirmed)
+          <div className="scientific-card">
+            <h4>Dr. Vandana Gupta</h4>
+            <p className="academic-convener-inst">Parul Institute of Design</p>
+          </div>
+          <div className="scientific-card">
+            <h4>Ms. Tarushikha Shaktawat</h4>
+            <p className="academic-convener-inst">Parul Institute of Design</p>
+          </div>
         </div>
       </section>
 
-      {/* 07 COORDINATORS */}
+      {/* 09 COORDINATORS */}
       <section className="hosts-section">
         <div className="hosts-section-header">
           <h2 className="hosts-section-title">Coordinators</h2>
         </div>
         <div className="scientific-grid">
           <div className="scientific-card">
-            <h4>Dr. Anurodh</h4>
-          </div>
-          <div className="scientific-card">
-            <h4>Dr. Vandana Gupta</h4>
-          </div>
-          <div className="scientific-card">
             <h4>Dr. V. M. Sarvanan</h4>
           </div>
           <div className="scientific-card">
-            <h4>Mr. Firoz</h4>
-          </div>
-        </div>
-        <div className="pending-note">
-          (Nominations from PIFA, PILA — yet to be confirmed)
-        </div>
-      </section>
-
-      {/* 08 INTERNATIONAL ADVISORY COMMITTEE */}
-      <section className="hosts-section">
-        <div className="hosts-section-header">
-          <h2 className="hosts-section-title">International Advisory Committee</h2>
-        </div>
-        <div className="committee-grid-3">
-          <div className="committee-card editorial">
-            <span className="committee-num">01</span>
-            <div className="committee-info">
-              <h3>Ms. Eija Salmi FRSA</h3>
-              <p>Secretary General, Cumulus Association, Finland</p>
-            </div>
-          </div>
-          <div className="committee-card editorial">
-            <span className="committee-num">02</span>
-            <div className="committee-info">
-              <h3>Prof. Dr. Lorenzo Imbesi</h3>
-              <p>President, Cumulus Association, Sapienza University of Rome, Italy</p>
-            </div>
-          </div>
-          <div className="committee-card editorial">
-            <span className="committee-num">03</span>
-            <div className="committee-info">
-              <h3>Dr. Dolly Daou</h3>
-              <p>Design researcher and academic leader, Australia and France</p>
-            </div>
-          </div>
-        </div>
-        <div className="pending-note">
-          Additional members and institutional representatives will be announced following confirmation.
-        </div>
-      </section>
-
-      {/* 09 ADVISORY COMMITTEE */}
-      <section className="hosts-section">
-        <div className="hosts-section-header">
-          <h2 className="hosts-section-title">Advisory Committee</h2>
-        </div>
-        <div className="committee-grid-3">
-          <div className="committee-card">
-            <span className="committee-num">01</span>
-            <div className="committee-info">
-              <h3>Prof. Rajat Bhattacharya</h3>
-              <p>Advisor &middot; Parul Institute of Design</p>
-            </div>
-          </div>
-          <div className="committee-card">
-            <span className="committee-num">02</span>
-            <div className="committee-info">
-              <h3>Mr. Vashishth Upadhyay</h3>
-              <p>Advisor &middot; Parul Institute of Design</p>
-            </div>
-          </div>
-          <div className="committee-card">
-            <span className="committee-num">03</span>
-            <div className="committee-info">
-              <h3>Dr. Kamlesh Jha</h3>
-              <p>Advisor, AIIMS</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 10 SCIENTIFIC & REVIEW COMMITTEE */}
-      <section className="hosts-section">
-        <div className="hosts-section-header">
-          <h2 className="hosts-section-title">Scientific &amp; Review Committee</h2>
-        </div>
-        <div className="scientific-grid">
-          <div className="scientific-card">
-            <h4>Dr. Shruti Tiwari</h4>
-          </div>
-          <div className="scientific-card">
-            <h4>Dr. Jyoti Rani</h4>
-          </div>
-          <div className="scientific-card">
-            <h4>Dr. Vandana Gupta</h4>
-          </div>
-          <div className="scientific-card">
-            <h4>Dr. V. M. Sarvanan</h4>
-          </div>
-          <div className="scientific-card">
-            <h4>Dr. Rechab</h4>
+            <h4>Dr. Rechab Londhe</h4>
           </div>
           <div className="scientific-card">
             <h4>Dr. Dhananjay Bisht</h4>
           </div>
-        </div>
-        <div className="pending-note">
-          Additional representatives from Parul Institute of Fine Arts and Parul Institute of Liberal Arts will be nominated.
+          <div className="scientific-card">
+            <h4>Dr. Anurodh</h4>
+          </div>
+          <div className="scientific-card">
+            <h4>Mr. Firoz Khan</h4>
+          </div>
+          <div className="scientific-card">
+            <h4>Ms. Tarushikha Shaktawat</h4>
+          </div>
+          <div className="scientific-card">
+            <h4>Mr. Rohit Chandwaskar</h4>
+          </div>
         </div>
       </section>
+
 
       {/* REVIEW PROCESS NOTE */}
       <div className="review-process-box">

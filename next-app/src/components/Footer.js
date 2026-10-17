@@ -38,8 +38,8 @@ export default function Footer() {
         <div className="footer-column footer-contact">
           <h3 className="footer-title">Contact Us</h3>
           <p><i className="fa-solid fa-location-dot"></i> <span>Parul University, P.O. Limda, Ta. Waghodia, Vadodara, Gujarat, India - 391760</span></p>
-          <p><i className="fa-solid fa-phone"></i> <span>+91 2668 260 312</span></p>
-          <p><i className="fa-solid fa-envelope"></i> <span>info@paruluniversity.ac.in</span></p>
+          <p><i className="fa-solid fa-phone"></i> <span>+91 9687560244 / +91 9873257320</span></p>
+          <p><i className="fa-solid fa-envelope"></i> <span>internationalconference.pid@paruluniversity.ac.in</span></p>
         </div>
       </div>
       <div className="footer-bottom">

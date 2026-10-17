@@ -425,6 +425,82 @@ export default function VenuePage() {
           margin-right: auto;
         }
 
+        .attractions-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 25px;
+          margin-top: 35px;
+        }
+
+        .attraction-card {
+          background: #ffffff;
+          border-radius: 16px;
+          padding: 28px 24px;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+          border-left: 4px solid var(--accent-color);
+          display: flex;
+          gap: 18px;
+          align-items: flex-start;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .attraction-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .attraction-icon {
+          width: 44px;
+          height: 44px;
+          background: #fff5f3;
+          color: var(--accent-color);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.15rem;
+          flex-shrink: 0;
+        }
+
+        .attraction-content h3 {
+          font-family: var(--font-heading);
+          font-size: 1.2rem;
+          color: var(--primary-color);
+          margin: 0 0 6px 0;
+          font-weight: 700;
+        }
+
+        .attraction-content p {
+          font-size: 0.92rem;
+          color: var(--text-light);
+          line-height: 1.55;
+          margin: 0;
+        }
+
+        .accommodation-notice {
+          background: #fdfbf7;
+          border: 1px dashed rgba(181, 71, 40, 0.35);
+          border-radius: 12px;
+          padding: 20px 24px;
+          margin-top: 35px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }
+
+        .accommodation-notice i {
+          font-size: 1.5rem;
+          color: var(--accent-color);
+          flex-shrink: 0;
+        }
+
+        .accommodation-notice p {
+          margin: 0;
+          font-size: 0.95rem;
+          color: var(--text-main);
+          line-height: 1.5;
+        }
+
         @media (max-width: 1024px) {
           .intro-grid { grid-template-columns: 1fr; gap: 30px; }
           .travel-grid { grid-template-columns: repeat(2, 1fr); }
@@ -434,6 +510,7 @@ export default function VenuePage() {
         @media (max-width: 768px) {
           .venue-hero-title { font-size: 2.2rem; }
           .travel-grid { grid-template-columns: 1fr; }
+          .attractions-grid { grid-template-columns: 1fr; }
           .campus-gallery-grid { grid-template-columns: 1fr; }
           .gallery-img-container { min-height: 260px; }
           .map-container { height: 320px; }
@@ -679,7 +756,80 @@ export default function VenuePage() {
         </div>
       </section>
 
-      {/* 6. Final CTA Section */}
+      {/* 6. Around Vadodara Section */}
+      <section className="venue-section" id="around-vadodara" style={{ paddingTop: "20px" }}>
+        <div className="venue-container">
+          <div className="section-header">
+            <span className="section-tag-pill">LOCAL ATTRACTIONS</span>
+            <h2 className="venue-hero-title">AROUND VADODARA</h2>
+            <div className="title-divider"></div>
+            <p className="venue-hero-desc">
+              Discover the historic, architectural, and cultural heritage across Vadodara and central Gujarat during your conference visit.
+            </p>
+          </div>
+
+          <div className="attractions-grid">
+            <div className="attraction-card">
+              <div className="attraction-icon">
+                <i className="fa-solid fa-landmark"></i>
+              </div>
+              <div className="attraction-content">
+                <h3>Laxmi Vilas Palace</h3>
+                <p>The majestic Gaekwad residence and one of the largest private dwellings ever built in India, renowned for its Indo-Saracenic grandeur.</p>
+              </div>
+            </div>
+
+            <div className="attraction-card">
+              <div className="attraction-icon">
+                <i className="fa-solid fa-monument"></i>
+              </div>
+              <div className="attraction-content">
+                <h3>Champaner-Pavagadh Archaeological Park</h3>
+                <p>A UNESCO World Heritage Site featuring prehistoric heritage, ancient hill fortresses, and early Islamic architecture, about an hour from campus.</p>
+              </div>
+            </div>
+
+            <div className="attraction-card">
+              <div className="attraction-icon">
+                <i className="fa-solid fa-person"></i>
+              </div>
+              <div className="attraction-content">
+                <h3>Statue of Unity &amp; Sardar Sarovar</h3>
+                <p>The world's tallest statue and the scenic Sardar Sarovar valley, situated about two and a half hours by road from Vadodara.</p>
+              </div>
+            </div>
+
+            <div className="attraction-card">
+              <div className="attraction-icon">
+                <i className="fa-solid fa-palette"></i>
+              </div>
+              <div className="attraction-content">
+                <h3>Sayaji Baug &amp; Baroda Museum</h3>
+                <p>Sayaji Baug expansive parklands featuring the historic Baroda Museum and Picture Gallery, home to renowned art collections and antiquities.</p>
+              </div>
+            </div>
+
+            <div className="attraction-card">
+              <div className="attraction-icon">
+                <i className="fa-solid fa-scissors"></i>
+              </div>
+              <div className="attraction-content">
+                <h3>Central Gujarat Craft &amp; Textile Belts</h3>
+                <p>The rich textile traditions and indigenous artisan craft clusters of central Gujarat, easily accessible within a day's travel.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="accommodation-notice">
+            <i className="fa-solid fa-circle-info"></i>
+            <p>
+              <strong>Delegate Accommodation &amp; Campus Transfers:</strong> Vadodara is served by Vadodara Junction on the Western Railway main line and by Vadodara Airport, with Ahmedabad International Airport about two hours away by road. Recommended delegate accommodation and scheduled campus transfers will be listed on the conference website.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Final CTA Section */}
       <section className="venue-section" id="cta" style={{ paddingBottom: "100px" }}>
         <div className="venue-container">
           <div className="cta-final-box">

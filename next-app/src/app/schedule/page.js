@@ -353,16 +353,25 @@ export default function SchedulePage() {
                 <div className="schedule-time"><i className="fa-regular fa-clock"></i> 10:45 to 11:30</div>
                 <div className="schedule-details">
                   <span className="schedule-type-badge">Keynote Address</span>
-                  <div className="schedule-session-title">Keynote 1: Prof. Dr. Lorenzo Imbesi</div>
+                  <div className="schedule-session-title">Keynote I. Bharat as a bridge to a shared global future</div>
                 </div>
                 <div className="schedule-venue"><i className="fa-solid fa-location-dot"></i> Venue: Central Auditorium</div>
               </div>
 
+              <div className="schedule-card break">
+                <div className="schedule-time"><i className="fa-regular fa-clock"></i> 11:30 to 11:45</div>
+                <div className="schedule-details">
+                  <span className="schedule-type-badge">Morning Break</span>
+                  <div className="schedule-session-title">Tea</div>
+                </div>
+                <div className="schedule-venue"><i className="fa-solid fa-location-dot"></i> Venue: PID</div>
+              </div>
+
               <div className="schedule-card">
-                <div className="schedule-time"><i className="fa-regular fa-clock"></i> 11:30 to 13:15</div>
+                <div className="schedule-time"><i className="fa-regular fa-clock"></i> 11:45 to 13:15</div>
                 <div className="schedule-details">
                   <span className="schedule-type-badge">Paper Presentations</span>
-                  <div className="schedule-session-title">Parallel paper presentations</div>
+                  <div className="schedule-session-title">Parallel paper presentations, Tracks 1, 2 and 3</div>
                 </div>
                 <div className="schedule-venue"><i className="fa-solid fa-location-dot"></i> Venue: PID</div>
               </div>
@@ -380,7 +389,7 @@ export default function SchedulePage() {
                 <div className="schedule-time"><i className="fa-regular fa-clock"></i> 14:00 to 15:30</div>
                 <div className="schedule-details">
                   <span className="schedule-type-badge">Workshops &amp; Sessions</span>
-                  <div className="schedule-session-title">Parallel paper sessions continued, and Call for Proposals workshops and demonstrations</div>
+                  <div className="schedule-session-title">Parallel paper sessions continued, with Call for Proposals workshops and demonstrations</div>
                 </div>
                 <div className="schedule-venue"><i className="fa-solid fa-location-dot"></i> Venue: PID</div>
               </div>
@@ -389,7 +398,7 @@ export default function SchedulePage() {
                 <div className="schedule-time"><i className="fa-regular fa-clock"></i> 15:30 to 16:15</div>
                 <div className="schedule-details">
                   <span className="schedule-type-badge">Panel Discussion</span>
-                  <div className="schedule-session-title">Panel: Design, the arts and civilisational identity in a global century</div>
+                  <div className="schedule-session-title">Thematic Panel 1. Policy, Skills and the Creative Economy: Turning Curriculum into Capability</div>
                 </div>
                 <div className="schedule-venue"><i className="fa-solid fa-location-dot"></i> Venue: Central Auditorium</div>
               </div>
@@ -446,7 +455,7 @@ export default function SchedulePage() {
                 <div className="schedule-time"><i className="fa-regular fa-clock"></i> 09:45 to 10:30</div>
                 <div className="schedule-details">
                   <span className="schedule-type-badge">Keynote Address</span>
-                  <div className="schedule-session-title">Keynote 2: Dr. Dolly Daou</div>
+                  <div className="schedule-session-title">Keynote II. Educators as practitioners. Art and design education for planetary futures</div>
                 </div>
                 <div className="schedule-venue"><i className="fa-solid fa-location-dot"></i> Venue: Central Auditorium / OSCAR</div>
               </div>
@@ -491,7 +500,7 @@ export default function SchedulePage() {
                 <div className="schedule-time"><i className="fa-regular fa-clock"></i> 15:30 to 16:15</div>
                 <div className="schedule-details">
                   <span className="schedule-type-badge">Panel Discussion</span>
-                  <div className="schedule-session-title">Panel: Healing, knowledge and cultural diplomacy, India’s global contribution</div>
+                  <div className="schedule-session-title">Thematic Panel 2. The Machine in the Studio: Authorship, Ethics and Creative Education</div>
                 </div>
                 <div className="schedule-venue"><i className="fa-solid fa-location-dot"></i> Venue: Central Auditorium</div>
               </div>
@@ -509,13 +518,50 @@ export default function SchedulePage() {
                 <div className="schedule-time"><i className="fa-regular fa-clock"></i> 17:00 to 17:45</div>
                 <div className="schedule-details">
                   <span className="schedule-type-badge">Valedictory Ceremony</span>
-                  <div className="schedule-session-title">Valedictory function, Cumulus Design Declaration reflection and announcement of winners</div>
+                  <div className="schedule-session-title">Valedictory session, address by the Guest of Honour Ms. Eija Salmi FRSA, reflection on the Cumulus Design Declaration and announcement of winners</div>
                 </div>
                 <div className="schedule-venue"><i className="fa-solid fa-location-dot"></i> Venue: Central Auditorium</div>
               </div>
             </div>
           </div>
         )}
+
+        {/* AWARDS & FORMATS SECTION */}
+        <div className="day-block" style={{ marginTop: '50px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '25px' }}>
+            <div style={{ background: '#ffffff', borderRadius: '16px', padding: '32px 28px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', borderTop: '4px solid #a83c27' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', color: '#002f4b', fontSize: '1.4rem', marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <i className="fa-solid fa-trophy" style={{ color: '#a83c27' }}></i> Conference Awards
+              </h3>
+              <p style={{ fontSize: '0.95rem', color: '#555555', marginBottom: '16px' }}>
+                Recognising exceptional scholarship, interdisciplinary rigor, and original creative research:
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.95rem', color: '#002f4b', fontWeight: 600 }}>
+                  <i className="fa-solid fa-award" style={{ color: '#a83c27' }}></i> Best Paper in each faculty
+                </li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.95rem', color: '#002f4b', fontWeight: 600 }}>
+                  <i className="fa-solid fa-award" style={{ color: '#a83c27' }}></i> Best Interdisciplinary Paper
+                </li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.95rem', color: '#002f4b', fontWeight: 600 }}>
+                  <i className="fa-solid fa-award" style={{ color: '#a83c27' }}></i> Best Doctoral Paper
+                </li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.95rem', color: '#002f4b', fontWeight: 600 }}>
+                  <i className="fa-solid fa-award" style={{ color: '#a83c27' }}></i> Best Student Presentation
+                </li>
+              </ul>
+            </div>
+
+            <div style={{ background: '#ffffff', borderRadius: '16px', padding: '32px 28px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', borderTop: '4px solid #002f4b' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', color: '#002f4b', fontSize: '1.4rem', marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <i className="fa-solid fa-layer-group" style={{ color: '#002f4b' }}></i> Session Formats
+              </h3>
+              <p style={{ fontSize: '0.95rem', color: '#555555', lineHeight: 1.65 }}>
+                Keynote lectures, parallel paper sessions, thematic panels, workshops and charrettes, poster and art exhibitions, performances and hands-on demonstrations. The emphasis throughout is on case studies, live demonstration and discussion rather than presentation alone.
+              </p>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );

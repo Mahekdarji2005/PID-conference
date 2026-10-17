@@ -320,7 +320,7 @@ export default function ImportantDatesPage() {
                 <div className="branch-line"></div>
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
-                  <div className="timeline-date">31 October 2026</div>
+                  <div className="timeline-date">15 November 2026</div>
                   <div className="timeline-event">Abstract submission (both calls)</div>
                 </div>
               </div>
@@ -329,7 +329,7 @@ export default function ImportantDatesPage() {
                 <div className="branch-line"></div>
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
-                  <div className="timeline-date">15 November 2026</div>
+                  <div className="timeline-date">25 November 2026</div>
                   <div className="timeline-event">Notification of acceptance</div>
                 </div>
               </div>
@@ -338,7 +338,7 @@ export default function ImportantDatesPage() {
                 <div className="branch-line"></div>
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
-                  <div className="timeline-date">1 November &ndash; 31 December 2026</div>
+                  <div className="timeline-date">25 November &ndash; 31 December 2026</div>
                   <div className="timeline-event">Registration window</div>
                 </div>
               </div>

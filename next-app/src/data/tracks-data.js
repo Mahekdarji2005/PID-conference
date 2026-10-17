@@ -142,7 +142,10 @@ export const tracksData = {
             "SDG 3: Good Health and Wellbeing",
             "SDG 6: Clean Water and Sanitation",
             "SDG 11: Sustainable Cities & Communities",
-            "SDG 12, 13, 14, 15: Ecological Stewardship"
+            "SDG 12: Responsible Consumption and Production",
+            "SDG 13: Climate Action",
+            "SDG 14: Life Below Water",
+            "SDG 15: Life on Land"
         ],
         nationalMissions: [
             "IKS Division, Ministry of Education",
