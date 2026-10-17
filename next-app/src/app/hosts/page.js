@@ -20,7 +20,7 @@ export default function HostsPage() {
         <div className="patrons-grid">
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/host/devanshusir_cutout.png" alt="Dr. Devanshu Patel" className="patron-img" />
+              <img src="/host/devanshusir_cutout.png" alt="Dr. Devanshu Patel" className="patron-img" style={{ objectPosition: 'center 10%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Chief Patron</span>
@@ -31,7 +31,7 @@ export default function HostsPage() {
           </div>
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/host/geetikamam_cutout.png" alt="Dr. Geetika Madan Patel" className="patron-img" />
+              <img src="/host/geetikamam_cutout.png" alt="Dr. Geetika Madan Patel" className="patron-img" style={{ objectPosition: 'center 15%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Chief Patron</span>
@@ -42,7 +42,7 @@ export default function HostsPage() {
           </div>
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/host/parulmam_cutout.png" alt="Dr. Parul Patel" className="patron-img" />
+              <img src="/host/parulmam_cutout.png" alt="Dr. Parul Patel" className="patron-img" style={{ objectPosition: 'center 8px' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Chief Patron</span>
