@@ -44,11 +44,11 @@ export default function Home() {
 
           <div className="hero-image blob-shape">
             <div className="slideshow">
-              <img src="/api/illustrated-images/WhatsApp%20Image%202026-10-16%20at%209.37.51%20AM.jpeg" alt="DISHA 2027 Conference Highlight 1" className="slide" />
-              <img src="/api/illustrated-images/WhatsApp%20Image%202026-10-16%20at%209.37.52%20AM%20(1).jpeg" alt="DISHA 2027 Conference Highlight 2" className="slide" />
-              <img src="/api/illustrated-images/WhatsApp%20Image%202026-10-16%20at%209.37.52%20AM%20(2).jpeg" alt="DISHA 2027 Conference Highlight 3" className="slide" />
-              <img src="/api/illustrated-images/WhatsApp%20Image%202026-10-16%20at%209.37.52%20AM.jpeg" alt="DISHA 2027 Conference Highlight 4" className="slide" />
-              <img src="/api/illustrated-images/WhatsApp%20Image%202026-10-16%20at%209.37.53%20AM%20(1).jpeg" alt="DISHA 2027 Conference Highlight 5" className="slide" />
+              <img src="/ILLUSTRATED%20IMAGES/WhatsApp%20Image%202026-10-16%20at%209.37.51%20AM.jpeg" alt="DISHA 2027 Conference Highlight 1" className="slide" />
+              <img src="/ILLUSTRATED%20IMAGES/WhatsApp%20Image%202026-10-16%20at%209.37.52%20AM%20(1).jpeg" alt="DISHA 2027 Conference Highlight 2" className="slide" />
+              <img src="/ILLUSTRATED%20IMAGES/WhatsApp%20Image%202026-10-16%20at%209.37.52%20AM%20(2).jpeg" alt="DISHA 2027 Conference Highlight 3" className="slide" />
+              <img src="/ILLUSTRATED%20IMAGES/WhatsApp%20Image%202026-10-16%20at%209.37.52%20AM.jpeg" alt="DISHA 2027 Conference Highlight 4" className="slide" />
+              <img src="/ILLUSTRATED%20IMAGES/WhatsApp%20Image%202026-10-16%20at%209.37.53%20AM%20(1).jpeg" alt="DISHA 2027 Conference Highlight 5" className="slide" />
             </div>
           </div>
         </div>
