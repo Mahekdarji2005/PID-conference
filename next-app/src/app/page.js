@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 export default function Home() {
   return (
     <main>
@@ -43,11 +44,11 @@ export default function Home() {
 
           <div className="hero-image blob-shape">
             <div className="slideshow">
-              <img src="/broucher-images/DSC00010.jpg" alt="DISHA 2027 Conference Highlight 1" className="slide" />
-              <img src="/broucher-images/DSC00025.jpg" alt="DISHA 2027 Conference Highlight 2" className="slide" />
-              <img src="/broucher-images/DSC00035.jpg" alt="DISHA 2027 Conference Highlight 3" className="slide" />
-              <img src="/broucher-images/DSC00050.jpg" alt="DISHA 2027 Conference Highlight 4" className="slide" />
-              <img src="/broucher-images/DSC00078.jpg" alt="DISHA 2027 Conference Highlight 5" className="slide" />
+              <img src="/api/illustrated-images/WhatsApp%20Image%202026-10-16%20at%209.37.51%20AM.jpeg" alt="DISHA 2027 Conference Highlight 1" className="slide" />
+              <img src="/api/illustrated-images/WhatsApp%20Image%202026-10-16%20at%209.37.52%20AM%20(1).jpeg" alt="DISHA 2027 Conference Highlight 2" className="slide" />
+              <img src="/api/illustrated-images/WhatsApp%20Image%202026-10-16%20at%209.37.52%20AM%20(2).jpeg" alt="DISHA 2027 Conference Highlight 3" className="slide" />
+              <img src="/api/illustrated-images/WhatsApp%20Image%202026-10-16%20at%209.37.52%20AM.jpeg" alt="DISHA 2027 Conference Highlight 4" className="slide" />
+              <img src="/api/illustrated-images/WhatsApp%20Image%202026-10-16%20at%209.37.53%20AM%20(1).jpeg" alt="DISHA 2027 Conference Highlight 5" className="slide" />
             </div>
           </div>
         </div>

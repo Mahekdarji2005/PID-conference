@@ -398,8 +398,8 @@ body {
 /* Image Blob Showcase */
 .hero-image {
     flex: 1;
-    max-width: 510px;
-    height: 510px;
+    max-width: 600px;
+    height: 600px;
     position: relative;
     margin-left: -1rem;
 }
