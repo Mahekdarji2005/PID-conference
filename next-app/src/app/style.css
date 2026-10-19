@@ -919,6 +919,18 @@ body {
     transform: scale(1.05);
 }
 
+.patron-img.nab-member-img {
+    object-fit: cover;
+    object-position: var(--pos-x, 50%) var(--pos-y, 30%);
+    transform: scale(var(--zoom, 1.6));
+    transform-origin: var(--pos-x, 50%) var(--pos-y, 30%);
+    translate: var(--shift-x, 0%) var(--shift-y, 0%);
+}
+
+.patron-card:hover .patron-img.nab-member-img {
+    transform: scale(calc(var(--zoom, 1.6) * 1.05));
+}
+
 .patron-card-body {
     padding: 0;
     width: 100%;

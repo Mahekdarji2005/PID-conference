@@ -80,22 +80,8 @@ const expertSpeakersData = [
 
 const KEYNOTE_DATA = [
   {
-    name: "Prof. Dr. Lorenzo Imbesi",
-    role: "KEYNOTE SPEAKER I",
-    bio: "President, Cumulus Association. Full Professor and Director, Sapienza Design Research, Sapienza University of Rome, Italy.",
-    image: "/Speaker_images/Lorenzo_Imbesi.jpg",
-    fallback: "LI",
-  },
-  {
-    name: "Dr. Dolly Daou",
-    role: "KEYNOTE SPEAKER II",
-    bio: "Design researcher, educator and academic leader in transdisciplinary design education, with leadership roles across Australia, Europe, China and the Middle East.",
-    image: "/Speaker_images/Dolly_Daou.jpg",
-    fallback: "DD",
-  },
-  {
     name: "Ms. Eija Salmi FRSA",
-    role: "GUEST OF HONOUR",
+    role: "KEYNOTE SPEAKER & GUEST OF HONOUR",
     bio: "Secretary General, Cumulus Association, Finland.",
     image: "/Speaker_images/Eija Salmi FRSA.JPG",
     fallback: "ES",
@@ -285,33 +271,14 @@ export default function SpeakersPage() {
 
   const DIRECTORY_GROUPS = [
     {
-      title: "Guest of Honour",
+      title: "Keynote Speaker & Guest of Honour",
       people: [
         {
           name: "Ms. Eija Salmi FRSA",
-          designation: "Guest of Honour & Secretary General",
+          designation: "Keynote Speaker & Guest of Honour · Secretary General",
           institution: "Cumulus Association · International Association of Universities & Colleges of Art, Design and Media",
-          tag: "GUEST OF HONOUR",
+          tag: "KEYNOTE & GUEST OF HONOUR",
           image: "/Speaker_images/Eija Salmi FRSA.JPG",
-        },
-      ],
-    },
-    {
-      title: "Keynote Speakers",
-      people: [
-        {
-          name: "Prof. Dr. Lorenzo Imbesi",
-          designation: "Keynote Speaker I & President, Cumulus Association",
-          institution: "Sapienza Design Research, Sapienza University of Rome, Italy",
-          tag: "KEYNOTE",
-          image: "/Speaker_images/Lorenzo_Imbesi.jpg",
-        },
-        {
-          name: "Dr. Dolly Daou",
-          designation: "Keynote Speaker II & Lead Design Researcher",
-          institution: "Transdisciplinary Design Leadership (Australia, Europe, Asia)",
-          tag: "KEYNOTE",
-          image: "/Speaker_images/Dolly_Daou.jpg",
         },
       ],
     },
@@ -344,36 +311,40 @@ export default function SpeakersPage() {
         </div>
       </section>
 
-      {/* Keynotes & Guest of Honour 3D Perspective Carousel Section */}
+      {/* Keynote Speaker & Guest of Honour 3D Perspective Section */}
       <section className="keynotes-section" id="keynotes-section">
         <div className="keynotes-header">
           <span className="keynotes-tag">DISHA 2027 &middot; FEATURED LEADERSHIP</span>
-          <h2 className="keynotes-title">Keynotes &amp; Guest of Honour</h2>
+          <h2 className="keynotes-title">Keynote Speaker &amp; Guest of Honour</h2>
           <div className="keynotes-title-accent"></div>
         </div>
 
         <div className="perspective-carousel-wrapper">
-          <button
-            className="carousel-nav-btn prev-btn"
-            id="keynote-prev-btn"
-            aria-label="Previous Keynote"
-            onClick={() =>
-              setCurrentKeynoteIndex((prev) => (prev - 1 + KEYNOTE_DATA.length) % KEYNOTE_DATA.length)
-            }
-          >
-            <i className="fa-solid fa-chevron-left"></i>
-          </button>
+          {KEYNOTE_DATA.length > 1 && (
+            <button
+              className="carousel-nav-btn prev-btn"
+              id="keynote-prev-btn"
+              aria-label="Previous Keynote"
+              onClick={() =>
+                setCurrentKeynoteIndex((prev) => (prev - 1 + KEYNOTE_DATA.length) % KEYNOTE_DATA.length)
+              }
+            >
+              <i className="fa-solid fa-chevron-left"></i>
+            </button>
+          )}
 
           <div className="perspective-stage" id="perspective-stage">
             {KEYNOTE_DATA.map((k, idx) => {
-              let posClass = "";
-              const total = KEYNOTE_DATA.length;
-              if (idx === currentKeynoteIndex) {
-                posClass = "pos-center active";
-              } else if (idx === (currentKeynoteIndex - 1 + total) % total) {
-                posClass = "pos-left left";
-              } else if (idx === (currentKeynoteIndex + 1) % total) {
-                posClass = "pos-right right";
+              let posClass = "pos-center active";
+              if (KEYNOTE_DATA.length > 1) {
+                const total = KEYNOTE_DATA.length;
+                if (idx === currentKeynoteIndex) {
+                  posClass = "pos-center active";
+                } else if (idx === (currentKeynoteIndex - 1 + total) % total) {
+                  posClass = "pos-left left";
+                } else if (idx === (currentKeynoteIndex + 1) % total) {
+                  posClass = "pos-right right";
+                }
               }
 
               return (
@@ -403,14 +374,16 @@ export default function SpeakersPage() {
             })}
           </div>
 
-          <button
-            className="carousel-nav-btn next-btn"
-            id="keynote-next-btn"
-            aria-label="Next Keynote"
-            onClick={() => setCurrentKeynoteIndex((prev) => (prev + 1) % KEYNOTE_DATA.length)}
-          >
-            <i className="fa-solid fa-chevron-right"></i>
-          </button>
+          {KEYNOTE_DATA.length > 1 && (
+            <button
+              className="carousel-nav-btn next-btn"
+              id="keynote-next-btn"
+              aria-label="Next Keynote"
+              onClick={() => setCurrentKeynoteIndex((prev) => (prev + 1) % KEYNOTE_DATA.length)}
+            >
+              <i className="fa-solid fa-chevron-right"></i>
+            </button>
+          )}
         </div>
 
         {/* Active Keynote Details Box */}
@@ -421,16 +394,18 @@ export default function SpeakersPage() {
         </div>
 
         {/* Pagination Indicator Dots */}
-        <div className="carousel-dots-container" id="keynote-carousel-dots">
-          {KEYNOTE_DATA.map((_, idx) => (
-            <button
-              key={idx}
-              className={`dot-btn ${idx === currentKeynoteIndex ? "active" : ""}`}
-              onClick={() => setCurrentKeynoteIndex(idx)}
-              aria-label={`Go to Keynote ${idx + 1}`}
-            ></button>
-          ))}
-        </div>
+        {KEYNOTE_DATA.length > 1 && (
+          <div className="carousel-dots-container" id="keynote-carousel-dots">
+            {KEYNOTE_DATA.map((_, idx) => (
+              <button
+                key={idx}
+                className={`dot-btn ${idx === currentKeynoteIndex ? "active" : ""}`}
+                onClick={() => setCurrentKeynoteIndex(idx)}
+                aria-label={`Go to Keynote ${idx + 1}`}
+              ></button>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Main Scroll-Driven 3D Speaker Orbit Showcase Stage */}

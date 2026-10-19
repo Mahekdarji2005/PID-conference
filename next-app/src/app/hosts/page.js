@@ -332,32 +332,6 @@ export default function HostsPage() {
               <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Cumulus Association, Finland</p>
             </div>
           </div>
-          <div className="patron-card">
-            <div className="patron-img-wrapper awaiting-photo">
-              <div className="patron-img-placeholder">
-                <i className="fa-solid fa-user"></i>
-              </div>
-            </div>
-            <div className="patron-card-body">
-              <span className="patron-role-tag">International Advisory Board</span>
-              <h3 className="patron-name">Prof. Dr. Lorenzo Imbesi</h3>
-              <p className="patron-designation">President, Cumulus Association</p>
-              <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Sapienza University of Rome, Italy</p>
-            </div>
-          </div>
-          <div className="patron-card">
-            <div className="patron-img-wrapper awaiting-photo">
-              <div className="patron-img-placeholder">
-                <i className="fa-solid fa-user"></i>
-              </div>
-            </div>
-            <div className="patron-card-body">
-              <span className="patron-role-tag">International Advisory Board</span>
-              <h3 className="patron-name">Dr. Dolly Daou</h3>
-              <p className="patron-designation">Design Researcher &amp; Academic Leader</p>
-              <p className="patron-institution"><i className="fa-solid fa-globe"></i> Australia &amp; France</p>
-            </div>
-          </div>
         </div>
 
         {/* Invited International Partner Institutions */}
@@ -379,7 +353,7 @@ export default function HostsPage() {
         <div className="patrons-grid">
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Mr_Arvind_Mishra.jpg" alt="Mr. Arvind Mishra" className="patron-img" />
+              <img src="/advisory_board/Mr_Arvind_Mishra.jpg" alt="Mr. Arvind Mishra" className="patron-img nab-member-img" style={{ '--zoom': 1.75, '--pos-x': '50%', '--pos-y': '26%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -391,7 +365,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Dr_Jonalee_Das.jpg" alt="Dr. Jonalee Bajpai" className="patron-img" />
+              <img src="/advisory_board/Dr_Jonalee_Das.jpg" alt="Dr. Jonalee Bajpai" className="patron-img nab-member-img" style={{ '--zoom': 1.9, '--pos-x': '52%', '--pos-y': '27%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -403,7 +377,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Mr_Somaditya_Banerjee.jpg" alt="Mr. Somaditya Banerjee" className="patron-img" />
+              <img src="/advisory_board/Mr_Somaditya_Banerjee.jpg" alt="Mr. Somaditya Banerjee" className="patron-img nab-member-img" style={{ '--zoom': 1.75, '--pos-x': '50%', '--pos-y': '29%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -415,7 +389,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Ms_Indira_Basu.jpg" alt="Ms. Indira Basu" className="patron-img" />
+              <img src="/advisory_board/Ms_Indira_Basu.jpg" alt="Ms. Indira Basu" className="patron-img nab-member-img" style={{ '--zoom': 1.85, '--pos-x': '55%', '--pos-y': '30%', '--shift-x': '-31%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -427,7 +401,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Mr_Aamir_Abdullah.jpg" alt="Mr. Aamir Abdullah" className="patron-img" />
+              <img src="/advisory_board/Mr_Aamir_Abdullah.jpg" alt="Mr. Aamir Abdullah" className="patron-img nab-member-img" style={{ '--zoom': 2.7, '--pos-x': '53%', '--pos-y': '27%', '--shift-x': '-30%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -439,7 +413,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Amitabha_Singh.jpg" alt="Mr. Amitabha Singh" className="patron-img" />
+              <img src="/advisory_board/Amitabha_Singh.jpg" alt="Mr. Amitabha Singh" className="patron-img nab-member-img" style={{ '--zoom': 1.65, '--pos-x': '50%', '--pos-y': '30%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -451,7 +425,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Mr_Mitresh_Sharma.jpg" alt="Mr. Mitresh Sharma" className="patron-img" />
+              <img src="/advisory_board/Mr_Mitresh_Sharma.jpg" alt="Mr. Mitresh Sharma" className="patron-img nab-member-img" style={{ '--zoom': 2.7, '--pos-x': '50%', '--pos-y': '31%', '--shift-x': '-31%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -463,7 +437,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Ms_Amrita_Madan.jpg" alt="Ar. Amrita Madan" className="patron-img" />
+              <img src="/advisory_board/Ms_Amrita_Madan.jpg" alt="Ar. Amrita Madan" className="patron-img nab-member-img" style={{ '--zoom': 2.7, '--pos-x': '50%', '--pos-y': '32%', '--shift-x': '-29%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -475,7 +449,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Mr_Chintan_Oza.jpg" alt="Mr. Chintan Oza" className="patron-img" />
+              <img src="/advisory_board/Mr_Chintan_Oza.jpg" alt="Mr. Chintan Oza" className="patron-img nab-member-img" style={{ '--zoom': 2.7, '--pos-x': '58%', '--pos-y': '30%', '--shift-x': '-31%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -487,7 +461,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Mr_Amit_Khamar.jpg" alt="Mr. Amit Khamar" className="patron-img" />
+              <img src="/advisory_board/Mr_Amit_Khamar.jpg" alt="Mr. Amit Khamar" className="patron-img nab-member-img" style={{ '--zoom': 2.8, '--pos-x': '57%', '--pos-y': '33%', '--shift-x': '-31%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -499,7 +473,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Ms_Bela_Rajgopalan.jpg" alt="Ms. Bela Kothari Rajagopalan" className="patron-img" />
+              <img src="/advisory_board/Ms_Bela_Rajgopalan.jpg" alt="Ms. Bela Kothari Rajagopalan" className="patron-img nab-member-img" style={{ '--zoom': 1.85, '--pos-x': '50%', '--pos-y': '26%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -511,7 +485,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Anil_Saini.jpg" alt="Mr. Anil Saini" className="patron-img" />
+              <img src="/advisory_board/Anil_Saini.jpg" alt="Mr. Anil Saini" className="patron-img nab-member-img" style={{ '--zoom': 1.9, '--pos-x': '50%', '--pos-y': '24%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -523,7 +497,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Dr_Arupa_Lahiry.jpg" alt="Dr. Arupa Lahiry" className="patron-img" />
+              <img src="/advisory_board/Dr_Arupa_Lahiry.jpg" alt="Dr. Arupa Lahiry" className="patron-img nab-member-img" style={{ '--zoom': 1.9, '--pos-x': '56%', '--pos-y': '27%', '--shift-x': '-32%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -535,7 +509,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Mr_Alex_Nyembo.jpg" alt="Mr. Alex Nyembo" className="patron-img" />
+              <img src="/advisory_board/Mr_Alex_Nyembo.jpg" alt="Mr. Alex Nyembo" className="patron-img nab-member-img" style={{ '--zoom': 2.7, '--pos-x': '54%', '--pos-y': '29%', '--shift-x': '-30%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -547,7 +521,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Mr_Shamy_Jacob.jpg" alt="Mr. Shamy Jacob" className="patron-img" />
+              <img src="/advisory_board/Mr_Shamy_Jacob.jpg" alt="Mr. Shamy Jacob" className="patron-img nab-member-img" style={{ '--zoom': 2.8, '--pos-x': '60%', '--pos-y': '28%', '--shift-x': '-15%', '--shift-y': '-10%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -559,7 +533,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Prof_Rajat_Bhattacharya.jpg" alt="Prof. Rajat Bhattacharya" className="patron-img" />
+              <img src="/advisory_board/Prof_Rajat_Bhattacharya.jpg" alt="Prof. Rajat Bhattacharya" className="patron-img nab-member-img" style={{ '--zoom': 2.8, '--pos-x': '50%', '--pos-y': '32%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>
@@ -571,7 +545,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Dr_Kamlesh_Jha.jpg" alt="Dr. Kamlesh Jha" className="patron-img" />
+              <img src="/advisory_board/Dr_Kamlesh_Jha.jpg" alt="Dr. Kamlesh Jha" className="patron-img nab-member-img" style={{ '--zoom': 1.6, '--pos-x': '50%', '--pos-y': '30%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>

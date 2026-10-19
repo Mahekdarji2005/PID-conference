@@ -399,7 +399,7 @@ export default function ContactPage() {
         <section className="contact-section">
           <div className="alignment-banner">
             <p>
-              DISHA 2027 is organised with the Cumulus Association and aligned with Viksit Bharat 2047, the seventeen United Nations Sustainable Development Goals and the G20 agenda.
+              DISHA 2027 is aligned with Viksit Bharat 2047, the seventeen United Nations Sustainable Development Goals (SDGs), and the G20 agenda.
             </p>
           </div>
         </section>

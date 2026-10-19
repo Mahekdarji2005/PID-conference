@@ -412,33 +412,14 @@ function renderFinalGrid() {
 
     const DIRECTORY_GROUPS = [
         {
-            title: "Guest of Honour",
+            title: "Keynote Speaker & Guest of Honour",
             people: [
                 {
                     name: "Ms. Eija Salmi FRSA",
-                    designation: "Guest of Honour & Secretary General",
+                    designation: "Keynote Speaker & Guest of Honour · Secretary General",
                     institution: "Cumulus Association · International Association of Universities & Colleges of Art, Design and Media",
-                    tag: "GUEST OF HONOUR",
+                    tag: "KEYNOTE & GUEST OF HONOUR",
                     image: "Speaker_images/Eija Salmi FRSA.JPG"
-                }
-            ]
-        },
-        {
-            title: "Keynote Speakers",
-            people: [
-                {
-                    name: "Prof. Dr. Lorenzo Imbesi",
-                    designation: "Keynote Speaker I & President, Cumulus Association",
-                    institution: "Sapienza Design Research, Sapienza University of Rome, Italy",
-                    tag: "KEYNOTE",
-                    image: "Speaker_images/Lorenzo_Imbesi.jpg"
-                },
-                {
-                    name: "Dr. Dolly Daou",
-                    designation: "Keynote Speaker II & Lead Design Researcher",
-                    institution: "Transdisciplinary Design Leadership (Australia, Europe, Asia)",
-                    tag: "KEYNOTE",
-                    image: "Speaker_images/Dolly_Daou.jpg"
                 }
             ]
         },
@@ -496,18 +477,8 @@ function renderFinalGrid() {
    ========================================================================== */
 const KEYNOTE_DATA = [
     {
-        name: "Prof. Dr. Lorenzo Imbesi",
-        role: "KEYNOTE SPEAKER I",
-        bio: "President, Cumulus Association. Full Professor and Director, Sapienza Design Research, Sapienza University of Rome, Italy."
-    },
-    {
-        name: "Dr. Dolly Daou",
-        role: "KEYNOTE SPEAKER II",
-        bio: "Design researcher, educator and academic leader in transdisciplinary design education, with leadership roles across Australia, Europe, China and the Middle East."
-    },
-    {
         name: "Ms. Eija Salmi FRSA",
-        role: "GUEST OF HONOUR",
+        role: "KEYNOTE SPEAKER & GUEST OF HONOUR",
         bio: "Secretary General, Cumulus Association, Finland."
     }
 ];

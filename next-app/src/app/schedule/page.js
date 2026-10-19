@@ -518,7 +518,7 @@ export default function SchedulePage() {
                 <div className="schedule-time"><i className="fa-regular fa-clock"></i> 17:00 to 17:45</div>
                 <div className="schedule-details">
                   <span className="schedule-type-badge">Valedictory Ceremony</span>
-                  <div className="schedule-session-title">Valedictory session, address by the Guest of Honour Ms. Eija Salmi FRSA, reflection on the Cumulus Design Declaration and announcement of winners</div>
+                  <div className="schedule-session-title">Valedictory session, address by Keynote Speaker and Guest of Honour Ms. Eija Salmi FRSA, reflection on the Cumulus Design Declaration and announcement of winners</div>
                 </div>
                 <div className="schedule-venue"><i className="fa-solid fa-location-dot"></i> Venue: Central Auditorium</div>
               </div>
