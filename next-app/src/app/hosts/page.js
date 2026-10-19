@@ -334,10 +334,13 @@ export default function HostsPage() {
           </div>
 
           <div className="patron-card">
-            <div className="patron-img-wrapper awaiting-photo">
-              <div className="patron-img-placeholder">
-                <i className="fa-solid fa-user"></i>
-              </div>
+            <div className="patron-img-wrapper">
+              <img
+                src="/international/Dr. Antara Haldar.png"
+                alt="Dr. Antara Haldar"
+                className="patron-img"
+                style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
+              />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">International Advisory Board</span>
@@ -354,10 +357,13 @@ export default function HostsPage() {
           </div>
 
           <div className="patron-card">
-            <div className="patron-img-wrapper awaiting-photo">
-              <div className="patron-img-placeholder">
-                <i className="fa-solid fa-user"></i>
-              </div>
+            <div className="patron-img-wrapper">
+              <img
+                src="/international/Frida Dahlquist.jpg"
+                alt="Ms. Frida Dahlquist"
+                className="patron-img"
+                style={{ objectFit: 'cover', objectPosition: 'center 25%' }}
+              />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">International Advisory Board</span>
@@ -368,10 +374,13 @@ export default function HostsPage() {
           </div>
 
           <div className="patron-card">
-            <div className="patron-img-wrapper awaiting-photo">
-              <div className="patron-img-placeholder">
-                <i className="fa-solid fa-user"></i>
-              </div>
+            <div className="patron-img-wrapper">
+              <img
+                src="/international/Gaurav Mahana.jpg"
+                alt="Mr. Gaurav Mahna"
+                className="patron-img nab-member-img"
+                style={{ '--zoom': 2.8, '--pos-x': '46%', '--pos-y': '13%', '--shift-y': '10%' }}
+              />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">International Advisory Board</span>
