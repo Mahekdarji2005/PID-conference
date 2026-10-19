@@ -332,6 +332,82 @@ export default function HostsPage() {
               <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Cumulus Association, Finland</p>
             </div>
           </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper awaiting-photo">
+              <div className="patron-img-placeholder">
+                <i className="fa-solid fa-user"></i>
+              </div>
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">International Advisory Board</span>
+              <h3 className="patron-name">Dr. Antara Haldar</h3>
+              <p className="patron-designation">
+                Professor, University of Cambridge<br />
+                Harvard University, Stanford University
+              </p>
+              <p className="patron-institution" style={{ display: 'block', textAlign: 'center' }}>
+                <i className="fa-solid fa-book-open" style={{ marginRight: '6px' }}></i>
+                <span>Author of <em>EVERYMAN</em> (Simon &amp; Schuster) &middot; Columnist, Project Syndicate</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper awaiting-photo">
+              <div className="patron-img-placeholder">
+                <i className="fa-solid fa-user"></i>
+              </div>
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">International Advisory Board</span>
+              <h3 className="patron-name">Ms. Frida Dahlquist</h3>
+              <p className="patron-designation">General Manager, H&amp;M HOME</p>
+              <p className="patron-institution"><i className="fa-solid fa-location-dot"></i> Stockholm, Sweden</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper awaiting-photo">
+              <div className="patron-img-placeholder">
+                <i className="fa-solid fa-user"></i>
+              </div>
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">International Advisory Board</span>
+              <h3 className="patron-name">Mr. Gaurav Mahna</h3>
+              <p className="patron-designation">Vice President, South Asia, KGS Sourcing Ltd.</p>
+              <p className="patron-institution"><i className="fa-solid fa-location-dot"></i> Gurugram, India</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper awaiting-photo">
+              <div className="patron-img-placeholder">
+                <i className="fa-solid fa-user"></i>
+              </div>
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">International Advisory Board</span>
+              <h3 className="patron-name">Ms. Gagan Bansal</h3>
+              <p className="patron-designation">Country Manager, Bangladesh, India &amp; Pakistan, LC Waikiki</p>
+              <p className="patron-institution"><i className="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</p>
+            </div>
+          </div>
+
+          <div className="patron-card">
+            <div className="patron-img-wrapper awaiting-photo">
+              <div className="patron-img-placeholder">
+                <i className="fa-solid fa-user"></i>
+              </div>
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">International Advisory Board</span>
+              <h3 className="patron-name">Mr. Manish Chawla</h3>
+              <p className="patron-designation">Global Supply Chain Manager, H&amp;M Lifestyle Brands, H&amp;M</p>
+              <p className="patron-institution"><i className="fa-solid fa-location-dot"></i> Hong Kong</p>
+            </div>
+          </div>
         </div>
 
         {/* Invited International Partner Institutions */}
