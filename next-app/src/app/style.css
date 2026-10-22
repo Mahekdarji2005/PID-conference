@@ -27,7 +27,6 @@ body {
 .about-content p,
 .feature-box p,
 .university-section p,
-.hosts-hero p,
 .review-process-box p,
 .tracks-main-desc,
 .panels-main-desc,
@@ -765,6 +764,8 @@ body {
     max-width: 620px;
     margin: 0 auto;
     font-weight: 400;
+    text-align: center;
+    text-align-last: center;
 }
 
 .hosts-section {
@@ -899,6 +900,22 @@ body {
     font-size: 2.4rem;
 }
 
+.patron-initials-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fdfbf7 0%, #ece5db 100%);
+    color: var(--primary-color, #0d2836);
+    font-family: var(--font-body, 'Inter', sans-serif);
+    font-size: clamp(2rem, 2.3vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: transform 0.4s ease;
+    user-select: none;
+}
+
 .patron-img {
     width: 100%;
     height: 100%;
@@ -915,7 +932,8 @@ body {
 }
 
 .chief-patron-card:hover .patron-img,
-.patron-card:hover .patron-img {
+.patron-card:hover .patron-img,
+.patron-card:hover .patron-initials-placeholder {
     transform: scale(1.05);
 }
 
@@ -930,6 +948,7 @@ body {
 .patron-card:hover .patron-img.nab-member-img {
     transform: scale(calc(var(--zoom, 1.6) * 1.05));
 }
+
 
 .patron-card-body {
     padding: 0;
@@ -1243,7 +1262,20 @@ img {
     flex-shrink: 0;
 }
 
-.footer-logo img:first-child {
+.footer-logo-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    line-height: 0;
+    transition: opacity 0.25s ease;
+}
+
+.footer-logo-link:hover {
+    opacity: 0.88;
+}
+
+.footer-logo img:first-child,
+.footer-logo-link img {
     height: 53px;
 }
 
@@ -1389,7 +1421,8 @@ img {
     .footer-logo img {
         height: 42px;
     }
-    .footer-logo img:first-child {
+    .footer-logo img:first-child,
+    .footer-logo-link img {
         height: 46px;
     }
     .site-footer {

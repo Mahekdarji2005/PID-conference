@@ -6,7 +6,9 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-column">
           <div className="footer-logo">
-            <img src="/logo/Parul_Institute_of_Design_Logo.png" alt="Parul Institute of Design" />
+            <a href="https://www.paruluniversity.ac.in/pid/" className="footer-logo-link">
+              <img src="/logo/Parul_Institute_of_Design_Logo.png" alt="Parul Institute of Design" />
+            </a>
             <img src="/logo/Parul_University_white_Logo.png" alt="Parul University" />
           </div>
           <p className="footer-about">
@@ -14,10 +16,8 @@ export default function Footer() {
             convening experts across design, arts, and technology.
           </p>
           <div className="social-icons">
-            <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i className="fa-brands fa-twitter"></i></a>
-            <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i className="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/parul-institute-of-design/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/pu_design__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
           </div>
         </div>
         
@@ -32,6 +32,8 @@ export default function Footer() {
             <li><Link href="/call-for-papers">Call for Papers</Link></li>
             <li><Link href="/publishing-ethics">Publishing Ethics</Link></li>
             <li><Link href="/venue">Venue &amp; Location</Link></li>
+            <li><a href="https://www.paruluniversity.ac.in/faculty/liberal-arts/">Faculty of Liberal Arts</a></li>
+            <li><a href="https://www.paruluniversity.ac.in/faculty/fine-arts/">Faculty of Fine Arts</a></li>
           </ul>
         </div>
         

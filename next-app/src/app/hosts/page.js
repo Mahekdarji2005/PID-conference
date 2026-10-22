@@ -20,7 +20,7 @@ export default function HostsPage() {
         <div className="patrons-grid">
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/host/devanshusir_cutout.png" alt="Dr. Devanshu Patel" className="patron-img" style={{ objectPosition: 'center 10%' }} />
+              <img src="/host/devanshusir_cutout.png" alt="Dr. Devanshu Patel" className="patron-img" style={{ objectPosition: 'center 20px' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Chief Patron</span>
@@ -31,7 +31,7 @@ export default function HostsPage() {
           </div>
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/host/geetikamam_cutout.png" alt="Dr. Geetika Madan Patel" className="patron-img" style={{ objectPosition: 'center 15%' }} />
+              <img src="/host/geetikamam_cutout.png" alt="Dr. Geetika Madan Patel" className="patron-img" style={{ objectPosition: 'center 20px' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Chief Patron</span>
@@ -42,7 +42,7 @@ export default function HostsPage() {
           </div>
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/host/parulmam_cutout.png" alt="Dr. Parul Patel" className="patron-img" style={{ objectPosition: 'center 8px' }} />
+              <img src="/host/parulmam_cutout.png" alt="Dr. Parul Patel" className="patron-img" style={{ objectPosition: 'center 28px' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Chief Patron</span>
@@ -53,7 +53,7 @@ export default function HostsPage() {
           </div>
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/host/komalmam_cutout.png" alt="Dr. Komal Patel" className="patron-img" />
+              <img src="/host/komalmam_cutout.png" alt="Dr. Komal Patel" className="patron-img" style={{ objectPosition: 'center 28px' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Chief Patron</span>
@@ -94,8 +94,8 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Mr. Guruchara Singh.png" alt="Mr. Gurucharan Singh" className="patron-img" style={{ scale: 1.11, translate: '0 5%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Patron</span>
@@ -116,8 +116,8 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Dr. Rohit Goyal-Dean.jpeg" alt="Dr. Rohit Goyal" className="patron-img" />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Patron</span>
@@ -127,8 +127,8 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Mr. Dhruvil Shah.jpeg" alt="Mr. Dhruvil Shah" className="patron-img" style={{ scale: 1.75, translate: '0 10%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Patron</span>
@@ -147,8 +147,8 @@ export default function HostsPage() {
         </div>
         <div className="patrons-grid">
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Prof. (Dr.) Anand Joshi.jpg" alt="Dr. Anand Joshi" className="patron-img" style={{ scale: 1.22, translate: '0 10%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Co-Patron</span>
@@ -158,8 +158,8 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Dr. Babita Chaubey.jpg" alt="Dr. Babita Chaubey" className="patron-img" style={{ scale: 1.22, translate: '0 10%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Co-Patron</span>
@@ -169,8 +169,8 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Bhavesh Mevada.jpg" alt="Dr. Bhavesh Mevada" className="patron-img" style={{ scale: 1.22, translate: '0 10%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Co-Patron</span>
@@ -180,8 +180,8 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Dr.RichaMishra.png" alt="Prof. (Dr.) Richa Mishra" className="patron-img" style={{ scale: 1.15, objectPosition: 'center 18%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Co-Patron</span>
@@ -191,8 +191,8 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Dr. Preeti Nair.webp" alt="Prof. (Dr.) Preeti Nair" className="patron-img" style={{ scale: 1.11, translate: '0 5%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Co-Patron</span>
@@ -211,8 +211,8 @@ export default function HostsPage() {
         </div>
         <div className="patrons-grid">
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Bhaskar Mitra_cutout.png" alt="Prof. Bhaskar Mitra" className="patron-img" style={{ scale: 1.15, translate: '0 18%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Organising Chair</span>
@@ -222,8 +222,8 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Jayaram Poduval_cutout.png" alt="Dr. Jayram Poduval" className="patron-img" style={{ scale: 1.15, translate: '0 16%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Organising Chair</span>
@@ -233,8 +233,8 @@ export default function HostsPage() {
             </div>
           </div>
           <div className="patron-card">
-            <div className="patron-img-wrapper black-placeholder">
-              <div className="patron-img placeholder-black"></div>
+            <div className="patron-img-wrapper">
+              <img src="/host/Dr.-Rajinder-Kaur-Barot.jpg" alt="Dr. Rajinder Kaur" className="patron-img" style={{ scale: 1.35, translate: '0 18%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Organising Chair</span>
@@ -375,12 +375,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img
-                src="/international/Gaurav Mahana.jpg"
-                alt="Mr. Gaurav Mahna"
-                className="patron-img nab-member-img"
-                style={{ '--zoom': 2.8, '--pos-x': '46%', '--pos-y': '13%', '--shift-y': '10%' }}
-              />
+              <div className="patron-initials-placeholder">GM</div>
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">International Advisory Board</span>
@@ -391,10 +386,8 @@ export default function HostsPage() {
           </div>
 
           <div className="patron-card">
-            <div className="patron-img-wrapper awaiting-photo">
-              <div className="patron-img-placeholder">
-                <i className="fa-solid fa-user"></i>
-              </div>
+            <div className="patron-img-wrapper">
+              <div className="patron-initials-placeholder">GB</div>
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">International Advisory Board</span>
@@ -405,10 +398,8 @@ export default function HostsPage() {
           </div>
 
           <div className="patron-card">
-            <div className="patron-img-wrapper awaiting-photo">
-              <div className="patron-img-placeholder">
-                <i className="fa-solid fa-user"></i>
-              </div>
+            <div className="patron-img-wrapper">
+              <div className="patron-initials-placeholder">MC</div>
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">International Advisory Board</span>
