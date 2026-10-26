@@ -159,7 +159,7 @@ export default function HostsPage() {
           </div>
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/host/Dr. Babita Chaubey.jpg" alt="Dr. Babita Chaubey" className="patron-img" style={{ scale: 1.22, translate: '0 10%' }} />
+              <img src="/host/Dr. Babita.jpeg" alt="Dr. Babita Chaubey" className="patron-img" style={{ objectPosition: 'center top' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Co-Patron</span>
@@ -256,23 +256,23 @@ export default function HostsPage() {
           </div>
           <div className="patron-card">
             <div className="patron-img-wrapper">
+              <img src="/host/Dr. Sarvanan.jpg" alt="Dr. Saravanan Kannappan" className="patron-img" />
+            </div>
+            <div className="patron-card-body">
+              <span className="patron-role-tag">Organising Chair</span>
+              <h3 className="patron-name">Dr. Saravanan Kannappan</h3>
+              <p className="patron-designation">HoD-Academics</p>
+              <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Parul Institute of Design</p>
+            </div>
+          </div>
+          <div className="patron-card">
+            <div className="patron-img-wrapper">
               <img src="/host/Ms. Dhvani Thakkar.JPG" alt="Ms. Dhvani Thakkar" className="patron-img" />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">Organising Chair</span>
               <h3 className="patron-name">Ms. Dhvani Thakkar</h3>
               <p className="patron-designation">Director-Admissions &amp; Outreach</p>
-              <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Parul Institute of Design</p>
-            </div>
-          </div>
-          <div className="patron-card">
-            <div className="patron-img-wrapper">
-              <img src="/host/Dr. Saravanan Kannappan.jpg" alt="Dr. Saravanan Kannappan" className="patron-img" />
-            </div>
-            <div className="patron-card-body">
-              <span className="patron-role-tag">Organising Chair</span>
-              <h3 className="patron-name">Dr. Saravanan Kannappan</h3>
-              <p className="patron-designation">HoD-Academics</p>
               <p className="patron-institution"><i className="fa-solid fa-building-columns"></i> Parul Institute of Design</p>
             </div>
           </div>
@@ -319,7 +319,7 @@ export default function HostsPage() {
           <div className="patron-card">
             <div className="patron-img-wrapper">
               <img
-                src="/Speaker_images/Eija Salmi FRSA.JPG"
+                src="/host/Eija Salmi.JPG"
                 alt="Ms. Eija Salmi FRSA"
                 className="patron-img"
                 style={{ objectPosition: 'center 52%' }}
@@ -621,7 +621,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img src="/advisory_board/Dr_Kamlesh_Jha.jpg" alt="Dr. Kamlesh Jha" className="patron-img nab-member-img" style={{ '--zoom': 1.6, '--pos-x': '50%', '--pos-y': '30%' }} />
+              <img src="/advisory_board/Dr_Kamlesh_Jha.jpg" alt="Dr. Kamlesh Jha" className="patron-img nab-member-img" style={{ '--zoom': 1.2, '--pos-x': '50%', '--pos-y': '24%', '--shift-y': '5%' }} />
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">National Advisory Board</span>

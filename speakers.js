@@ -9,8 +9,8 @@ const expertSpeakersData = [
         designation: "Former Executive Director & Senior Faculty",
         institution: "National Institute of Design (NID), Ahmedabad",
         tag: "DESIGN PEDAGOGY & LEADERSHIP",
-        image: "Speaker_images/Dr Anil Sinha.jpg",
-        cutout: "speaker_cutouts/Dr Anil Sinha.png"
+        image: "Speaker_images/Dr.Anil Sinha.png",
+        cutout: "Speaker_images/Dr.Anil Sinha.png"
     },
     {
         id: 2,
@@ -18,8 +18,8 @@ const expertSpeakersData = [
         designation: "Coordinator, IKS Division & Associate Professor",
         institution: "Ministry of Education, Govt. of India · IIT Kharagpur",
         tag: "INDIAN KNOWLEDGE SYSTEMS",
-        image: "Speaker_images/Dr. Anuradha Choudry.jpg",
-        cutout: "speaker_cutouts/Dr. Anuradha Choudry.png"
+        image: "Speaker_images/Dr. Anuradha.png",
+        cutout: "Speaker_images/Dr. Anuradha.png"
     },
     {
         id: 3,
@@ -27,8 +27,8 @@ const expertSpeakersData = [
         designation: "Director & Professor",
         institution: "Educational Multimedia Research Centre (EMRC), Anna University",
         tag: "MULTIMEDIA & DIGITAL COMMUNICATION",
-        image: "Speaker_images/Dr. S. Arulchelvan.jpg",
-        cutout: "speaker_cutouts/Dr. S. Arulchelvan.png"
+        image: "Speaker_images/Dr.Arulchelvan.png",
+        cutout: "Speaker_images/Dr.Arulchelvan.png"
     },
     {
         id: 4,
@@ -36,8 +36,8 @@ const expertSpeakersData = [
         designation: "Director & Dean",
         institution: "Parul Institute of Design & Fine Arts, Parul University",
         tag: "CONFERENCE CHAIR",
-        image: "Speaker_images/Dr. Swapna Mishra.jpeg",
-        cutout: "speaker_cutouts/Dr. Swapna Mishra.png"
+        image: "Speaker_images/Dr. Swapna Mishra.png",
+        cutout: "Speaker_images/Dr. Swapna Mishra.png"
     },
     {
         id: 5,
@@ -45,8 +45,8 @@ const expertSpeakersData = [
         designation: "Former Dean & Craft Heritage Specialist",
         institution: "Faculty of Family and Community Sciences, MSU Baroda",
         tag: "TEXTILE HERITAGE & CRAFT",
-        image: "Speaker_images/Prof. Dr. Anjali Karolia (Retd).jpg",
-        cutout: "speaker_cutouts/Prof. Dr. Anjali Karolia (Retd).png"
+        image: "Speaker_images/Dr. Anjali Karolia.png",
+        cutout: "Speaker_images/Dr. Anjali Karolia.png"
     },
     {
         id: 6,
@@ -54,8 +54,8 @@ const expertSpeakersData = [
         designation: "Former Principal & Senior Academician",
         institution: "School of Fashion & Textile Technology",
         tag: "SUSTAINABLE FASHION INNOVATION",
-        image: "Speaker_images/IMG-Dr. M.M. Hundekar.jpg",
-        cutout: "speaker_cutouts/IMG-Dr. M.M. Hundekar.png"
+        image: "Speaker_images/Dr. M.Hundekar.png",
+        cutout: "Speaker_images/Dr. M.Hundekar.png"
     },
     {
         id: 7,
@@ -63,8 +63,8 @@ const expertSpeakersData = [
         designation: "Associate Professor & Lead Researcher",
         institution: "Parul Institute of Design, Parul University",
         tag: "SUSTAINABLE DESIGN METHODOLOGY",
-        image: "Speaker_images/Dr. Vahini Aravind.jpg",
-        cutout: "speaker_cutouts/Dr. Vahini Aravind.png"
+        image: "Speaker_images/Dr.Vahini Aravind.png",
+        cutout: "Speaker_images/Dr.Vahini Aravind.png"
     },
     {
         id: 8,
@@ -72,8 +72,8 @@ const expertSpeakersData = [
         designation: "Dean & Head of Innovation",
         institution: "Parul Institute of Design, Parul University",
         tag: "INDUSTRIAL DESIGN & INNOVATION",
-        image: "Speaker_images/Subhanish Malhotra.png",
-        cutout: "speaker_cutouts/Subhanish Malhotra.png"
+        image: "Speaker_images/Subhanish Malhotra-1.jpg",
+        cutout: "Speaker_images/Subhanish Malhotra-1.jpg"
     }
 ];
 
@@ -419,7 +419,7 @@ function renderFinalGrid() {
                     designation: "Keynote Speaker & Guest of Honour · Secretary General",
                     institution: "Cumulus Association · International Association of Universities & Colleges of Art, Design and Media",
                     tag: "KEYNOTE & GUEST OF HONOUR",
-                    image: "Speaker_images/Eija Salmi FRSA.JPG"
+                    image: "Speaker_images/Eija Salmi.JPG"
                 }
             ]
         },
