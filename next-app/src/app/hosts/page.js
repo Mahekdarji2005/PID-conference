@@ -318,12 +318,7 @@ export default function HostsPage() {
         <div className="patrons-grid">
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img
-                src="/host/Eija Salmi.JPG"
-                alt="Ms. Eija Salmi FRSA"
-                className="patron-img"
-                style={{ objectPosition: 'center 52%' }}
-              />
+              <div className="patron-initials-placeholder">ES</div>
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">International Advisory Board</span>
@@ -335,12 +330,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img
-                src="/international/Dr. Antara Haldar.png"
-                alt="Dr. Antara Haldar"
-                className="patron-img"
-                style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
-              />
+              <div className="patron-initials-placeholder">AH</div>
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">International Advisory Board</span>
@@ -358,12 +348,7 @@ export default function HostsPage() {
 
           <div className="patron-card">
             <div className="patron-img-wrapper">
-              <img
-                src="/international/Frida Dahlquist.jpg"
-                alt="Ms. Frida Dahlquist"
-                className="patron-img"
-                style={{ objectFit: 'cover', objectPosition: 'center 25%' }}
-              />
+              <div className="patron-initials-placeholder">FD</div>
             </div>
             <div className="patron-card-body">
               <span className="patron-role-tag">International Advisory Board</span>
